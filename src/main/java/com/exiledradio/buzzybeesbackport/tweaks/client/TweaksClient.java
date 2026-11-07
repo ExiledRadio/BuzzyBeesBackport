@@ -15,7 +15,8 @@ import java.util.Random;
 
 /**
  * Client half of the tweaks: 1.15's three new splash texts, and closing the death screen once the server
- * has respawned the player (doImmediateRespawn).
+ * has respawned the player (doImmediateRespawn). Also registers {@link ElytraClient} (elytra while rising)
+ * and {@link ToggleKeys} (toggle sneak and sprint).
  */
 public final class TweaksClient {
 
@@ -34,6 +35,8 @@ public final class TweaksClient {
 
     public static void init() {
         MinecraftForge.EVENT_BUS.register(new TweaksClient());
+        MinecraftForge.EVENT_BUS.register(new ElytraClient());
+        MinecraftForge.EVENT_BUS.register(new ToggleKeys());
     }
 
     @SubscribeEvent

@@ -91,8 +91,11 @@ public final class TweaksSelfTest implements SelfTest {
         }
         c.ok(seeds > 60 && seeds < 150, "large ferns drop wheat seeds about 1 in 8: " + seeds + "/800");
         // Attached stems already drop seeds in 1.12.2 (same block as the growing stem).
+        // Each of its three tries succeeds 8 in 15 times, so one harvest gives none 1 time in 10: try 20.
         NonNullList<ItemStack> stem = NonNullList.create();
-        Blocks.MELON_STEM.getDrops(stem, c.world, BlockPos.ORIGIN, Blocks.MELON_STEM.getDefaultState().withProperty(net.minecraft.block.BlockStem.AGE, 7), 0);
+        for (int i = 0; i < 20; i++) {
+            Blocks.MELON_STEM.getDrops(stem, c.world, BlockPos.ORIGIN, Blocks.MELON_STEM.getDefaultState().withProperty(net.minecraft.block.BlockStem.AGE, 7), 0);
+        }
         c.ok(!stem.isEmpty(), "a grown melon stem drops seeds (vanilla 1.12.2 already)");
     }
 
@@ -148,6 +151,10 @@ public final class TweaksSelfTest implements SelfTest {
 
         BlockPos base = c.area();
         EntityPlayerMP player = player(c, c.world, "eggs", base.add(4, 1, 4));
+        // Zombies saved in this area by an earlier run would be counted too.
+        for (EntityZombie old : c.world.getEntitiesWithinAABB(EntityZombie.class, new net.minecraft.util.math.AxisAlignedBB(base).expand(32, 60, 32).grow(0, 60, 0))) {
+            old.setDead();
+        }
         EntityZombie adult = new EntityZombie(c.world);
         adult.setPosition(base.getX() + 6.5, base.getY() + 1, base.getZ() + 4.5);
         c.world.spawnEntity(adult);
@@ -168,6 +175,9 @@ public final class TweaksSelfTest implements SelfTest {
         player.setHeldItem(EnumHand.MAIN_HAND, husk);
         player.interactOn(adult, EnumHand.MAIN_HAND);
         c.eq(1, husk.getCount(), "a husk egg on a zombie does nothing");
+        for (EntityZombie z : c.world.getEntitiesWithinAABB(EntityZombie.class, adult.getEntityBoundingBox().grow(2))) {
+            z.setDead();
+        }
         c.world.removeEntity(player);
 
         // Babies among animals spawned with a chunk.

@@ -145,6 +145,39 @@ public final class ModConfig {
         @Config.Comment("The title screen can show 1.15's three new splash texts.")
         @Config.LangKey("config.buzzybeesbackport.tweaks.splashTexts")
         public boolean splashTexts = true;
+
+
+        @Config.Comment("At a crafting table, shift-clicking a stack in your inventory moves it into the crafting grid, and only to the other part of the inventory when the grid has no room.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.craftingShiftClick")
+        public boolean craftingShiftClick = true;
+
+        @Config.Comment("Elytra can be opened right after a jump, while you are still rising.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.elytraJump")
+        public boolean elytraJump = true;
+
+        @Config.Comment("Client: the sneak key turns sneaking on and off instead of being held.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.toggleSneak")
+        public boolean toggleSneak = false;
+
+        @Config.Comment("Client: the sprint key turns sprinting on and off instead of being held.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.toggleSprint")
+        public boolean toggleSprint = false;
+
+        @Config.Comment("A firework rocket fired from a dispenser flies straight the way the dispenser faces.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.dispensedFireworks")
+        public boolean dispensedFireworks = true;
+
+        @Config.Comment("Two by Two also needs bees bred, and A Balanced Diet also needs a honey bottle.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.advancementBees")
+        public boolean advancementBees = true;
+
+        @Config.Comment("Parrots stay on your shoulders while you ride a horse, boat, minecart or anything else.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.parrotsWhileRiding")
+        public boolean parrotsWhileRiding = true;
+
+        @Config.Comment("A dying mob or player drops its experience at once, with its loot, instead of after the death animation.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.xpWithLoot")
+        public boolean xpWithLoot = true;
     }
 
     public static final class Compat {

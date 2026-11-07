@@ -20,7 +20,13 @@ public final class BuzzyBeesCore implements IFMLLoadingPlugin {
 
     @Override
     public String[] getASMTransformerClass() {
-        return new String[] {PistonStickTransformer.class.getName()};
+        return new String[] {
+                PistonStickTransformer.class.getName(),
+                WorkbenchShiftTransformer.class.getName(),
+                ElytraStartTransformer.class.getName(),
+                FireworkAngleTransformer.class.getName(),
+                ShoulderRidingTransformer.class.getName(),
+        };
     }
 
     @Nullable
