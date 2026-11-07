@@ -1,0 +1,1 @@
+block.buzzybeesbackport.set_spawn = block.minecraft.set_spawn
