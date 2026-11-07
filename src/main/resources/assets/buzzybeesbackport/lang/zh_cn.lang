@@ -27,6 +27,8 @@ config.buzzybeesbackport.compat=兼容性
 config.buzzybeesbackport.compat.tooltip=来自添加了相同内容的其他模组的世界和方块。
 config.buzzybeesbackport.compat.convertRemoved=转换已移除模组的内容
 config.buzzybeesbackport.compat.convertRemoved.tooltip=当另一个添加了这些内容的模组从世界中移除后，转换它遗留下来的方块、物品和蜜蜂。
+config.buzzybeesbackport.compat.duplicates=重复方块
+config.buzzybeesbackport.compat.duplicates.tooltip=当另一个已安装的模组添加了相同的方块和物品时：OURS隐藏它的，THEIRS隐藏我们的，BOTH不隐藏任何内容。
 
 # --- honey ---
 advancements.buzzybeesbackport.honey_block_slide.description=跳入蜂蜜块以缓冲摔落
@@ -66,6 +68,20 @@ tooltip.buzzybeesbackport.beehive.honey=蜂蜜：%s / %s
 subtitles.buzzybeesbackport.entity.iron_golem.damage=铁傀儡：受损
 subtitles.buzzybeesbackport.entity.iron_golem.repair=铁傀儡：被修复
 
+# --- campfire ---
+config.buzzybeesbackport.campfire=营火
+config.buzzybeesbackport.campfire.tooltip=未安装Village & Pillage Backport时的营火。
+config.buzzybeesbackport.campfire.enabled=启用
+config.buzzybeesbackport.campfire.enabled.tooltip=未安装Village & Pillage Backport时，本模组是否添加自己的营火。若已安装，则使用它的营火，此项不起作用。
+config.buzzybeesbackport.campfire.cookTime=烹饪时间
+config.buzzybeesbackport.campfire.cookTime.tooltip=烹饪一个物品所需的时间，单位为刻。1.14为600（30秒），是熔炉的三倍。
+config.buzzybeesbackport.campfire.extraFoods=额外食物
+config.buzzybeesbackport.campfire.extraFoods.tooltip=营火能烹饪什么。默认：所有输入和输出都是食物的熔炉配方，即1.14自己的列表（生肉、生鱼、马铃薯），再加上任何模组的生食。要添加默认未包含的物品，可写为“modid:item”（按熔炉的方式烹饪）或“modid:item=modid:result”（烹饪成指定物品）。在任意一项后加上“:meta”可选择某个变种，例如“minecraft:fish:1=minecraft:cooked_fish:1”。
+config.buzzybeesbackport.campfire.excludedFoods=排除的食物
+config.buzzybeesbackport.campfire.excludedFoods.tooltip=营火拒绝的物品，即使上面的规则会烹饪它们，格式为“modid:item”或“modid:item:meta”。
+tile.buzzybeesbackport.campfire.name=营火
+subtitles.buzzybeesbackport.block.campfire.crackle=营火：噼啪作响
+
 # --- tweaks ---
 config.buzzybeesbackport.tweaks.endStoneBricks=末地石砖硬度
 config.buzzybeesbackport.tweaks.endStoneBricks.tooltip=末地石砖的挖掘时间与石头相同（硬度3），抗爆性也与石头相同（9）。
@@ -95,4 +111,20 @@ config.buzzybeesbackport.tweaks.bellRedstone=钟可被红石敲响
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=钟在受到红石充能时会鸣响。
 config.buzzybeesbackport.tweaks.splashTexts=1.15闪烁标语
 config.buzzybeesbackport.tweaks.splashTexts.tooltip=标题屏幕可以显示1.15新增的三条闪烁标语。
+config.buzzybeesbackport.tweaks.craftingShiftClick=Shift+点击放入合成方格
+config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=在工作台中，Shift+点击物品栏中的一组物品会将其移入合成方格，只有当合成方格放不下时才会移到物品栏的另一部分。
+config.buzzybeesbackport.tweaks.elytraJump=上升时展开鞘翅
+config.buzzybeesbackport.tweaks.elytraJump.tooltip=跳跃后即可立刻展开鞘翅，即使你仍在上升。
+config.buzzybeesbackport.tweaks.toggleSneak=切换潜行
+config.buzzybeesbackport.tweaks.toggleSneak.tooltip=客户端：潜行键改为按一下开启或关闭潜行，而不必按住。
+config.buzzybeesbackport.tweaks.toggleSprint=切换疾跑
+config.buzzybeesbackport.tweaks.toggleSprint.tooltip=客户端：疾跑键改为按一下开启或关闭疾跑，而不必按住。
+config.buzzybeesbackport.tweaks.dispensedFireworks=发射器射出的烟花向前飞
+config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=从发射器射出的烟花火箭会沿发射器朝向的方向笔直飞行。
+config.buzzybeesbackport.tweaks.advancementBees=农牧业进度中加入蜜蜂
+config.buzzybeesbackport.tweaks.advancementBees.tooltip=“成双成对”还需要繁殖蜜蜂，“均衡饮食”还需要蜂蜜瓶。
+config.buzzybeesbackport.tweaks.parrotsWhileRiding=鹦鹉留在肩上
+config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=在你骑马、乘船、乘坐矿车或骑乘其他任何东西时，鹦鹉会留在你的肩上。
+config.buzzybeesbackport.tweaks.xpWithLoot=经验随战利品一同掉落
+config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=死亡的生物或玩家会立即连同战利品一起掉落经验，而不是等死亡动画结束后。
 block.buzzybeesbackport.set_spawn=已设置重生点

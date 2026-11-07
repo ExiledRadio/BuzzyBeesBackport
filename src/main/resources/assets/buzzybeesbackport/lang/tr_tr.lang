@@ -27,6 +27,8 @@ config.buzzybeesbackport.compat=Uyumluluk
 config.buzzybeesbackport.compat.tooltip=Aynı şeyleri ekleyen diğer modların dünyaları ve blokları.
 config.buzzybeesbackport.compat.convertRemoved=Kaldırılan Modun İçeriğini Dönüştür
 config.buzzybeesbackport.compat.convertRemoved.tooltip=Bunları ekleyen başka bir mod bir dünyadan kaldırıldığında, o modun geride bıraktığı blokları, eşyaları ve arıları dönüştürür.
+config.buzzybeesbackport.compat.duplicates=Yinelenen Bloklar
+config.buzzybeesbackport.compat.duplicates.tooltip=Yüklü başka bir mod aynı blokları ve eşyaları eklediğinde: OURS onunkileri gizler, THEIRS bizimkileri gizler, BOTH hiçbir şeyi gizlemez.
 
 # --- honey ---
 advancements.buzzybeesbackport.honey_block_slide.description=Düşüşünüzü hafifletmek için bir bal bloğuna atlayın
@@ -66,6 +68,20 @@ tooltip.buzzybeesbackport.beehive.honey=Bal: %s / %s
 subtitles.buzzybeesbackport.entity.iron_golem.damage=Demir Golem kırıldı
 subtitles.buzzybeesbackport.entity.iron_golem.repair=Demir Golem onarıldı
 
+# --- campfire ---
+config.buzzybeesbackport.campfire=Kamp Ateşi
+config.buzzybeesbackport.campfire.tooltip=Village & Pillage Backport yüklü değilken kamp ateşi.
+config.buzzybeesbackport.campfire.enabled=Etkin
+config.buzzybeesbackport.campfire.enabled.tooltip=Village & Pillage Backport yüklü değilken bu modun kendi kamp ateşi kopyasını ekleyip eklemeyeceği. O yüklüyse onun kamp ateşi kullanılır ve bu ayar hiçbir şey yapmaz.
+config.buzzybeesbackport.campfire.cookTime=Pişirme Süresi
+config.buzzybeesbackport.campfire.cookTime.tooltip=Bir eşyanın pişmesinin birim zaman cinsinden ne kadar sürdüğü. 1.14'te 600'dür (30 saniye), bir ocağın üç katı.
+config.buzzybeesbackport.campfire.extraFoods=Ek Yiyecekler
+config.buzzybeesbackport.campfire.extraFoods.tooltip=Kamp ateşinin neleri pişirdiği. Varsayılan olarak: girdisi ve çıktısı yiyecek olan her ocak tarifi; bu, 1.14'ün kendi listesi (çiğ et, çiğ balık, patates) artı her modun çiğ yiyecekleridir. Varsayılanın dışarıda bıraktığı bir eşyayı 'modid:item' (ocağın pişireceği gibi pişirilir) ya da 'modid:item=modid:result' (o sonuca pişirilir) olarak ekle. Tek bir türü seçmek için ikisinden birinin sonuna ':meta' ekle, örn. 'minecraft:fish:1=minecraft:cooked_fish:1'.
+config.buzzybeesbackport.campfire.excludedFoods=Hariç Tutulan Yiyecekler
+config.buzzybeesbackport.campfire.excludedFoods.tooltip=Yukarıdaki kural pişirecek olsa bile kamp ateşinin reddettiği eşyalar, 'modid:item' ya da 'modid:item:meta' biçiminde.
+tile.buzzybeesbackport.campfire.name=Kamp Ateşi
+subtitles.buzzybeesbackport.block.campfire.crackle=Kamp Ateşi çatırdıyor
+
 # --- tweaks ---
 config.buzzybeesbackport.tweaks.endStoneBricks=End Taşı Tuğlası Sertliği
 config.buzzybeesbackport.tweaks.endStoneBricks.tooltip=End taşı tuğlalarını kazmak taş kadar sürer (sertlik 3) ve patlamalara taş kadar dayanır (9).
@@ -95,4 +111,20 @@ config.buzzybeesbackport.tweaks.bellRedstone=Çanlar Redstone ile Çalar
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=Bir çan redstone ile güç aldığında çalar.
 config.buzzybeesbackport.tweaks.splashTexts=1.15 Logo Altı Metinleri
 config.buzzybeesbackport.tweaks.splashTexts.tooltip=Ana menü, 1.15'in üç yeni logo altı metnini gösterebilir.
+config.buzzybeesbackport.tweaks.craftingShiftClick=Shift+Tıklama ile Üretim Izgarasına
+config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=Çalışma masasında envanterindeki bir yığına Shift+tıklama onu üretim ızgarasına taşır; envanterin diğer kısmına ise yalnızca ızgarada yer kalmadığında taşır.
+config.buzzybeesbackport.tweaks.elytraJump=Yükselirken Elitra Açma
+config.buzzybeesbackport.tweaks.elytraJump.tooltip=Elitra, bir zıplamanın hemen ardından, sen hâlâ yükselirken açılabilir.
+config.buzzybeesbackport.tweaks.toggleSneak=Eğilmeyi Aç/Kapat
+config.buzzybeesbackport.tweaks.toggleSneak.tooltip=İstemci: eğilme tuşu basılı tutulmak yerine eğilmeyi açıp kapatır.
+config.buzzybeesbackport.tweaks.toggleSprint=Koşmayı Aç/Kapat
+config.buzzybeesbackport.tweaks.toggleSprint.tooltip=İstemci: koşma tuşu basılı tutulmak yerine koşmayı açıp kapatır.
+config.buzzybeesbackport.tweaks.dispensedFireworks=Fırlatılan Havai Fişekler İleri Uçar
+config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=Bir fırlatıcıdan atılan havai fişek roketi, fırlatıcının baktığı yöne doğru dümdüz uçar.
+config.buzzybeesbackport.tweaks.advancementBees=Tarım ve Hayvancılık Gelişimlerinde Arılar
+config.buzzybeesbackport.tweaks.advancementBees.tooltip="İkişer İkişer" ayrıca arıların çiftleştirilmesini, "Dengeli Beslenme" ise ayrıca bir bal şişesini gerektirir.
+config.buzzybeesbackport.tweaks.parrotsWhileRiding=Papağanlar Omuzda Kalır
+config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Bir ata, tekneye, vagona ya da başka herhangi bir şeye binerken papağanlar omuzlarında kalır.
+config.buzzybeesbackport.tweaks.xpWithLoot=Tecrübe Ganimetle Birlikte Düşer
+config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Ölen bir canlı ya da oyuncu, tecrübesini ölüm animasyonundan sonra değil, ganimetiyle birlikte hemen düşürür.
 block.buzzybeesbackport.set_spawn=Yeniden canlanma noktası ayarlandı

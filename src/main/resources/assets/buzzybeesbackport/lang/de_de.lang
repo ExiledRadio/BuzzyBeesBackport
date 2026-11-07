@@ -27,6 +27,8 @@ config.buzzybeesbackport.compat=Kompatibilität
 config.buzzybeesbackport.compat.tooltip=Welten und Blöcke anderer Mods, die dieselben Dinge hinzufügen.
 config.buzzybeesbackport.compat.convertRemoved=Inhalte entfernter Mods umwandeln
 config.buzzybeesbackport.compat.convertRemoved.tooltip=Wandelt Blöcke, Gegenstände und Bienen um, die ein anderer Mod hinterlassen hat, der sie hinzugefügt hat, wenn dieser Mod aus einer Welt entfernt wird.
+config.buzzybeesbackport.compat.duplicates=Doppelte Blöcke
+config.buzzybeesbackport.compat.duplicates.tooltip=Wenn ein anderer installierter Mod dieselben Blöcke und Gegenstände hinzufügt: OURS blendet seine aus, THEIRS blendet unsere aus, BOTH blendet nichts aus.
 
 # --- honey ---
 advancements.buzzybeesbackport.honey_block_slide.description=Springe an einen Honigblock, um deinen Sturz abzufangen
@@ -66,6 +68,20 @@ tooltip.buzzybeesbackport.beehive.honey=Honig: %s / %s
 subtitles.buzzybeesbackport.entity.iron_golem.damage=Eisengolem wird beschädigt
 subtitles.buzzybeesbackport.entity.iron_golem.repair=Eisengolem wird repariert
 
+# --- campfire ---
+config.buzzybeesbackport.campfire=Lagerfeuer
+config.buzzybeesbackport.campfire.tooltip=Das Lagerfeuer, wenn Village & Pillage Backport nicht installiert ist.
+config.buzzybeesbackport.campfire.enabled=Aktiviert
+config.buzzybeesbackport.campfire.enabled.tooltip=Ob dieser Mod seine eigene Kopie des Lagerfeuers hinzufügt, wenn Village & Pillage Backport nicht installiert ist. Ist er installiert, wird dessen Lagerfeuer verwendet und dies bewirkt nichts.
+config.buzzybeesbackport.campfire.cookTime=Garzeit
+config.buzzybeesbackport.campfire.cookTime.tooltip=Wie lange ein Gegenstand zum Garen braucht, in Ticks. In 1.14 sind es 600 (30 Sekunden), dreimal so lang wie in einem Ofen.
+config.buzzybeesbackport.campfire.extraFoods=Zusätzliche Nahrung
+config.buzzybeesbackport.campfire.extraFoods.tooltip=Was das Lagerfeuer gart. Standardmäßig: jedes Ofenrezept, dessen Zutat und Ergebnis beide Nahrung sind, also die eigene Liste von 1.14 (rohes Fleisch, roher Fisch, Kartoffeln) plus die rohen Lebensmittel jedes Mods. Füge einen Gegenstand, den der Standard auslässt, als 'modid:item' hinzu (gegart wie im Ofen) oder als 'modid:item=modid:result' (zu diesem Ergebnis gegart). Hänge ':meta' an eines davon an, um eine Variante zu wählen, z. B. 'minecraft:fish:1=minecraft:cooked_fish:1'.
+config.buzzybeesbackport.campfire.excludedFoods=Ausgeschlossene Nahrung
+config.buzzybeesbackport.campfire.excludedFoods.tooltip=Gegenstände, die das Lagerfeuer ablehnt, obwohl die Regel oben sie garen würde, als 'modid:item' oder 'modid:item:meta'.
+tile.buzzybeesbackport.campfire.name=Lagerfeuer
+subtitles.buzzybeesbackport.block.campfire.crackle=Lagerfeuer knistert
+
 # --- tweaks ---
 config.buzzybeesbackport.tweaks.endStoneBricks=Härte von Endsteinziegeln
 config.buzzybeesbackport.tweaks.endStoneBricks.tooltip=Endsteinziegel brauchen zum Abbauen so lange wie Stein (Härte 3) und widerstehen Explosionen wie dieser (9).
@@ -95,4 +111,20 @@ config.buzzybeesbackport.tweaks.bellRedstone=Glocken läuten mit Redstone
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=Eine Glocke läutet, wenn sie mit Redstone aktiviert wird.
 config.buzzybeesbackport.tweaks.splashTexts=Menüsprüche aus 1.15
 config.buzzybeesbackport.tweaks.splashTexts.tooltip=Das Hauptmenü kann die drei neuen Menüsprüche aus 1.15 anzeigen.
+config.buzzybeesbackport.tweaks.craftingShiftClick=Umschalt-Klick ins Handwerksraster
+config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=An einer Werkbank verschiebt ein Umschalt-Klick auf einen Stapel in deinem Inventar diesen ins Handwerksraster, und nur dann in den anderen Teil des Inventars, wenn im Raster kein Platz ist.
+config.buzzybeesbackport.tweaks.elytraJump=Elytren beim Aufsteigen öffnen
+config.buzzybeesbackport.tweaks.elytraJump.tooltip=Elytren lassen sich direkt nach einem Sprung öffnen, während du noch aufsteigst.
+config.buzzybeesbackport.tweaks.toggleSneak=Schleichen umschalten
+config.buzzybeesbackport.tweaks.toggleSneak.tooltip=Client: Die Schleichen-Taste schaltet das Schleichen ein und aus, statt gehalten werden zu müssen.
+config.buzzybeesbackport.tweaks.toggleSprint=Sprinten umschalten
+config.buzzybeesbackport.tweaks.toggleSprint.tooltip=Client: Die Sprinten-Taste schaltet das Sprinten ein und aus, statt gehalten werden zu müssen.
+config.buzzybeesbackport.tweaks.dispensedFireworks=Geworfene Feuerwerksraketen fliegen geradeaus
+config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=Eine aus einem Werfer abgefeuerte Feuerwerksrakete fliegt geradeaus in die Richtung, in die der Werfer zeigt.
+config.buzzybeesbackport.tweaks.advancementBees=Bienen in Landwirtschafts-Fortschritten
+config.buzzybeesbackport.tweaks.advancementBees.tooltip=„Paarweise“ verlangt zusätzlich, Bienen zu vermehren, und „Ausgewogene Ernährung“ zusätzlich eine Honigflasche.
+config.buzzybeesbackport.tweaks.parrotsWhileRiding=Papageien bleiben auf den Schultern
+config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Papageien bleiben auf deinen Schultern, während du ein Pferd, ein Boot, eine Lore oder irgendetwas anderes reitest oder fährst.
+config.buzzybeesbackport.tweaks.xpWithLoot=Erfahrung fällt mit der Beute
+config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Eine sterbende Kreatur oder ein sterbender Spieler lässt die Erfahrung sofort zusammen mit der Beute fallen, statt erst nach der Todesanimation.
 block.buzzybeesbackport.set_spawn=Wiedereinstiegspunkt gesetzt

@@ -27,6 +27,8 @@ config.buzzybeesbackport.compat=Kompatybilność
 config.buzzybeesbackport.compat.tooltip=Światy i bloki z innych modów, które dodają to samo.
 config.buzzybeesbackport.compat.convertRemoved=Konwertuj zawartość usuniętego moda
 config.buzzybeesbackport.compat.convertRemoved.tooltip=Konwertuje bloki, przedmioty i pszczoły pozostawione przez inny mod, który je dodawał, gdy ten mod zostanie usunięty ze świata.
+config.buzzybeesbackport.compat.duplicates=Zduplikowane bloki
+config.buzzybeesbackport.compat.duplicates.tooltip=Gdy inny zainstalowany mod dodaje te same bloki i przedmioty: OURS ukrywa jego, THEIRS ukrywa nasze, BOTH niczego nie ukrywa.
 
 # --- honey ---
 advancements.buzzybeesbackport.honey_block_slide.description=Spowolnij upadek, ześlizgując się po bloku miodu
@@ -66,6 +68,20 @@ tooltip.buzzybeesbackport.beehive.honey=Miód: %s / %s
 subtitles.buzzybeesbackport.entity.iron_golem.damage=Żelazny golem pęka
 subtitles.buzzybeesbackport.entity.iron_golem.repair=Żelazny golem naprawiony
 
+# --- campfire ---
+config.buzzybeesbackport.campfire=Ognisko
+config.buzzybeesbackport.campfire.tooltip=Ognisko, gdy Village & Pillage Backport nie jest zainstalowany.
+config.buzzybeesbackport.campfire.enabled=Włączone
+config.buzzybeesbackport.campfire.enabled.tooltip=Czy ten mod dodaje własną kopię ogniska, gdy Village & Pillage Backport nie jest zainstalowany. Gdy jest zainstalowany, używane jest jego ognisko, a to ustawienie nic nie robi.
+config.buzzybeesbackport.campfire.cookTime=Czas pieczenia
+config.buzzybeesbackport.campfire.cookTime.tooltip=Jak długo piecze się jeden przedmiot, w tikach. W 1.14 to 600 (30 sekund), trzy razy dłużej niż w piecu.
+config.buzzybeesbackport.campfire.extraFoods=Dodatkowe jedzenie
+config.buzzybeesbackport.campfire.extraFoods.tooltip=Co piecze ognisko. Domyślnie: każda receptura pieca, której składnik i wynik są jedzeniem, czyli lista z 1.14 (surowe mięso, surowe ryby, ziemniaki) plus surowe jedzenie z każdego moda. Dodaj przedmiot pominięty domyślnie jako 'modid:item' (pieczony tak jak w piecu) lub 'modid:item=modid:result' (pieczony na ten wynik). Dopisz ':meta' po którymkolwiek z nich, by wybrać jeden wariant, np. 'minecraft:fish:1=minecraft:cooked_fish:1'.
+config.buzzybeesbackport.campfire.excludedFoods=Wykluczone jedzenie
+config.buzzybeesbackport.campfire.excludedFoods.tooltip=Przedmioty, których ognisko nie przyjmie, choć reguła powyżej by je upiekła, jako 'modid:item' lub 'modid:item:meta'.
+tile.buzzybeesbackport.campfire.name=Ognisko
+subtitles.buzzybeesbackport.block.campfire.crackle=Ognisko trzaska
+
 # --- tweaks ---
 config.buzzybeesbackport.tweaks.endStoneBricks=Twardość endowych kamiennych cegieł
 config.buzzybeesbackport.tweaks.endStoneBricks.tooltip=Endowe kamienne cegły wydobywa się tak długo jak kamień (twardość 3) i są tak samo odporne na wybuchy (9).
@@ -95,4 +111,20 @@ config.buzzybeesbackport.tweaks.bellRedstone=Dzwony dzwonią od redstone
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=Dzwon dzwoni, gdy zostanie zasilony redstone.
 config.buzzybeesbackport.tweaks.splashTexts=Przytytuły z 1.15
 config.buzzybeesbackport.tweaks.splashTexts.tooltip=Ekran tytułowy może wyświetlać trzy nowe przytytuły z 1.15.
+config.buzzybeesbackport.tweaks.craftingShiftClick=Shift+klik do siatki wytwarzania
+config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=Przy stole rzemieślniczym Shift+klik na stos w ekwipunku przenosi go do siatki wytwarzania, a do drugiej części ekwipunku tylko wtedy, gdy w siatce nie ma miejsca.
+config.buzzybeesbackport.tweaks.elytraJump=Otwieranie elytr podczas wznoszenia
+config.buzzybeesbackport.tweaks.elytraJump.tooltip=Elytry można otworzyć tuż po skoku, gdy jeszcze się wznosisz.
+config.buzzybeesbackport.tweaks.toggleSneak=Przełączanie skradania
+config.buzzybeesbackport.tweaks.toggleSneak.tooltip=Klient: klawisz skradania włącza i wyłącza skradanie zamiast wymagać przytrzymania.
+config.buzzybeesbackport.tweaks.toggleSprint=Przełączanie biegu
+config.buzzybeesbackport.tweaks.toggleSprint.tooltip=Klient: klawisz biegu włącza i wyłącza bieg zamiast wymagać przytrzymania.
+config.buzzybeesbackport.tweaks.dispensedFireworks=Fajerwerki z dozownika lecą prosto
+config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=Fajerwerk wystrzelony z dozownika leci prosto w kierunku, w którym zwrócony jest dozownik.
+config.buzzybeesbackport.tweaks.advancementBees=Pszczoły w postępach z działu Rolnictwo
+config.buzzybeesbackport.tweaks.advancementBees.tooltip=„Zakochana para” wymaga też rozmnożenia pszczół, a „Zbilansowana dieta” wymaga też butelki miodu.
+config.buzzybeesbackport.tweaks.parrotsWhileRiding=Papugi zostają na ramionach
+config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Papugi zostają na twoich ramionach, gdy jedziesz na koniu, łódką, wagonikiem czy czymkolwiek innym.
+config.buzzybeesbackport.tweaks.xpWithLoot=Doświadczenie wypada razem z łupem
+config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Umierające stworzenie lub gracz od razu upuszcza swoje doświadczenie razem z łupem, zamiast po animacji śmierci.
 block.buzzybeesbackport.set_spawn=Ustawiono punkt odradzania

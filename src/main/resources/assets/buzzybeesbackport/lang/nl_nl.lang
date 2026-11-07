@@ -27,6 +27,8 @@ config.buzzybeesbackport.compat=Compatibiliteit
 config.buzzybeesbackport.compat.tooltip=Werelden en blokken van andere mods die dezelfde dingen toevoegen.
 config.buzzybeesbackport.compat.convertRemoved=Inhoud van verwijderde mod omzetten
 config.buzzybeesbackport.compat.convertRemoved.tooltip=Zet blokken, voorwerpen en bijen om die zijn achtergelaten door een andere mod die ze toevoegde, wanneer die mod uit een wereld wordt verwijderd.
+config.buzzybeesbackport.compat.duplicates=Dubbele blokken
+config.buzzybeesbackport.compat.duplicates.tooltip=Als een andere geïnstalleerde mod dezelfde blokken en voorwerpen toevoegt: OURS verbergt die van hen, THEIRS verbergt die van ons, BOTH verbergt niets.
 
 # --- honey ---
 advancements.buzzybeesbackport.honey_block_slide.description=Spring tegen een honingblok om je val te breken
@@ -66,6 +68,20 @@ tooltip.buzzybeesbackport.beehive.honey=Honing: %s / %s
 subtitles.buzzybeesbackport.entity.iron_golem.damage=IJzergolem breekt
 subtitles.buzzybeesbackport.entity.iron_golem.repair=IJzergolem wordt gerepareerd
 
+# --- campfire ---
+config.buzzybeesbackport.campfire=Kampvuur
+config.buzzybeesbackport.campfire.tooltip=Het kampvuur, als Village & Pillage Backport niet geïnstalleerd is.
+config.buzzybeesbackport.campfire.enabled=Ingeschakeld
+config.buzzybeesbackport.campfire.enabled.tooltip=Of deze mod zijn eigen kopie van het kampvuur toevoegt als Village & Pillage Backport niet geïnstalleerd is. Is die wel geïnstalleerd, dan wordt het kampvuur daarvan gebruikt en doet dit niets.
+config.buzzybeesbackport.campfire.cookTime=Gaartijd
+config.buzzybeesbackport.campfire.cookTime.tooltip=Hoe lang het duurt om één voorwerp te garen, in ticks. Die van 1.14 is 600 (30 seconden), drie keer zo lang als een oven.
+config.buzzybeesbackport.campfire.extraFoods=Extra voedsel
+config.buzzybeesbackport.campfire.extraFoods.tooltip=Wat het kampvuur gaart. Standaard: elk ovenrecept waarvan invoer en uitvoer allebei voedsel zijn, wat de eigen lijst van 1.14 is (rauw vlees, rauwe vis, aardappels) plus het rauwe voedsel van elke mod. Voeg een voorwerp dat de standaard weglaat toe als 'modid:item' (gegaard zoals de oven het zou doen) of 'modid:item=modid:result' (gegaard tot dat resultaat). Zet ':meta' achter een van beide om één variant te kiezen, bijv. 'minecraft:fish:1=minecraft:cooked_fish:1'.
+config.buzzybeesbackport.campfire.excludedFoods=Uitgesloten voedsel
+config.buzzybeesbackport.campfire.excludedFoods.tooltip=Voorwerpen die het kampvuur weigert, ook al zou de regel hierboven ze garen, als 'modid:item' of 'modid:item:meta'.
+tile.buzzybeesbackport.campfire.name=Kampvuur
+subtitles.buzzybeesbackport.block.campfire.crackle=Kampvuur knettert
+
 # --- tweaks ---
 config.buzzybeesbackport.tweaks.endStoneBricks=Hardheid van endblokstenen
 config.buzzybeesbackport.tweaks.endStoneBricks.tooltip=Endblokstenen kosten net zo lang om te delven als steen (hardheid 3) en zijn even bestand tegen explosies (9).
@@ -95,4 +111,20 @@ config.buzzybeesbackport.tweaks.bellRedstone=Bellen luiden met redstone
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=Een bel luidt wanneer hij door redstone wordt aangestuurd.
 config.buzzybeesbackport.tweaks.splashTexts=Splashteksten uit 1.15
 config.buzzybeesbackport.tweaks.splashTexts.tooltip=Het hoofdmenu kan de drie nieuwe splashteksten uit 1.15 tonen.
+config.buzzybeesbackport.tweaks.craftingShiftClick=Shift-klik naar het vervaardigingsraster
+config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=Bij een werkbank verplaatst een shift-klik op een stapel in je inventaris die naar het vervaardigingsraster, en alleen naar het andere deel van de inventaris als het raster geen ruimte heeft.
+config.buzzybeesbackport.tweaks.elytraJump=Dekschild openen tijdens het stijgen
+config.buzzybeesbackport.tweaks.elytraJump.tooltip=Een dekschild kan direct na een sprong worden geopend, terwijl je nog stijgt.
+config.buzzybeesbackport.tweaks.toggleSneak=Sluipen omschakelen
+config.buzzybeesbackport.tweaks.toggleSneak.tooltip=Client: de sluiptoets zet sluipen aan en uit in plaats van dat je hem ingedrukt moet houden.
+config.buzzybeesbackport.tweaks.toggleSprint=Rennen omschakelen
+config.buzzybeesbackport.tweaks.toggleSprint.tooltip=Client: de rentoets zet rennen aan en uit in plaats van dat je hem ingedrukt moet houden.
+config.buzzybeesbackport.tweaks.dispensedFireworks=Vuurpijlen uit dispensers vliegen recht vooruit
+config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=Een vuurpijl die door een dispenser wordt afgevuurd, vliegt recht in de richting waarin de dispenser kijkt.
+config.buzzybeesbackport.tweaks.advancementBees=Bijen in agricultuurvooruitgangen
+config.buzzybeesbackport.tweaks.advancementBees.tooltip='Twee bij twee' vereist ook dat je bijen fokt, en 'Een gebalanceerd dieet' vereist ook een honingfles.
+config.buzzybeesbackport.tweaks.parrotsWhileRiding=Papegaaien blijven op schouders
+config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Papegaaien blijven op je schouders zitten terwijl je op een paard, in een boot, in een mijnkar of op iets anders rijdt.
+config.buzzybeesbackport.tweaks.xpWithLoot=Ervaring valt samen met buit
+config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Een stervend wezen of stervende speler laat zijn ervaring meteen vallen, samen met zijn buit, in plaats van na de sterfanimatie.
 block.buzzybeesbackport.set_spawn=Respawnpunt ingesteld
