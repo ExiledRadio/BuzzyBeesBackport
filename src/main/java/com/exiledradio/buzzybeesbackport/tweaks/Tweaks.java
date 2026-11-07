@@ -53,7 +53,9 @@ import java.util.WeakHashMap;
 /**
  * Stream X: 1.15's smaller changes to blocks, items and mobs, each behind its own {@code tweaks} switch.
  * The player-facing rules (beds, game rules, Creative eating) are in {@link PlayerTweaks}, the dispensers in
- * {@link DispenserTweaks}, the bell in {@link BellRedstone}.
+ * {@link DispenserTweaks}, the bell in {@link BellRedstone}. The ones that need a bytecode patch
+ * ({@code docs/PATCHES.md}, P2-P5) have their hooks in {@link CraftingShift}, {@link ElytraStart},
+ * {@link DispensedFireworks} and {@link ShoulderParrots}; the advancements are {@link AdvancementTweaks}.
  */
 @Mod.EventBusSubscriber(modid = BuzzyBeesBackport.MOD_ID)
 public final class Tweaks {
@@ -82,6 +84,9 @@ public final class Tweaks {
         }
         if (ModConfig.tweaks.dispensers) {
             DispenserTweaks.register();
+        }
+        if (ModConfig.tweaks.dispensedFireworks) {
+            DispensedFireworks.register();
         }
     }
 
