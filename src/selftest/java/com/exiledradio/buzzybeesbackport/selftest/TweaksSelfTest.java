@@ -154,8 +154,14 @@ public final class TweaksSelfTest implements SelfTest {
         ItemStack egg = new ItemStack(Items.SPAWN_EGG, 2);
         ItemMonsterPlacer.applyEntityIdToItemStack(egg, EntityList.getKey(EntityZombie.class));
         player.setHeldItem(EnumHand.MAIN_HAND, egg);
+        int before = 0;
+        for (EntityZombie z : c.world.getEntitiesWithinAABB(EntityZombie.class, adult.getEntityBoundingBox().grow(2))) {
+            if (z.isChild() && !z.isDead) {
+                before++;
+            }
+        }
         c.eq(EnumActionResult.SUCCESS, player.interactOn(adult, EnumHand.MAIN_HAND), "a zombie egg on a zombie is used");
-        int babies = 0;
+        int babies = -before;
         for (EntityZombie z : c.world.getEntitiesWithinAABB(EntityZombie.class, adult.getEntityBoundingBox().grow(2))) {
             if (z.isChild() && !z.isDead) {
                 babies++;
