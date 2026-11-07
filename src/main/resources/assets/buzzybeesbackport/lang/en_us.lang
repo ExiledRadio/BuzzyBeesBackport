@@ -60,3 +60,7 @@ subtitles.buzzybeesbackport.entity.bee.pollinate=Bee buzzes happily
 subtitles.buzzybeesbackport.entity.bee.sting=Bee stings
 tooltip.buzzybeesbackport.beehive.bees=Bees: %s / %s
 tooltip.buzzybeesbackport.beehive.honey=Honey: %s / %s
+
+# --- golems ---
+subtitles.buzzybeesbackport.entity.iron_golem.damage=Iron Golem breaks
+subtitles.buzzybeesbackport.entity.iron_golem.repair=Iron Golem repaired

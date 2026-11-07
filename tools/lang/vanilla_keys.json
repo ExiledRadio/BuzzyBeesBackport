@@ -54,6 +54,8 @@
     "subtitles.buzzybeesbackport.entity.bee.loop_aggressive": "subtitles.entity.bee.loop_aggressive",
     "subtitles.buzzybeesbackport.entity.bee.pollinate": "subtitles.entity.bee.pollinate",
     "subtitles.buzzybeesbackport.entity.bee.sting": "subtitles.entity.bee.sting",
+    "subtitles.buzzybeesbackport.entity.iron_golem.damage": "subtitles.entity.iron_golem.damage",
+    "subtitles.buzzybeesbackport.entity.iron_golem.repair": "subtitles.entity.iron_golem.repair",
     "subtitles.buzzybeesbackport.item.honey_bottle.drink": "subtitles.item.honey_bottle.drink",
     "tile.buzzybeesbackport.bee_nest.name": "block.minecraft.bee_nest",
     "tile.buzzybeesbackport.beehive.name": "block.minecraft.beehive",

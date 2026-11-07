@@ -425,5 +425,34 @@
       }
     ],
     "subtitle": "subtitles.buzzybeesbackport.block.beehive.drip"
+  },
+  "entity.iron_golem.damage": {
+    "sounds": [
+      {
+        "name": "buzzybeesbackport:mob/irongolem/damage1",
+        "volume": 0.8
+      },
+      {
+        "name": "buzzybeesbackport:mob/irongolem/damage1",
+        "pitch": 0.8,
+        "volume": 0.8
+      },
+      {
+        "name": "buzzybeesbackport:mob/irongolem/damage2",
+        "volume": 0.8
+      },
+      {
+        "name": "buzzybeesbackport:mob/irongolem/damage2",
+        "pitch": 0.8,
+        "volume": 0.8
+      }
+    ],
+    "subtitle": "subtitles.buzzybeesbackport.entity.iron_golem.damage"
+  },
+  "entity.iron_golem.repair": {
+    "sounds": [
+      "buzzybeesbackport:mob/irongolem/repair"
+    ],
+    "subtitle": "subtitles.buzzybeesbackport.entity.iron_golem.repair"
   }
 }
