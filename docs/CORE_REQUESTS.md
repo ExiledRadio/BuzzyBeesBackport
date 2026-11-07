@@ -79,3 +79,10 @@ Wanted: `FutureMcTable.Contributor.tileData((TileEntity ours, NBTTagCompound the
 
 **Meanwhile**: `migrate/FutureMcBees` covers the removed-mod path itself, after Core's pass on the same
 chunk-load event. `/futuremc convert` with the other mod installed still loses bees and honey inside hives.
+
+## 6. The campfire in the ownership table
+
+This mod now carries an identical copy of Village & Pillage's campfire (`buzzybeesbackport:campfire`), registered
+only without it. `BlockOwnership` should list `campfire` as Village & Pillage's, and the owner-side remap of
+other mods' copies (the half of Rule 1 not built yet) should include it: a world with our campfires stops at
+FML's missing-blocks prompt when Village & Pillage is added later. Same gap as Update Aquatic's copies.
