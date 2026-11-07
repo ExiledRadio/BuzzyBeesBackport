@@ -258,6 +258,34 @@ public final class HoneySelfTest implements SelfTest {
         BlockPistonStructureHelper helper = new BlockPistonStructureHelper(c.world, piston, EnumFacing.EAST, true);
         c.ok(helper.canMove() && helper.getBlocksToMove().contains(piston.east().north()), "honey drags the stone beside it");
 
+        // Patch P1: honey and slime do not stick to each other (1.15), in either direction.
+        c.ok(com.exiledradio.buzzybeesbackport.asm.PistonStickTransformer.applied, "patch P1 applied to the piston helper");
+        c.world.setBlockState(piston.east().south(), Blocks.SLIME_BLOCK.getDefaultState(), 2);
+        helper = new BlockPistonStructureHelper(c.world, piston, EnumFacing.EAST, true);
+        c.ok(helper.canMove() && !helper.getBlocksToMove().contains(piston.east().south()), "honey leaves the slime beside it");
+        c.ok(helper.getBlocksToMove().contains(piston.east().north()), "and still drags the stone");
+        // Slime pushed, honey beside it: the honey stays.
+        BlockPos p2 = c.area().add(4, 1, 4);
+        c.world.setBlockState(p2, Blocks.PISTON.getDefaultState().withProperty(net.minecraft.block.BlockPistonBase.FACING, EnumFacing.EAST), 2);
+        c.world.setBlockState(p2.east(), Blocks.SLIME_BLOCK.getDefaultState(), 2);
+        c.world.setBlockState(p2.east().north(), HoneyContent.honeyBlock.getDefaultState(), 2);
+        c.world.setBlockState(p2.east().south(), Blocks.SLIME_BLOCK.getDefaultState(), 2);
+        helper = new BlockPistonStructureHelper(c.world, p2, EnumFacing.EAST, true);
+        c.ok(helper.canMove() && !helper.getBlocksToMove().contains(p2.east().north()), "slime leaves the honey beside it");
+        c.ok(helper.getBlocksToMove().contains(p2.east().south()), "and still drags slime");
+        // The pull-behind line: honey dragged sideways pulls the blocks behind it, but not slime.
+        BlockPos p3 = c.area().add(4, 1, 4);
+        c.world.setBlockState(p3, Blocks.PISTON.getDefaultState().withProperty(net.minecraft.block.BlockPistonBase.FACING, EnumFacing.EAST), 2);
+        c.world.setBlockState(p3.east(), HoneyContent.honeyBlock.getDefaultState(), 2);
+        c.world.setBlockState(p3.east().north(), HoneyContent.honeyBlock.getDefaultState(), 2);
+        c.world.setBlockState(p3.north(), Blocks.SLIME_BLOCK.getDefaultState(), 2);
+        helper = new BlockPistonStructureHelper(c.world, p3, EnumFacing.EAST, true);
+        c.ok(helper.canMove() && helper.getBlocksToMove().contains(p3.east().north()), "honey drags the honey beside it");
+        c.ok(!helper.getBlocksToMove().contains(p3.north()), "which does not pull the slime behind it");
+        c.world.setBlockState(p3.north(), HoneyContent.honeyBlock.getDefaultState(), 2);
+        helper = new BlockPistonStructureHelper(c.world, p3, EnumFacing.EAST, true);
+        c.ok(helper.canMove() && helper.getBlocksToMove().contains(p3.north()), "but does pull honey behind it");
+
         carryAndLaunch(c, true);
         carryAndLaunch(c, false);
     }

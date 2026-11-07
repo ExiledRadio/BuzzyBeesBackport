@@ -79,8 +79,8 @@ numbers.
     particles; the *Sticky Situation* advancement on the first slide;
   - landing on it takes a fifth of the fall damage (`onFallenUpon`);
   - mobs avoid walking on it (path node cost), it does not conduct redstone (not a normal cube);
-  - pistons move it and the blocks touching it like slime (Forge's `isStickyBlock`). See *Still open* 1: it
-    also sticks to slime here;
+  - pistons move it and the blocks touching it like slime (Forge's `isStickyBlock`), but not slime: patch
+    P1 (`docs/PATCHES.md`);
   - an entity on a moving honey block moves with it (1.12.2's piston already carries entities);
   - stickiness through carpets and slabs (the collision under them is checked one block down).
 - **Honeycomb block**: 4 honeycombs, hardness 0.6, decorative.
@@ -222,7 +222,8 @@ As Update Aquatic's plan, which this mod follows exactly:
 - **`common/`**: read freely; changes are the integrator's (this session).
 - **Registration** through `common/Content`; other streams' items with `Owners.ours("name")`.
 - **Docs**: `docs/streams/<stream>.md` with changelog section, how it works, tested, not tested.
-- **No mixins, no coremod, no ASM.** A part that needs patching stops and goes to *Still open*.
+- **Closest to vanilla.** Bytecode patches are allowed where vanilla parity needs them: this mod's own
+  coremod (`asm`, one transformer per patch, each in `docs/PATCHES.md`), no MixinBooter.
 - **Client-only types** only in `client/` classes, reached by a call that names no client type.
 
 ## Build and test
@@ -242,12 +243,10 @@ As Update Aquatic's plan, which this mod follows exactly:
 - **UA**: `doInsomnia` stops its phantoms; spawn eggs make baby drowned.
 - **Backport Core**: ownership declarations, Future MC tables, (later) a shared smoke-source and flower registry.
 
-## Still open (the user's call)
+## Decided
 
-1. **Honey and slime stick to each other here.** In 1.15 a honey block and a slime block side by side do not pull
-   each other, which is how flying machines split. 1.12.2 Forge only asks a block "are you sticky?", with no
-   neighbor, so without patching `BlockPistonStructureHelper` honey glues to slime. Everything else about honey
-   works without patches. Options: accept the difference (default, planned), or allow one small patch for it.
+1. **Honey and slime do not stick to each other**, as in vanilla: the family's rule is closest to vanilla,
+   with bytecode patches where needed (2026-11-07). Patch P1 in `docs/PATCHES.md`.
 
 ## Order
 
