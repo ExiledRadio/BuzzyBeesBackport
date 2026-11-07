@@ -1,0 +1,10 @@
+{
+  "parent": "buzzybeesbackport:block/orientable_with_bottom",
+  "textures": {
+    "top": "buzzybeesbackport:block/bee_nest_top",
+    "bottom": "buzzybeesbackport:block/bee_nest_bottom",
+    "side": "buzzybeesbackport:block/bee_nest_side",
+    "front": "buzzybeesbackport:block/bee_nest_front_honey",
+    "particle": "buzzybeesbackport:block/bee_nest_side"
+  }
+}

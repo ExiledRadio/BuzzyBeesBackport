@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:husbandry/root",
+  "display": {
+    "icon": {
+      "item": "buzzybeesbackport:honey_bottle"
+    },
+    "title": {
+      "translate": "advancements.buzzybeesbackport.safely_harvest_honey.title"
+    },
+    "description": {
+      "translate": "advancements.buzzybeesbackport.safely_harvest_honey.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "safely_harvest_honey": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "safely_harvest_honey"
+    ]
+  ]
+}

@@ -39,6 +39,10 @@ def candidates(key):
         return ["item.minecraft." + name, "block.minecraft." + name]
     if key.startswith("subtitles.%s." % M):
         return ["subtitles." + key[len("subtitles.%s." % M):]]
+    if key.startswith("entity.%s." % M) and key.endswith(".name"):
+        return ["entity.minecraft." + key[len("entity.%s." % M):-len(".name")]]
+    if key.startswith("death.attack.%s." % M):
+        return ["death.attack." + key[len("death.attack.%s." % M):]]
     if key.startswith("advancements.%s." % M):
         # Our advancements sit in vanilla's tabs under our own keys: advancements.<modid>.<name>.title.
         rest = key[len("advancements.%s." % M):]

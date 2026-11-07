@@ -34,3 +34,27 @@ tile.buzzybeesbackport.honey_block.name=Honey Block
 tile.buzzybeesbackport.honeycomb_block.name=Honeycomb Block
 subtitles.buzzybeesbackport.block.honey_block.slide=Sliding down a honey block
 subtitles.buzzybeesbackport.item.honey_bottle.drink=Gulping
+
+# --- bees ---
+advancements.buzzybeesbackport.safely_harvest_honey.description=Use a Campfire to collect Honey from a Beehive using a Bottle without aggravating the bees
+advancements.buzzybeesbackport.safely_harvest_honey.title=Bee Our Guest
+advancements.buzzybeesbackport.silk_touch_nest.description=Move a Bee Nest, with 3 bees inside, using Silk Touch
+advancements.buzzybeesbackport.silk_touch_nest.title=Total Beelocation
+death.attack.buzzybeesbackport.sting.player=%1$s was stung to death by %2$s
+death.attack.buzzybeesbackport.sting=%1$s was stung to death
+entity.buzzybeesbackport.bee.name=Bee
+tile.buzzybeesbackport.bee_nest.name=Bee Nest
+tile.buzzybeesbackport.beehive.name=Beehive
+subtitles.buzzybeesbackport.block.beehive.drip=Honey drips
+subtitles.buzzybeesbackport.block.beehive.enter=Bee enters hive
+subtitles.buzzybeesbackport.block.beehive.exit=Bee leaves hive
+subtitles.buzzybeesbackport.block.beehive.shear=Shears scrape
+subtitles.buzzybeesbackport.block.beehive.work=Bees work
+subtitles.buzzybeesbackport.entity.bee.death=Bee dies
+subtitles.buzzybeesbackport.entity.bee.hurt=Bee hurts
+subtitles.buzzybeesbackport.entity.bee.loop=Bee buzzes
+subtitles.buzzybeesbackport.entity.bee.loop_aggressive=Bee buzzes angrily
+subtitles.buzzybeesbackport.entity.bee.pollinate=Bee buzzes happily
+subtitles.buzzybeesbackport.entity.bee.sting=Bee stings
+tooltip.buzzybeesbackport.beehive.bees=Bees: %s / %s
+tooltip.buzzybeesbackport.beehive.honey=Honey: %s / %s

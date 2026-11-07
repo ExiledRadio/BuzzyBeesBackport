@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "minecraft:item_exists",
+      "item": "buzzybeesbackport:honeycomb"
+    },
+    {
+      "type": "minecraft:item_exists",
+      "item": "buzzybeesbackport:beehive"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "HHH",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "type": "forge:ore_dict",
+      "ore": "plankWood"
+    },
+    "H": {
+      "item": "buzzybeesbackport:honeycomb"
+    }
+  },
+  "result": {
+    "item": "buzzybeesbackport:beehive"
+  }
+}

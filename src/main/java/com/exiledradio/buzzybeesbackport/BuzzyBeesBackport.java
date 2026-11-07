@@ -56,6 +56,7 @@ public final class BuzzyBeesBackport {
 
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
+        com.exiledradio.buzzybeesbackport.bee.BeeContent.init();
     }
 
     @Mod.EventHandler

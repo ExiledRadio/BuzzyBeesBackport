@@ -35,6 +35,7 @@ public final class ClientSetup {
     public static void init() {
         MinecraftForge.EVENT_BUS.register(new ClientSetup());
         com.exiledradio.buzzybeesbackport.honey.client.HoneyClient.init();
+        com.exiledradio.buzzybeesbackport.bee.client.BeeClient.init();
     }
 
     @SubscribeEvent
