@@ -13,7 +13,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
  * <pre>
  *   0-4   common          15-19 nests         30-34 migrate
  *   5-9   honey           20-24 golems
- *   10-14 bees            25-29 tweaks
+ *   10-14 bees            25-29 tweaks        35-39 campfire
  * </pre>
  *
  * <p>The channel name is short because Forge caps channel names at 20 characters, one fewer than the
@@ -31,5 +31,7 @@ public final class NetworkHandler {
     public static void init() {
         channel = NetworkRegistry.INSTANCE.newSimpleChannel(CHANNEL);
         // Streams register their packets below, in id order.
+        channel.registerMessage(com.exiledradio.buzzybeesbackport.campfire.PacketCampfireDowse.Handler.class,
+                com.exiledradio.buzzybeesbackport.campfire.PacketCampfireDowse.class, 35, net.minecraftforge.fml.relauncher.Side.CLIENT);
     }
 }

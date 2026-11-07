@@ -17,11 +17,13 @@ import java.util.function.Predicate;
  * What calms bees under a hive: 1.15's {@code CampfireBlock.isSmokeyPos}, and fire directly beneath.
  *
  * <p>The campfire is Village &amp; Pillage's (Rule 2: used when it is installed, read by name and its
- * {@code lit} property). Other mods add theirs - Nether Update's soul campfire - with {@link #addSource}.
+ * {@code lit} property), or without it this mod's identical copy, read the same way. Other mods add theirs - Nether Update's soul campfire - with {@link #addSource}.
  */
 public final class BeeSmoke {
 
     private static final ResourceLocation CAMPFIRE = new ResourceLocation("villagerbackport", "campfire");
+    /** This mod's identical copy of it, registered when Village &amp; Pillage is absent. */
+    private static final ResourceLocation OUR_CAMPFIRE = new ResourceLocation("buzzybeesbackport", "campfire");
     private static final List<Predicate<IBlockState>> SOURCES = new ArrayList<Predicate<IBlockState>>();
     /** 1.15's smoke column: a solid block that fills the middle of the column stops the smoke. */
     private static final AxisAlignedBB COLUMN = new AxisAlignedBB(6.0D / 16, 0.0D, 6.0D / 16, 10.0D / 16, 1.0D, 10.0D / 16);
@@ -37,7 +39,7 @@ public final class BeeSmoke {
     /** @return true for a lit campfire */
     public static boolean isSmokeSource(IBlockState state) {
         Block block = state.getBlock();
-        if (CAMPFIRE.equals(block.getRegistryName())) {
+        if (CAMPFIRE.equals(block.getRegistryName()) || OUR_CAMPFIRE.equals(block.getRegistryName())) {
             for (IProperty<?> p : state.getPropertyKeys()) {
                 if ("lit".equals(p.getName())) {
                     return Boolean.TRUE.equals(state.getValue(p));

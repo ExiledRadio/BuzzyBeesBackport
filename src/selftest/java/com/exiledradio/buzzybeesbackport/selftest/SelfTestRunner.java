@@ -49,6 +49,7 @@ public final class SelfTestRunner {
             new NestSelfTest(),
             new GolemSelfTest(),
             new TweaksSelfTest(),
+            new CampfireSelfTest(),
     };
 
     private final List<String> wanted;

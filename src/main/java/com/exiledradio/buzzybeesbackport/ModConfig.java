@@ -49,6 +49,10 @@ public final class ModConfig {
     @Config.Comment("Worlds and blocks from other mods that add the same things.")
     public static final Compat compat = new Compat();
 
+    @Config.LangKey("config.buzzybeesbackport.campfire")
+    @Config.Comment("The campfire, when Village & Pillage Backport is not installed.")
+    public static final Campfire campfire = new Campfire();
+
     // ------------------------------------------------------------------------------------------
     // Categories. Each stream owns exactly one.
     // ------------------------------------------------------------------------------------------
@@ -151,6 +155,33 @@ public final class ModConfig {
         @Config.Comment("Convert blocks, items and bees left behind by another mod that added them, when that mod is removed from a world.")
         @Config.LangKey("config.buzzybeesbackport.compat.convertRemoved")
         public boolean convertRemoved = true;
+    }
+
+    /** Mirrors Village &amp; Pillage's own campfire category; the copied campfire classes read these. */
+    public static final class Campfire {
+        @Config.RequiresMcRestart
+        @Config.Comment({"Whether this mod adds its copy of the campfire when Village & Pillage Backport is not installed.",
+                "With it installed, its campfire is used and this does nothing."})
+        @Config.LangKey("config.buzzybeesbackport.campfire.enabled")
+        public boolean enabled = true;
+
+        @Config.Comment({"How long one item takes to cook, in ticks. 1.14's is 600 (30 seconds), three times a furnace."})
+        @Config.RangeInt(min = 1, max = 72000)
+        @Config.LangKey("config.buzzybeesbackport.campfire.cookTime")
+        public int cookTime = 600;
+
+        @Config.Comment({"What the campfire cooks. By default: every furnace recipe whose input and output are both food,",
+                "which is 1.14's own list (raw meat, raw fish, potatoes) plus any mod's raw foods.",
+                "Add an item the default leaves out as 'modid:item' (cooked as the furnace would) or",
+                "'modid:item=modid:result' (cooked into that). Add ':meta' after either to pick one variant,",
+                "e.g. 'minecraft:fish:1=minecraft:cooked_fish:1'."})
+        @Config.LangKey("config.buzzybeesbackport.campfire.extraFoods")
+        public String[] extraFoods = {};
+
+        @Config.Comment({"Items the campfire refuses, even though the rule above would cook them, as 'modid:item' or",
+                "'modid:item:meta'."})
+        @Config.LangKey("config.buzzybeesbackport.campfire.excludedFoods")
+        public String[] excludedFoods = {};
     }
 
     // ------------------------------------------------------------------------------------------
