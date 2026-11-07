@@ -11,7 +11,7 @@ Package `honey`. Config `honey` (`enabled`). Built in the first session.
     bottles. Walking on it is slow and jumping from it is half as high, even through a carpet or slab on
     top. Fall against its side and you slide down slowly instead of falling; land on it and you take a fifth
     of the fall damage. Pistons move it and everything touching it, like slime, and whatever stands on it
-    rides along; it doesn't bounce things the way slime does. It doesn't carry redstone.
+    rides along; it doesn't bounce things the way slime does, and honey and slime don't stick to each other. It doesn't carry redstone.
 *   Advancement *Sticky Situation* for sliding down a honey block.
 
 ## How it works
@@ -34,7 +34,7 @@ Package `honey`. Config `honey` (`enabled`). Built in the first session.
     1.15's honey sound instead, through `PlaySoundAtEntityEvent`.
 *   **Advancement**: 1.12.2 has no slide trigger, so `common/Advancements.grant` gives it from the slide
     code; its criterion is `minecraft:impossible`, and it sits in vanilla's Adventure tab.
-*   **Known difference** (*Still open* 1 in the plan): honey and slime stick to each other here. 1.12.2's
+*   **Honey and slime don't stick to each other**, as 1.15: patch P1 (`docs/PATCHES.md`), since 1.12.2's
     piston only asks a block whether it is sticky, not what it touches.
 
 ## Tested headlessly
