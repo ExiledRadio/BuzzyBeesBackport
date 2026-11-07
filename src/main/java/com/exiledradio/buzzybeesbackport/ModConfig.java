@@ -1,0 +1,113 @@
+package com.exiledradio.buzzybeesbackport;
+
+import net.minecraftforge.common.config.Config;
+import net.minecraftforge.common.config.ConfigManager;
+import net.minecraftforge.fml.client.event.ConfigChangedEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+/**
+ * Configuration: one category per stream, each with an {@code enabled} switch.
+ *
+ * <h2>Rules for streams</h2>
+ * <ul>
+ *   <li>A stream edits only inside its own category class.</li>
+ *   <li>Category classes extend {@code Object} directly. Forge 1.12 crashes at startup ("Unknown type")
+ *       on a category class that extends another one.</li>
+ *   <li>{@code enabled} is read once, during registration, and needs a restart: switching a stream off
+ *       means its blocks and items are never registered, so a world that has them loses them.</li>
+ *   <li>A changed default never reaches an installed game (Forge keeps the value in the file), so a
+ *       default that must change gets a new key.</li>
+ *   <li>Every field has an explicit {@code @Config.LangKey}, with a name line and a {@code .tooltip} line
+ *       in {@code en_us.lang} (the config screen shows the tooltip in place of the comment).</li>
+ * </ul>
+ */
+@Config(modid = BuzzyBeesBackport.MOD_ID, name = BuzzyBeesBackport.MOD_ID)
+public final class ModConfig {
+
+    @Config.LangKey("config.buzzybeesbackport.honey")
+    @Config.Comment("Honey bottles, honeycomb, honey blocks and honeycomb blocks.")
+    public static final Honey honey = new Honey();
+
+    @Config.LangKey("config.buzzybeesbackport.bees")
+    @Config.Comment("Bees, bee nests and beehives.")
+    public static final Bees bees = new Bees();
+
+    @Config.LangKey("config.buzzybeesbackport.nests")
+    @Config.Comment("Bee nests generating on trees and growing with saplings near flowers.")
+    public static final Nests nests = new Nests();
+
+    @Config.LangKey("config.buzzybeesbackport.golems")
+    @Config.Comment("Iron golems cracking as they are hurt, and repairing them with iron ingots.")
+    public static final Golems golems = new Golems();
+
+    @Config.LangKey("config.buzzybeesbackport.tweaks")
+    @Config.Comment("1.15's smaller changes, each with its own switch.")
+    public static final Tweaks tweaks = new Tweaks();
+
+    @Config.LangKey("config.buzzybeesbackport.compat")
+    @Config.Comment("Worlds and blocks from other mods that add the same things.")
+    public static final Compat compat = new Compat();
+
+    // ------------------------------------------------------------------------------------------
+    // Categories. Each stream owns exactly one.
+    // ------------------------------------------------------------------------------------------
+
+    public static final class Honey {
+        @Config.RequiresMcRestart
+        @Config.Comment("Honey bottles, honeycomb, honey blocks and honeycomb blocks. Off, nothing is registered.")
+        @Config.LangKey("config.buzzybeesbackport.honey.enabled")
+        public boolean enabled = true;
+    }
+
+    public static final class Bees {
+        @Config.RequiresMcRestart
+        @Config.Comment("Bees, bee nests and beehives. Off, nothing is registered.")
+        @Config.LangKey("config.buzzybeesbackport.bees.enabled")
+        public boolean enabled = true;
+    }
+
+    public static final class Nests {
+        @Config.Comment("Bee nests generate on oak and birch trees in newly generated chunks, and sometimes grow with saplings near flowers.")
+        @Config.LangKey("config.buzzybeesbackport.nests.enabled")
+        public boolean enabled = true;
+    }
+
+    public static final class Golems {
+        @Config.Comment("Iron golems show cracks as they lose health and can be repaired with iron ingots.")
+        @Config.LangKey("config.buzzybeesbackport.golems.enabled")
+        public boolean enabled = true;
+    }
+
+    public static final class Tweaks {
+        @Config.RequiresMcRestart
+        @Config.Comment("1.15's smaller changes. Off, none of them apply, whatever their own switches say.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.enabled")
+        public boolean enabled = true;
+    }
+
+    public static final class Compat {
+        @Config.Comment("Convert blocks, items and bees left behind by another mod that added them, when that mod is removed from a world.")
+        @Config.LangKey("config.buzzybeesbackport.compat.convertRemoved")
+        public boolean convertRemoved = true;
+    }
+
+    // ------------------------------------------------------------------------------------------
+
+    /** Saves edits made in the in-game config screen. */
+    @Mod.EventBusSubscriber(modid = BuzzyBeesBackport.MOD_ID)
+    public static final class EventHandler {
+        private EventHandler() {
+        }
+
+        @SubscribeEvent
+        public static void onConfigChanged(ConfigChangedEvent.OnConfigChangedEvent event) {
+            if (BuzzyBeesBackport.MOD_ID.equals(event.getModID())) {
+                ConfigManager.sync(BuzzyBeesBackport.MOD_ID, Config.Type.INSTANCE);
+            }
+        }
+    }
+
+    private ModConfig() {
+    }
+}

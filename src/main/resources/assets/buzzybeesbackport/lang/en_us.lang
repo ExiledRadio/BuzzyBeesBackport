@@ -1,0 +1,26 @@
+itemGroup.buzzybeesbackport=Buzzy Bees Backport
+
+config.buzzybeesbackport.honey=Honey
+config.buzzybeesbackport.honey.tooltip=Honey bottles, honeycomb, honey blocks and honeycomb blocks.
+config.buzzybeesbackport.honey.enabled=Enabled
+config.buzzybeesbackport.honey.enabled.tooltip=Honey bottles, honeycomb, honey blocks and honeycomb blocks. Off, nothing is registered.
+config.buzzybeesbackport.bees=Bees
+config.buzzybeesbackport.bees.tooltip=Bees, bee nests and beehives.
+config.buzzybeesbackport.bees.enabled=Enabled
+config.buzzybeesbackport.bees.enabled.tooltip=Bees, bee nests and beehives. Off, nothing is registered.
+config.buzzybeesbackport.nests=Nest Generation
+config.buzzybeesbackport.nests.tooltip=Bee nests generating on trees and growing with saplings near flowers.
+config.buzzybeesbackport.nests.enabled=Enabled
+config.buzzybeesbackport.nests.enabled.tooltip=Bee nests generate on oak and birch trees in newly generated chunks, and sometimes grow with saplings near flowers.
+config.buzzybeesbackport.golems=Iron Golems
+config.buzzybeesbackport.golems.tooltip=Iron golems cracking as they are hurt, and repairing them with iron ingots.
+config.buzzybeesbackport.golems.enabled=Enabled
+config.buzzybeesbackport.golems.enabled.tooltip=Iron golems show cracks as they lose health and can be repaired with iron ingots.
+config.buzzybeesbackport.tweaks=Other 1.15 Changes
+config.buzzybeesbackport.tweaks.tooltip=1.15's smaller changes, each with its own switch.
+config.buzzybeesbackport.tweaks.enabled=Enabled
+config.buzzybeesbackport.tweaks.enabled.tooltip=1.15's smaller changes. Off, none of them apply, whatever their own switches say.
+config.buzzybeesbackport.compat=Compatibility
+config.buzzybeesbackport.compat.tooltip=Worlds and blocks from other mods that add the same things.
+config.buzzybeesbackport.compat.convertRemoved=Convert Removed Mod's Content
+config.buzzybeesbackport.compat.convertRemoved.tooltip=Convert blocks, items and bees left behind by another mod that added them, when that mod is removed from a world.
