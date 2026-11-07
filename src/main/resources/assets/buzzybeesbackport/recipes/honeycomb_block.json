@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "minecraft:item_exists",
+      "item": "buzzybeesbackport:honeycomb"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "HH",
+    "HH"
+  ],
+  "key": {
+    "H": {
+      "item": "buzzybeesbackport:honeycomb"
+    }
+  },
+  "result": {
+    "item": "buzzybeesbackport:honeycomb_block"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "ours": [
+    "itemGroup.buzzybeesbackport",
+    "config.buzzybeesbackport.honey",
+    "config.buzzybeesbackport.honey.tooltip",
+    "config.buzzybeesbackport.honey.enabled",
+    "config.buzzybeesbackport.honey.enabled.tooltip",
+    "config.buzzybeesbackport.bees",
+    "config.buzzybeesbackport.bees.tooltip",
+    "config.buzzybeesbackport.bees.enabled",
+    "config.buzzybeesbackport.bees.enabled.tooltip",
+    "config.buzzybeesbackport.nests",
+    "config.buzzybeesbackport.nests.tooltip",
+    "config.buzzybeesbackport.nests.enabled",
+    "config.buzzybeesbackport.nests.enabled.tooltip",
+    "config.buzzybeesbackport.golems",
+    "config.buzzybeesbackport.golems.tooltip",
+    "config.buzzybeesbackport.golems.enabled",
+    "config.buzzybeesbackport.golems.enabled.tooltip",
+    "config.buzzybeesbackport.tweaks",
+    "config.buzzybeesbackport.tweaks.tooltip",
+    "config.buzzybeesbackport.tweaks.enabled",
+    "config.buzzybeesbackport.tweaks.enabled.tooltip",
+    "config.buzzybeesbackport.compat",
+    "config.buzzybeesbackport.compat.tooltip",
+    "config.buzzybeesbackport.compat.convertRemoved",
+    "config.buzzybeesbackport.compat.convertRemoved.tooltip"
+  ],
+  "vanilla": {
+    "advancements.buzzybeesbackport.honey_block_slide.description": "advancements.adventure.honey_block_slide.description",
+    "advancements.buzzybeesbackport.honey_block_slide.title": "advancements.adventure.honey_block_slide.title",
+    "item.buzzybeesbackport.honey_bottle.name": "item.minecraft.honey_bottle",
+    "item.buzzybeesbackport.honeycomb.name": "item.minecraft.honeycomb",
+    "subtitles.buzzybeesbackport.block.honey_block.slide": "subtitles.block.honey_block.slide",
+    "subtitles.buzzybeesbackport.item.honey_bottle.drink": "subtitles.item.honey_bottle.drink",
+    "tile.buzzybeesbackport.honey_block.name": "block.minecraft.honey_block",
+    "tile.buzzybeesbackport.honeycomb_block.name": "block.minecraft.honeycomb_block"
+  }
+}

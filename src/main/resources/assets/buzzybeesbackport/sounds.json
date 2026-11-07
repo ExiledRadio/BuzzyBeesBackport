@@ -1,1 +1,157 @@
-{}
+{
+  "block.honey_block.break": {
+    "sounds": [
+      "buzzybeesbackport:block/honeyblock/break1",
+      "buzzybeesbackport:block/honeyblock/break2",
+      "buzzybeesbackport:block/honeyblock/break3",
+      "buzzybeesbackport:block/honeyblock/break4",
+      "buzzybeesbackport:block/honeyblock/break5"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.honey_block.fall": {
+    "sounds": [
+      "buzzybeesbackport:block/honeyblock/step1",
+      "buzzybeesbackport:block/honeyblock/step2",
+      "buzzybeesbackport:block/honeyblock/step3",
+      "buzzybeesbackport:block/honeyblock/step4",
+      "buzzybeesbackport:block/honeyblock/step5"
+    ]
+  },
+  "block.honey_block.hit": {
+    "sounds": [
+      "buzzybeesbackport:block/honeyblock/step1",
+      "buzzybeesbackport:block/honeyblock/step2",
+      "buzzybeesbackport:block/honeyblock/step3",
+      "buzzybeesbackport:block/honeyblock/step4",
+      "buzzybeesbackport:block/honeyblock/step5"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.honey_block.place": {
+    "sounds": [
+      "buzzybeesbackport:block/honeyblock/break1",
+      "buzzybeesbackport:block/honeyblock/break2",
+      "buzzybeesbackport:block/honeyblock/break3",
+      "buzzybeesbackport:block/honeyblock/break4",
+      "buzzybeesbackport:block/honeyblock/break5"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.honey_block.slide": {
+    "sounds": [
+      {
+        "name": "buzzybeesbackport:block/honeyblock/slide1",
+        "volume": 0.8
+      },
+      {
+        "name": "buzzybeesbackport:block/honeyblock/slide1",
+        "pitch": 0.9,
+        "volume": 0.8
+      },
+      {
+        "name": "buzzybeesbackport:block/honeyblock/slide2",
+        "volume": 0.8
+      },
+      {
+        "name": "buzzybeesbackport:block/honeyblock/slide2",
+        "pitch": 0.8,
+        "volume": 0.8
+      },
+      {
+        "name": "buzzybeesbackport:block/honeyblock/slide3",
+        "volume": 0.8
+      },
+      {
+        "name": "buzzybeesbackport:block/honeyblock/slide3",
+        "pitch": 0.8,
+        "volume": 0.8
+      },
+      {
+        "name": "buzzybeesbackport:block/honeyblock/slide4",
+        "volume": 0.8
+      },
+      {
+        "name": "buzzybeesbackport:block/honeyblock/slide4",
+        "pitch": 0.8,
+        "volume": 0.8
+      }
+    ],
+    "subtitle": "subtitles.buzzybeesbackport.block.honey_block.slide"
+  },
+  "block.honey_block.step": {
+    "sounds": [
+      "buzzybeesbackport:block/honeyblock/step1",
+      "buzzybeesbackport:block/honeyblock/step2",
+      "buzzybeesbackport:block/honeyblock/step3",
+      "buzzybeesbackport:block/honeyblock/step4",
+      "buzzybeesbackport:block/honeyblock/step5"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  },
+  "item.honey_bottle.drink": {
+    "sounds": [
+      "buzzybeesbackport:item/bottle/drink_honey1",
+      "buzzybeesbackport:item/bottle/drink_honey2",
+      {
+        "name": "buzzybeesbackport:item/bottle/drink_honey3",
+        "volume": 0.35
+      },
+      {
+        "name": "buzzybeesbackport:item/bottle/drink_honey3",
+        "volume": 0.75
+      }
+    ],
+    "subtitle": "subtitles.buzzybeesbackport.item.honey_bottle.drink"
+  },
+  "block.coral_block.break": {
+    "sounds": [
+      "buzzybeesbackport:dig/coral1",
+      "buzzybeesbackport:dig/coral2",
+      "buzzybeesbackport:dig/coral3",
+      "buzzybeesbackport:dig/coral4"
+    ],
+    "subtitle": "subtitles.block.generic.break"
+  },
+  "block.coral_block.fall": {
+    "sounds": [
+      "buzzybeesbackport:step/coral1",
+      "buzzybeesbackport:step/coral2",
+      "buzzybeesbackport:step/coral3",
+      "buzzybeesbackport:step/coral4",
+      "buzzybeesbackport:step/coral5",
+      "buzzybeesbackport:step/coral6"
+    ]
+  },
+  "block.coral_block.hit": {
+    "sounds": [
+      "buzzybeesbackport:step/coral1",
+      "buzzybeesbackport:step/coral2",
+      "buzzybeesbackport:step/coral3",
+      "buzzybeesbackport:step/coral4",
+      "buzzybeesbackport:step/coral5",
+      "buzzybeesbackport:step/coral6"
+    ],
+    "subtitle": "subtitles.block.generic.hit"
+  },
+  "block.coral_block.place": {
+    "sounds": [
+      "buzzybeesbackport:dig/coral1",
+      "buzzybeesbackport:dig/coral2",
+      "buzzybeesbackport:dig/coral3",
+      "buzzybeesbackport:dig/coral4"
+    ],
+    "subtitle": "subtitles.block.generic.place"
+  },
+  "block.coral_block.step": {
+    "sounds": [
+      "buzzybeesbackport:step/coral1",
+      "buzzybeesbackport:step/coral2",
+      "buzzybeesbackport:step/coral3",
+      "buzzybeesbackport:step/coral4",
+      "buzzybeesbackport:step/coral5",
+      "buzzybeesbackport:step/coral6"
+    ],
+    "subtitle": "subtitles.block.generic.footsteps"
+  }
+}

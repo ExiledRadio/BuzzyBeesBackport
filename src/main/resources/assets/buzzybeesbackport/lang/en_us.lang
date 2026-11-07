@@ -24,3 +24,13 @@ config.buzzybeesbackport.compat=Compatibility
 config.buzzybeesbackport.compat.tooltip=Worlds and blocks from other mods that add the same things.
 config.buzzybeesbackport.compat.convertRemoved=Convert Removed Mod's Content
 config.buzzybeesbackport.compat.convertRemoved.tooltip=Convert blocks, items and bees left behind by another mod that added them, when that mod is removed from a world.
+
+# --- honey ---
+advancements.buzzybeesbackport.honey_block_slide.description=Jump into a Honey Block to break your fall
+advancements.buzzybeesbackport.honey_block_slide.title=Sticky Situation
+item.buzzybeesbackport.honey_bottle.name=Honey Bottle
+item.buzzybeesbackport.honeycomb.name=Honeycomb
+tile.buzzybeesbackport.honey_block.name=Honey Block
+tile.buzzybeesbackport.honeycomb_block.name=Honeycomb Block
+subtitles.buzzybeesbackport.block.honey_block.slide=Sliding down a honey block
+subtitles.buzzybeesbackport.item.honey_bottle.drink=Gulping

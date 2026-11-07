@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:adventure/root",
+  "display": {
+    "icon": {
+      "item": "buzzybeesbackport:honey_block"
+    },
+    "title": {
+      "translate": "advancements.buzzybeesbackport.honey_block_slide.title"
+    },
+    "description": {
+      "translate": "advancements.buzzybeesbackport.honey_block_slide.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "honey_block_slide": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "honey_block_slide"
+    ]
+  ]
+}
