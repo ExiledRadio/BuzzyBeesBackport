@@ -245,6 +245,10 @@ As Update Aquatic's plan, which this mod follows exactly:
 
 ## Decided
 
+0. **Waterlogging** (Backport Core 1.1.0 over Fluidlogged API): none of 1.15's blocks is waterloggable in
+   vanilla (bee nest, beehive, honey block, honeycomb block), so none uses Core's `Waterloggable`. The campfire
+   copy stays identical to Village & Pillage's, and follows it when that mod makes its campfire waterloggable.
+
 1. **Honey and slime do not stick to each other**, as in vanilla: the family's rule is closest to vanilla,
    with bytecode patches where needed (2026-11-07). Patch P1 in `docs/PATCHES.md`.
 

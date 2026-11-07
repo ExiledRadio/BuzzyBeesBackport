@@ -21,6 +21,8 @@ repositories {
     flatDir {
         dirs 'deps'
     }
+    // CurseMaven serves CurseForge files by project and file id, so the version is pinned exactly.
+    maven { url 'https://cursemaven.com' }
 }
 
 apply plugin: 'eclipse'
@@ -49,6 +51,9 @@ dependencies {
     // flatDir (FG2 would compile against the SRG-named jar). The dev jar also puts Core on the
     // runServer classpath, where FML finds it as a mod.
     compile name: "BackportCore-${core_version}-dev"
+    // Fluidlogged API 3.3.3 (CurseForge 485654, file 8445863), which Backport Core 1.1.0 requires. Core's
+    // dev jar does not carry it, so runServer needs it here too. Never bundled.
+    deobfCompile 'curse.maven:fluidlogged-api-485654:8445863'
 }
 
 // Headless self-tests live in src/selftest/java and are compiled in only for a test run:

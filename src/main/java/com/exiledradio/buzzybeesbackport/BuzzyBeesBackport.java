@@ -29,7 +29,7 @@ import org.apache.logging.log4j.Logger;
         name = BuzzyBeesBackport.MOD_NAME,
         version = BuzzyBeesBackport.VERSION,
         acceptedMinecraftVersions = "[1.12.2]",
-        dependencies = "required-after:backportcore@[1.0.0,)"
+        dependencies = "required-after:backportcore@[1.1.0,)"
 )
 public final class BuzzyBeesBackport {
 
