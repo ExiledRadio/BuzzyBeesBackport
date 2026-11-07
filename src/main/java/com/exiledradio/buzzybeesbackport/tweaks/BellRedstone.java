@@ -32,6 +32,7 @@ public final class BellRedstone {
     private static final Map<World, Set<BlockPos>> POWERED = Collections.synchronizedMap(new WeakHashMap<World, Set<BlockPos>>());
     private static Method ring;
     private static boolean looked;
+    private static int rings;
 
     private BellRedstone() {
     }
@@ -51,6 +52,11 @@ public final class BellRedstone {
         if (BELL.equals(event.getState().getBlock().getRegistryName())) {
             check(world, event.getPos());
         }
+    }
+
+    /** @return how many bells this has rung since start (the self-test reads it) */
+    public static int rings() {
+        return rings;
     }
 
     /** Rings the bell if it has just become powered; remembers power so it rings once per rising edge. */
@@ -88,6 +94,7 @@ public final class BellRedstone {
         }
         try {
             ring.invoke(block, world, pos);
+            rings++;
             return true;
         } catch (ReflectiveOperationException e) {
             return false;
