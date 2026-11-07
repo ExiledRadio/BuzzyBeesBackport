@@ -125,8 +125,9 @@ numbers.
   - Dispensers: shears harvest honeycombs (dropped), glass bottles take a honey bottle.
   - Full hives drip honey below them (client).
 - **Advancements**: *Bee Our Guest* (bottle without angering, campfire under it) and *Total Beelocation* (Silk
-  Touch a nest with 3 bees), in a *Buzzy Bees* tab of their own, since 1.12.2's husbandry tab is vanilla's
-  file. *Two by Two* and *A Balanced Diet* gaining bees and honey: see X.
+  Touch a nest with 3 bees), in vanilla's Husbandry tab through their `parent`, granted from code
+  (`common/Advancements`; 1.12.2 lacks 1.15's triggers). *Two by Two* and *A Balanced Diet* gaining bees and
+  honey: see X.
 - Spawn egg. Sounds: 18 events (bee loop, aggressive loop, pollinate, sting, hurt, death, hive enter/exit/work,
   honey drink, honey block sounds...). Renderer, model and the three textures (normal, angry, nectar, each with
   a stingless variant) from 1.15's model, client-only.
