@@ -151,6 +151,11 @@ public final class ModConfig {
         @Config.Comment("Convert blocks, items and bees left behind by another mod that added them, when that mod is removed from a world.")
         @Config.LangKey("config.buzzybeesbackport.compat.convertRemoved")
         public boolean convertRemoved = true;
+
+        @Config.Comment({"When another installed mod adds the same blocks and items: OURS hides theirs, THEIRS hides ours,",
+                "BOTH hides nothing."})
+        @Config.LangKey("config.buzzybeesbackport.compat.duplicates")
+        public com.exiledradio.backportcore.duplicate.DuplicateBlocks.Keep duplicates = com.exiledradio.backportcore.duplicate.DuplicateBlocks.Keep.OURS;
     }
 
     // ------------------------------------------------------------------------------------------

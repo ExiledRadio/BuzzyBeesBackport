@@ -1,0 +1,76 @@
+{
+  "bee_nest": {
+    "0": {
+      "facing": "south",
+      "full": "false"
+    },
+    "1": {
+      "facing": "west",
+      "full": "false"
+    },
+    "2": {
+      "facing": "north",
+      "full": "false"
+    },
+    "3": {
+      "facing": "east",
+      "full": "false"
+    },
+    "4": {
+      "facing": "south",
+      "full": "true"
+    },
+    "5": {
+      "facing": "west",
+      "full": "true"
+    },
+    "6": {
+      "facing": "north",
+      "full": "true"
+    },
+    "7": {
+      "facing": "east",
+      "full": "true"
+    }
+  },
+  "beehive": {
+    "0": {
+      "facing": "south",
+      "full": "false"
+    },
+    "1": {
+      "facing": "west",
+      "full": "false"
+    },
+    "2": {
+      "facing": "north",
+      "full": "false"
+    },
+    "3": {
+      "facing": "east",
+      "full": "false"
+    },
+    "4": {
+      "facing": "south",
+      "full": "true"
+    },
+    "5": {
+      "facing": "west",
+      "full": "true"
+    },
+    "6": {
+      "facing": "north",
+      "full": "true"
+    },
+    "7": {
+      "facing": "east",
+      "full": "true"
+    }
+  },
+  "honey_block": {
+    "0": {}
+  },
+  "honeycomb_block": {
+    "0": {}
+  }
+}
