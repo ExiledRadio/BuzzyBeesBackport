@@ -39,6 +39,8 @@ def candidates(key):
         return ["item.minecraft." + name, "block.minecraft." + name]
     if key.startswith("subtitles.%s." % M):
         return ["subtitles." + key[len("subtitles.%s." % M):]]
+    if key.startswith("block.%s." % M):
+        return ["block.minecraft." + key[len("block.%s." % M):]]
     if key.startswith("entity.%s." % M) and key.endswith(".name"):
         return ["entity.minecraft." + key[len("entity.%s." % M):-len(".name")]]
     if key.startswith("death.attack.%s." % M):

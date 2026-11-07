@@ -89,6 +89,62 @@ public final class ModConfig {
         @Config.Comment("1.15's smaller changes. Off, none of them apply, whatever their own switches say.")
         @Config.LangKey("config.buzzybeesbackport.tweaks.enabled")
         public boolean enabled = true;
+
+        @Config.Comment("End stone bricks take as long to mine as stone (hardness 3) and resist explosions like it (9).")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.endStoneBricks")
+        public boolean endStoneBricks = true;
+
+        @Config.Comment("A boat burns long enough to smelt 6 items.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.boatFuel")
+        public boolean boatFuel = true;
+
+        @Config.Comment("A wet sponge placed in the Nether dries at once.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.spongeDries")
+        public boolean spongeDries = true;
+
+        @Config.Comment("A rail with nothing to connect to is placed along the way you are facing.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.railFacing")
+        public boolean railFacing = true;
+
+        @Config.Comment("Large ferns drop wheat seeds like tall grass.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.fernSeeds")
+        public boolean fernSeeds = true;
+
+        @Config.Comment("Using a spawn egg on an adult zombie, husk, zombie villager, zombie pigman or drowned of its kind spawns a baby.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.spawnEggBabies")
+        public boolean spawnEggBabies = true;
+
+        @Config.Comment("Animals spawning in groups are sometimes babies: 5% for cows, sheep, pigs, chickens and foxes, 10% for wolves, horses and llamas.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.babyAnimals")
+        public boolean babyAnimals = true;
+
+        @Config.Comment("Parrots no longer imitate endermen, polar bears, wolves or zombie pigmen.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.parrotImitation")
+        public boolean parrotImitation = true;
+
+        @Config.Comment("Food and cake can be eaten in Creative mode.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.creativeEating")
+        public boolean creativeEating = true;
+
+        @Config.Comment("Using a bed sets your respawn point and says so, even when it is too early to sleep.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.bedSpawn")
+        public boolean bedSpawn = true;
+
+        @Config.Comment("Adds the game rules fallDamage, fireDamage, drowningDamage, doImmediateRespawn and doInsomnia.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.gameRules")
+        public boolean gameRules = true;
+
+        @Config.Comment("Dispensers fill glass bottles from water, place armor stands and light campfires with fire charges.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.dispensers")
+        public boolean dispensers = true;
+
+        @Config.Comment("A bell rings when it is powered by redstone.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.bellRedstone")
+        public boolean bellRedstone = true;
+
+        @Config.Comment("The title screen can show 1.15's three new splash texts.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.splashTexts")
+        public boolean splashTexts = true;
     }
 
     public static final class Compat {

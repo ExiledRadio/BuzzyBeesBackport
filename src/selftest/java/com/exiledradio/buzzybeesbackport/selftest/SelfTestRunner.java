@@ -48,6 +48,7 @@ public final class SelfTestRunner {
             new BeeSelfTest(),
             new NestSelfTest(),
             new GolemSelfTest(),
+            new TweaksSelfTest(),
     };
 
     private final List<String> wanted;

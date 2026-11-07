@@ -58,6 +58,7 @@ public final class BuzzyBeesBackport {
     @Mod.EventHandler
     public void init(FMLInitializationEvent event) {
         com.exiledradio.buzzybeesbackport.bee.BeeContent.init();
+        com.exiledradio.buzzybeesbackport.tweaks.Tweaks.init();
         if (event.getSide().isClient()) {
             com.exiledradio.buzzybeesbackport.golem.client.GolemClient.init();
         }

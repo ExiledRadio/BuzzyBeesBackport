@@ -64,3 +64,34 @@ tooltip.buzzybeesbackport.beehive.honey=Honey: %s / %s
 # --- golems ---
 subtitles.buzzybeesbackport.entity.iron_golem.damage=Iron Golem breaks
 subtitles.buzzybeesbackport.entity.iron_golem.repair=Iron Golem repaired
+
+# --- tweaks ---
+config.buzzybeesbackport.tweaks.endStoneBricks=End Stone Bricks Hardness
+config.buzzybeesbackport.tweaks.endStoneBricks.tooltip=End stone bricks take as long to mine as stone (hardness 3) and resist explosions like it (9).
+config.buzzybeesbackport.tweaks.boatFuel=Boats as Fuel
+config.buzzybeesbackport.tweaks.boatFuel.tooltip=A boat burns long enough to smelt 6 items.
+config.buzzybeesbackport.tweaks.spongeDries=Sponges Dry in the Nether
+config.buzzybeesbackport.tweaks.spongeDries.tooltip=A wet sponge placed in the Nether dries at once.
+config.buzzybeesbackport.tweaks.railFacing=Rails Face the Player
+config.buzzybeesbackport.tweaks.railFacing.tooltip=A rail with nothing to connect to is placed along the way you are facing.
+config.buzzybeesbackport.tweaks.fernSeeds=Large Ferns Drop Seeds
+config.buzzybeesbackport.tweaks.fernSeeds.tooltip=Large ferns drop wheat seeds like tall grass.
+config.buzzybeesbackport.tweaks.spawnEggBabies=Spawn Eggs Make Baby Zombies
+config.buzzybeesbackport.tweaks.spawnEggBabies.tooltip=Using a spawn egg on an adult zombie, husk, zombie villager, zombie pigman or drowned of its kind spawns a baby.
+config.buzzybeesbackport.tweaks.babyAnimals=Babies in Animal Groups
+config.buzzybeesbackport.tweaks.babyAnimals.tooltip=Animals spawning in groups are sometimes babies: 5% for cows, sheep, pigs, chickens and foxes, 10% for wolves, horses and llamas.
+config.buzzybeesbackport.tweaks.parrotImitation=Parrots Imitate Fewer Mobs
+config.buzzybeesbackport.tweaks.parrotImitation.tooltip=Parrots no longer imitate endermen, polar bears, wolves or zombie pigmen.
+config.buzzybeesbackport.tweaks.creativeEating=Eat in Creative
+config.buzzybeesbackport.tweaks.creativeEating.tooltip=Food and cake can be eaten in Creative mode.
+config.buzzybeesbackport.tweaks.bedSpawn=Beds Set Spawn on Use
+config.buzzybeesbackport.tweaks.bedSpawn.tooltip=Using a bed sets your respawn point and says so, even when it is too early to sleep.
+config.buzzybeesbackport.tweaks.gameRules=1.15 Game Rules
+config.buzzybeesbackport.tweaks.gameRules.tooltip=Adds the game rules fallDamage, fireDamage, drowningDamage, doImmediateRespawn and doInsomnia.
+config.buzzybeesbackport.tweaks.dispensers=Dispenser Changes
+config.buzzybeesbackport.tweaks.dispensers.tooltip=Dispensers fill glass bottles from water, place armor stands and light campfires with fire charges.
+config.buzzybeesbackport.tweaks.bellRedstone=Bells Ring on Redstone
+config.buzzybeesbackport.tweaks.bellRedstone.tooltip=A bell rings when it is powered by redstone.
+config.buzzybeesbackport.tweaks.splashTexts=1.15 Splash Texts
+config.buzzybeesbackport.tweaks.splashTexts.tooltip=The title screen can show 1.15's three new splash texts.
+block.buzzybeesbackport.set_spawn=Respawn point set
