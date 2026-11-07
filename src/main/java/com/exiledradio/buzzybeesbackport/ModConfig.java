@@ -71,6 +71,11 @@ public final class ModConfig {
         @Config.Comment("Bee nests generate on oak and birch trees in newly generated chunks, and sometimes grow with saplings near flowers.")
         @Config.LangKey("config.buzzybeesbackport.nests.enabled")
         public boolean enabled = true;
+
+        @Config.Comment({"Other mods' biomes get nests too, by their Forge biome types: plains like plains (5% of trees),",
+                "broadleaf forests like forests (0.2%)."})
+        @Config.LangKey("config.buzzybeesbackport.nests.moddedBiomes")
+        public boolean moddedBiomes = true;
     }
 
     public static final class Golems {

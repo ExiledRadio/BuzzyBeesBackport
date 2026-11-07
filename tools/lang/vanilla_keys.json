@@ -13,6 +13,8 @@
     "config.buzzybeesbackport.nests.tooltip",
     "config.buzzybeesbackport.nests.enabled",
     "config.buzzybeesbackport.nests.enabled.tooltip",
+    "config.buzzybeesbackport.nests.moddedBiomes",
+    "config.buzzybeesbackport.nests.moddedBiomes.tooltip",
     "config.buzzybeesbackport.golems",
     "config.buzzybeesbackport.golems.tooltip",
     "config.buzzybeesbackport.golems.enabled",
