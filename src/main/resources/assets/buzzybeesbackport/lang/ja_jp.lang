@@ -27,6 +27,8 @@ config.buzzybeesbackport.compat=互換性
 config.buzzybeesbackport.compat.tooltip=同じものを追加する他のModのワールドとブロック。
 config.buzzybeesbackport.compat.convertRemoved=削除されたModのコンテンツを変換
 config.buzzybeesbackport.compat.convertRemoved.tooltip=同じものを追加していた別のModがワールドから削除されたとき、そのModが残したブロック、アイテム、ミツバチを変換します。
+config.buzzybeesbackport.compat.duplicates=重複するブロック
+config.buzzybeesbackport.compat.duplicates.tooltip=インストールされている別のModが同じブロックやアイテムを追加する場合の扱いです。OURSは相手側を、THEIRSはこちら側を非表示にし、BOTHは何も非表示にしません。
 
 # --- honey ---
 advancements.buzzybeesbackport.honey_block_slide.description=ハチミツブロックに飛び込み、落下を阻止する
@@ -66,6 +68,20 @@ tooltip.buzzybeesbackport.beehive.honey=ハチミツ：%s / %s
 subtitles.buzzybeesbackport.entity.iron_golem.damage=アイアンゴーレムが破壊される
 subtitles.buzzybeesbackport.entity.iron_golem.repair=アイアンゴーレムが修復される
 
+# --- campfire ---
+config.buzzybeesbackport.campfire=焚き火
+config.buzzybeesbackport.campfire.tooltip=Village & Pillage Backportがインストールされていないときの焚き火です。
+config.buzzybeesbackport.campfire.enabled=有効
+config.buzzybeesbackport.campfire.enabled.tooltip=Village & Pillage Backportがインストールされていないとき、このModが独自の焚き火を追加するかどうかです。インストールされている場合はそちらの焚き火が使われ、この設定は何もしません。
+config.buzzybeesbackport.campfire.cookTime=調理時間
+config.buzzybeesbackport.campfire.cookTime.tooltip=アイテム1個の調理にかかる時間（ティック）です。1.14の値は600（30秒）で、かまどの3倍です。
+config.buzzybeesbackport.campfire.extraFoods=追加の食べ物
+config.buzzybeesbackport.campfire.extraFoods.tooltip=焚き火で調理できるものです。デフォルトでは、材料と完成品がどちらも食べ物であるかまどのレシピすべてです。これは1.14本来のリスト（生肉、生魚、ジャガイモ）に、あらゆるModの生の食べ物を加えたものです。デフォルトに含まれないアイテムは、'modid:item'（かまどと同じように調理）または'modid:item=modid:result'（その結果に調理）として追加します。どちらかの後に':meta'を付けると特定の種類を指定できます。例：'minecraft:fish:1=minecraft:cooked_fish:1'。
+config.buzzybeesbackport.campfire.excludedFoods=除外する食べ物
+config.buzzybeesbackport.campfire.excludedFoods.tooltip=上のルールで調理対象になる場合でも、焚き火が受け付けないアイテムです。'modid:item'または'modid:item:meta'の形式です。
+tile.buzzybeesbackport.campfire.name=焚き火
+subtitles.buzzybeesbackport.block.campfire.crackle=焚き火が燃える
+
 # --- tweaks ---
 config.buzzybeesbackport.tweaks.endStoneBricks=エンドストーンレンガの硬さ
 config.buzzybeesbackport.tweaks.endStoneBricks.tooltip=エンドストーンレンガは石と同じ時間で採掘でき（硬さ3）、石と同じように爆発に耐えます（9）。
@@ -95,4 +111,20 @@ config.buzzybeesbackport.tweaks.bellRedstone=レッドストーンで鐘が鳴�
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=鐘はレッドストーン動力を受けると鳴ります。
 config.buzzybeesbackport.tweaks.splashTexts=1.15のスプラッシュテキスト
 config.buzzybeesbackport.tweaks.splashTexts.tooltip=タイトル画面に1.15の新しいスプラッシュテキスト3つが表示されることがあります。
+config.buzzybeesbackport.tweaks.craftingShiftClick=Shift+クリックでクラフトグリッドへ
+config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=作業台で、インベントリ内のスタックをShift+クリックするとクラフトグリッドに移動し、グリッドに空きがないときだけインベントリのもう一方の部分に移動します。
+config.buzzybeesbackport.tweaks.elytraJump=上昇中にエリトラを開く
+config.buzzybeesbackport.tweaks.elytraJump.tooltip=ジャンプした直後、まだ上昇している間でもエリトラを開けます。
+config.buzzybeesbackport.tweaks.toggleSneak=スニークの切り替え
+config.buzzybeesbackport.tweaks.toggleSneak.tooltip=クライアント：スニークキーを押し続ける代わりに、押すたびにスニークのオンとオフを切り替えます。
+config.buzzybeesbackport.tweaks.toggleSprint=ダッシュの切り替え
+config.buzzybeesbackport.tweaks.toggleSprint.tooltip=クライアント：ダッシュキーを押し続ける代わりに、押すたびにダッシュのオンとオフを切り替えます。
+config.buzzybeesbackport.tweaks.dispensedFireworks=ディスペンサーのロケット花火がまっすぐ飛ぶ
+config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=ディスペンサーから発射されたロケット花火が、ディスペンサーの向いている方向へまっすぐ飛びます。
+config.buzzybeesbackport.tweaks.advancementBees=農業の進捗にミツバチを追加
+config.buzzybeesbackport.tweaks.advancementBees.tooltip=「2匹ずつ」ではミツバチの繁殖も、「バランスの取れた食事」ではハチミツ入りの瓶も必要になります。
+config.buzzybeesbackport.tweaks.parrotsWhileRiding=オウムが肩に乗ったまま
+config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=ウマ、ボート、トロッコなど何かに乗っている間も、オウムが肩に乗ったままになります。
+config.buzzybeesbackport.tweaks.xpWithLoot=経験値をドロップ品と一緒に落とす
+config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=死んだMobやプレイヤーが、死亡アニメーションの後ではなく、ドロップ品と一緒にすぐ経験値を落とします。
 block.buzzybeesbackport.set_spawn=リスポーン地点が設定されました

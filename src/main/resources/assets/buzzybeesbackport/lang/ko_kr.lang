@@ -27,6 +27,8 @@ config.buzzybeesbackport.compat=호환성
 config.buzzybeesbackport.compat.tooltip=같은 것을 추가하는 다른 모드의 세계와 블록.
 config.buzzybeesbackport.compat.convertRemoved=제거된 모드의 콘텐츠 변환
 config.buzzybeesbackport.compat.convertRemoved.tooltip=같은 것을 추가하던 다른 모드가 세계에서 제거되면, 그 모드가 남긴 블록, 아이템, 꿀벌을 변환합니다.
+config.buzzybeesbackport.compat.duplicates=중복 블록
+config.buzzybeesbackport.compat.duplicates.tooltip=설치된 다른 모드가 같은 블록과 아이템을 추가할 때의 처리입니다. OURS는 상대 쪽을, THEIRS는 이 모드 쪽을 숨기고, BOTH는 아무것도 숨기지 않습니다.
 
 # --- honey ---
 advancements.buzzybeesbackport.honey_block_slide.description=꿀 블록을 향해 점프해 낙하를 멈추세요
@@ -66,6 +68,20 @@ tooltip.buzzybeesbackport.beehive.honey=꿀: %s / %s
 subtitles.buzzybeesbackport.entity.iron_golem.damage=철 골렘이 부서짐
 subtitles.buzzybeesbackport.entity.iron_golem.repair=철 골렘이 수리됨
 
+# --- campfire ---
+config.buzzybeesbackport.campfire=모닥불
+config.buzzybeesbackport.campfire.tooltip=Village & Pillage Backport가 설치되지 않았을 때의 모닥불입니다.
+config.buzzybeesbackport.campfire.enabled=활성화
+config.buzzybeesbackport.campfire.enabled.tooltip=Village & Pillage Backport가 설치되지 않았을 때 이 모드가 자체 모닥불을 추가할지 여부입니다. 설치되어 있으면 그 모드의 모닥불이 사용되며 이 설정은 아무 효과가 없습니다.
+config.buzzybeesbackport.campfire.cookTime=조리 시간
+config.buzzybeesbackport.campfire.cookTime.tooltip=아이템 하나를 익히는 데 걸리는 시간(틱)입니다. 1.14의 값은 600(30초)으로, 화로의 세 배입니다.
+config.buzzybeesbackport.campfire.extraFoods=추가 음식
+config.buzzybeesbackport.campfire.extraFoods.tooltip=모닥불이 익히는 것입니다. 기본적으로 재료와 결과물이 모두 음식인 모든 화로 제작법이며, 이는 1.14 본래의 목록(익히지 않은 고기, 익히지 않은 생선, 감자)에 모든 모드의 날음식을 더한 것입니다. 기본값에 빠진 아이템은 'modid:item'(화로와 같은 결과로 익힘) 또는 'modid:item=modid:result'(그 결과물로 익힘)로 추가합니다. 어느 쪽이든 뒤에 ':meta'를 붙이면 특정 변종을 고를 수 있습니다. 예: 'minecraft:fish:1=minecraft:cooked_fish:1'.
+config.buzzybeesbackport.campfire.excludedFoods=제외할 음식
+config.buzzybeesbackport.campfire.excludedFoods.tooltip=위의 규칙대로라면 익힐 수 있더라도 모닥불이 받지 않는 아이템을 'modid:item' 또는 'modid:item:meta' 형식으로 지정합니다.
+tile.buzzybeesbackport.campfire.name=모닥불
+subtitles.buzzybeesbackport.block.campfire.crackle=모닥불이 타닥거림
+
 # --- tweaks ---
 config.buzzybeesbackport.tweaks.endStoneBricks=엔드 석재 벽돌 단단함
 config.buzzybeesbackport.tweaks.endStoneBricks.tooltip=엔드 석재 벽돌은 돌과 같은 시간에 캘 수 있고(단단함 3), 돌처럼 폭발에 견딥니다(9).
@@ -95,4 +111,20 @@ config.buzzybeesbackport.tweaks.bellRedstone=레드스톤으로 울리는 종
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=종에 레드스톤 신호가 들어오면 종이 울립니다.
 config.buzzybeesbackport.tweaks.splashTexts=1.15 스플래시 문구
 config.buzzybeesbackport.tweaks.splashTexts.tooltip=타이틀 화면에 1.15의 새 스플래시 문구 3개가 표시될 수 있습니다.
+config.buzzybeesbackport.tweaks.craftingShiftClick=Shift+클릭으로 제작 칸에 넣기
+config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=제작대에서 보관함의 아이템 묶음을 Shift+클릭하면 제작 칸으로 옮겨지며, 제작 칸에 자리가 없을 때만 보관함의 다른 부분으로 옮겨집니다.
+config.buzzybeesbackport.tweaks.elytraJump=상승 중 겉날개 펼치기
+config.buzzybeesbackport.tweaks.elytraJump.tooltip=점프 직후 아직 올라가는 중에도 겉날개를 펼칠 수 있습니다.
+config.buzzybeesbackport.tweaks.toggleSneak=웅크리기 토글
+config.buzzybeesbackport.tweaks.toggleSneak.tooltip=클라이언트: 웅크리기 키를 누르고 있는 대신 누를 때마다 웅크리기를 켜고 끕니다.
+config.buzzybeesbackport.tweaks.toggleSprint=달리기 토글
+config.buzzybeesbackport.tweaks.toggleSprint.tooltip=클라이언트: 달리기 키를 누르고 있는 대신 누를 때마다 달리기를 켜고 끕니다.
+config.buzzybeesbackport.tweaks.dispensedFireworks=발사기 폭죽이 앞으로 날아감
+config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=발사기에서 발사된 폭죽 로켓이 발사기가 향한 방향으로 곧게 날아갑니다.
+config.buzzybeesbackport.tweaks.advancementBees=농사 발전 과제에 꿀벌 추가
+config.buzzybeesbackport.tweaks.advancementBees.tooltip='짝지어주기'는 꿀벌 교배도, '균형 잡힌 식단'은 꿀이 든 병도 필요하게 됩니다.
+config.buzzybeesbackport.tweaks.parrotsWhileRiding=앵무새가 어깨에 남음
+config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=말, 보트, 광산 수레 등 무엇을 타고 있어도 앵무새가 어깨에 그대로 남아 있습니다.
+config.buzzybeesbackport.tweaks.xpWithLoot=경험치가 노획물과 함께 떨어짐
+config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=죽은 몹이나 플레이어가 사망 애니메이션이 끝난 뒤가 아니라 노획물과 함께 즉시 경험치를 떨어뜨립니다.
 block.buzzybeesbackport.set_spawn=리스폰 지점을 설정했습니다

@@ -27,6 +27,8 @@ config.buzzybeesbackport.compat=Compatibilité
 config.buzzybeesbackport.compat.tooltip=Mondes et blocs d'autres mods qui ajoutent les mêmes choses.
 config.buzzybeesbackport.compat.convertRemoved=Convertir le contenu d'un mod retiré
 config.buzzybeesbackport.compat.convertRemoved.tooltip=Convertit les blocs, objets et abeilles laissés par un autre mod qui les ajoutait, quand ce mod est retiré d'un monde.
+config.buzzybeesbackport.compat.duplicates=Blocs en double
+config.buzzybeesbackport.compat.duplicates.tooltip=Quand un autre mod installé ajoute les mêmes blocs et objets : OURS masque les siens, THEIRS masque les nôtres, BOTH ne masque rien.
 
 # --- honey ---
 advancements.buzzybeesbackport.honey_block_slide.description=Sautez contre un bloc de miel pour ralentir votre chute.
@@ -66,6 +68,20 @@ tooltip.buzzybeesbackport.beehive.honey=Miel : %s / %s
 subtitles.buzzybeesbackport.entity.iron_golem.damage=Golem de fer qui s'abîme
 subtitles.buzzybeesbackport.entity.iron_golem.repair=Golem de fer réparé
 
+# --- campfire ---
+config.buzzybeesbackport.campfire=Feu de camp
+config.buzzybeesbackport.campfire.tooltip=Le feu de camp, quand Village & Pillage Backport n'est pas installé.
+config.buzzybeesbackport.campfire.enabled=Activé
+config.buzzybeesbackport.campfire.enabled.tooltip=Indique si ce mod ajoute sa propre copie du feu de camp quand Village & Pillage Backport n'est pas installé. S'il est installé, c'est son feu de camp qui est utilisé et ce réglage n'a aucun effet.
+config.buzzybeesbackport.campfire.cookTime=Temps de cuisson
+config.buzzybeesbackport.campfire.cookTime.tooltip=Temps de cuisson d'un objet, en ticks. Celui de la 1.14 est de 600 (30 secondes), trois fois celui d'un fourneau.
+config.buzzybeesbackport.campfire.extraFoods=Aliments supplémentaires
+config.buzzybeesbackport.campfire.extraFoods.tooltip=Ce que le feu de camp cuit. Par défaut : toutes les recettes de fourneau dont l'entrée et la sortie sont de la nourriture, ce qui correspond à la liste de la 1.14 (viande crue, poisson cru, pommes de terre) plus les aliments crus de tous les mods. Ajoutez un objet que la valeur par défaut omet sous la forme 'modid:item' (cuit comme le ferait le fourneau) ou 'modid:item=modid:result' (cuit en ce résultat). Ajoutez ':meta' après l'un ou l'autre pour choisir une variante, par ex. 'minecraft:fish:1=minecraft:cooked_fish:1'.
+config.buzzybeesbackport.campfire.excludedFoods=Aliments exclus
+config.buzzybeesbackport.campfire.excludedFoods.tooltip=Objets que le feu de camp refuse, même si la règle ci-dessus les cuirait, sous la forme 'modid:item' ou 'modid:item:meta'.
+tile.buzzybeesbackport.campfire.name=Feu de camp
+subtitles.buzzybeesbackport.block.campfire.crackle=Feu de camp qui crépite
+
 # --- tweaks ---
 config.buzzybeesbackport.tweaks.endStoneBricks=Dureté de la pierre taillée de l'End
 config.buzzybeesbackport.tweaks.endStoneBricks.tooltip=La pierre taillée de l'End se mine aussi lentement que la roche (dureté 3) et résiste aux explosions comme elle (9).
@@ -95,4 +111,20 @@ config.buzzybeesbackport.tweaks.bellRedstone=Les cloches sonnent avec la redston
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=Une cloche sonne quand elle est alimentée par de la redstone.
 config.buzzybeesbackport.tweaks.splashTexts=Textes d'accueil de la 1.15
 config.buzzybeesbackport.tweaks.splashTexts.tooltip=Le menu principal peut afficher les trois nouveaux textes d'accueil de la 1.15.
+config.buzzybeesbackport.tweaks.craftingShiftClick=Maj + clic vers la grille de fabrication
+config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=À un établi, un Maj + clic sur une pile de votre inventaire la déplace dans la grille de fabrication, et seulement vers l'autre partie de l'inventaire quand la grille n'a plus de place.
+config.buzzybeesbackport.tweaks.elytraJump=Ouvrir les élytres en montant
+config.buzzybeesbackport.tweaks.elytraJump.tooltip=Les élytres peuvent s'ouvrir juste après un saut, pendant que vous montez encore.
+config.buzzybeesbackport.tweaks.toggleSneak=S'accroupir en mode basculer
+config.buzzybeesbackport.tweaks.toggleSneak.tooltip=Client : la touche S'accroupir active et désactive l'accroupissement au lieu de devoir être maintenue.
+config.buzzybeesbackport.tweaks.toggleSprint=Courir en mode basculer
+config.buzzybeesbackport.tweaks.toggleSprint.tooltip=Client : la touche Courir active et désactive la course au lieu de devoir être maintenue.
+config.buzzybeesbackport.tweaks.dispensedFireworks=Les feux d'artifice distribués volent droit devant
+config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=Une fusée de feu d'artifice tirée par un distributeur vole tout droit dans la direction vers laquelle le distributeur est orienté.
+config.buzzybeesbackport.tweaks.advancementBees=Abeilles dans les progrès d'Agriculture
+config.buzzybeesbackport.tweaks.advancementBees.tooltip=« Deux par deux » demande aussi de faire se reproduire des abeilles, et « Une alimentation équilibrée » demande aussi une fiole de miel.
+config.buzzybeesbackport.tweaks.parrotsWhileRiding=Les perroquets restent sur les épaules
+config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Les perroquets restent sur vos épaules pendant que vous montez un cheval, un bateau, un wagonnet ou toute autre chose.
+config.buzzybeesbackport.tweaks.xpWithLoot=L'expérience tombe avec le butin
+config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Une créature ou un joueur qui meurt lâche son expérience immédiatement, avec son butin, au lieu d'attendre la fin de l'animation de mort.
 block.buzzybeesbackport.set_spawn=Point de réapparition défini
