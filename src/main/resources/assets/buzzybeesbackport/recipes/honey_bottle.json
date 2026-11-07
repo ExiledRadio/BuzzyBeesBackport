@@ -1,0 +1,30 @@
+{
+  "conditions": [
+    {
+      "type": "minecraft:item_exists",
+      "item": "buzzybeesbackport:honey_bottle"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "buzzybeesbackport:honey_block"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    },
+    {
+      "item": "minecraft:glass_bottle"
+    }
+  ],
+  "result": {
+    "item": "buzzybeesbackport:honey_bottle",
+    "count": 4
+  }
+}

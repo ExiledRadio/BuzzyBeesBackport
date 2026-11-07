@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "type": "minecraft:item_exists",
+      "item": "buzzybeesbackport:honey_bottle"
+    }
+  ],
+  "type": "minecraft:crafting_shapeless",
+  "group": "sugar",
+  "ingredients": [
+    {
+      "item": "buzzybeesbackport:honey_bottle"
+    }
+  ],
+  "result": {
+    "item": "minecraft:sugar",
+    "count": 3
+  }
+}

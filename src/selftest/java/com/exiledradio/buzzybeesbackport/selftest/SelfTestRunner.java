@@ -44,6 +44,7 @@ public final class SelfTestRunner {
     /** Every stream's test. A stream adds its own line. */
     private static final SelfTest[] TESTS = {
             new ScaffoldSelfTest(),
+            new HoneySelfTest(),
     };
 
     private final List<String> wanted;

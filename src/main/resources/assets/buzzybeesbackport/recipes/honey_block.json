@@ -1,0 +1,21 @@
+{
+  "conditions": [
+    {
+      "type": "minecraft:item_exists",
+      "item": "buzzybeesbackport:honey_block"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "buzzybeesbackport:honey_bottle"
+    }
+  },
+  "result": {
+    "item": "buzzybeesbackport:honey_block"
+  }
+}
