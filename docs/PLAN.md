@@ -158,6 +158,11 @@ numbers.
 
 ### X. Other 1.15 changes
 
+**Built** (first and second pass): `docs/streams/tweaks.md` is the current list and supersedes the one
+below, which predates the closest-to-vanilla rule (the crafting table, elytra, fireworks and parrots use
+patches P2-P5; the advancements are edited by reflection; experience drops with the loot).
+
+
 Each behind its own switch in `tweaks`:
 
 - **End stone bricks**: hardness 3, blast resistance 9 (also V&P's end stone brick slabs, stairs and walls by
@@ -254,12 +259,12 @@ As Update Aquatic's plan, which this mod follows exactly:
 
 ## Order and status
 
-1. Scaffold, this plan: **done**.
-2. H honey, B bees/nests/hives, G nest generation, I iron golems: **done** (see `docs/streams/`).
-   Patch P1 (honey and slime): **done** (`docs/PATCHES.md`).
-3. X other 1.15 changes: **first pass done** (fourteen changes); the rest is listed in `docs/streams/tweaks.md`.
-4. L languages: **first pass done** (Mojang's names in all 18); our own 57 keys still to translate.
-5. W (new, from the family's "every mod works on its own" rule): an identical copy of Village & Pillage's
-   campfire, registered only when it is absent, so bees can be calmed by a campfire without it. Fire under
-   the hive calms them meanwhile.
-6. F Future MC pairs: needs a real instance with Future MC to record its states with `/futuremc dump`.
+1. Scaffold, plan: **done**.
+2. H honey, B bees/nests/hives, G nest generation, I iron golems, patch P1: **done**.
+3. X other 1.15 changes: **done** (`docs/streams/tweaks.md`; farmland under piston-moved blocks not done, see there).
+4. W campfire copy (Village & Pillage's, only when it is absent): **done**.
+5. F Future MC pairs: **done** (`/futuremc convert` with the mod installed loses bees inside hives until Core
+   request 5).
+6. Backport Core 1.1.0 with Fluidlogged API: **done**; no 1.15 block is waterloggable.
+7. L languages: **done** once the last 28 keys are translated.
+8. Release 1.0.0: `docs/curseforge/`, icon, version.

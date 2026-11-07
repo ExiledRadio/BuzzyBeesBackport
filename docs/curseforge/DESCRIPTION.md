@@ -54,6 +54,13 @@ Each of these has its own switch in the config:
 *   Dispensers fill glass bottles from water, place armor stands and light campfires with fire charges.
 *   Bells ring when powered by redstone.
 *   The title screen has 1.15's three new splash texts.
+*   Shift-clicking a stack in the crafting table moves it into the grid.
+*   Elytra open right after a jump, while you are still rising.
+*   Toggle sneak and toggle sprint, as 1.15's accessibility options (off by default).
+*   Firework rockets from a dispenser fly the way it faces.
+*   *Two by Two* needs bees, and *A Balanced Diet* needs honey bottles.
+*   Parrots stay on your shoulder while you ride.
+*   Experience drops at the same moment as the loot.
 
 ## With the other backports
 
