@@ -1,0 +1,28 @@
+{
+  "parent": "minecraft:husbandry/root",
+  "display": {
+    "icon": {
+      "item": "buzzybeesbackport:bee_nest"
+    },
+    "title": {
+      "translate": "advancements.buzzybeesbackport.silk_touch_nest.title"
+    },
+    "description": {
+      "translate": "advancements.buzzybeesbackport.silk_touch_nest.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "silk_touch_nest": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "silk_touch_nest"
+    ]
+  ]
+}
