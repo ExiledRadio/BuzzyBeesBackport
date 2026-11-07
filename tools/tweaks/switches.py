@@ -34,7 +34,8 @@ def lang():
     lines = []
     for field, name, comment in SWITCHES:
         lines.append("config.buzzybeesbackport.tweaks.%s=%s" % (field, name))
-        lines.append("config.buzzybeesbackport.tweaks.%s.tooltip=%s" % (field, comment))
+        # The config screen formats tooltips with String.format: a literal percent sign is %%.
+        lines.append("config.buzzybeesbackport.tweaks.%s.tooltip=%s" % (field, comment.replace("%", "%%")))
     return lines
 
 
