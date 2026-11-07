@@ -26,6 +26,8 @@ config.buzzybeesbackport.compat=Compatibility
 config.buzzybeesbackport.compat.tooltip=Worlds and blocks from other mods that add the same things.
 config.buzzybeesbackport.compat.convertRemoved=Convert Removed Mod's Content
 config.buzzybeesbackport.compat.convertRemoved.tooltip=Convert blocks, items and bees left behind by another mod that added them, when that mod is removed from a world.
+config.buzzybeesbackport.compat.duplicates=Duplicate Blocks
+config.buzzybeesbackport.compat.duplicates.tooltip=When another installed mod adds the same blocks and items: OURS hides theirs, THEIRS hides ours, BOTH hides nothing.
 
 # --- honey ---
 advancements.buzzybeesbackport.honey_block_slide.description=Jump into a Honey Block to break your fall

@@ -70,3 +70,12 @@ New textures this mod adds itself (iron golem cracks, bees, hives) are its own, 
   entity: converting entities on chunk load is not in Core yet. Stream F does it here; if another family mod
   needs entity conversion too (Future MC's foxes and pandas are V&P's), it should move to Core as
   `FutureMcTable.Contributor.entity(theirId, (oldNbt) -> newEntity)`.
+
+## 5. Future MC: tile data, not only items
+
+`FutureMcConvert.fill` moves only items into a counterpart's tile entity. Hives keep bees and a honey level.
+Wanted: `FutureMcTable.Contributor.tileData((TileEntity ours, NBTTagCompound theirs) -> void)`, called by both
+`fill` paths (the removed-mod chunk pass and `/futuremc convert`).
+
+**Meanwhile**: `migrate/FutureMcBees` covers the removed-mod path itself, after Core's pass on the same
+chunk-load event. `/futuremc convert` with the other mod installed still loses bees and honey inside hives.
