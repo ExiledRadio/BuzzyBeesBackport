@@ -37,6 +37,7 @@ public final class ClientSetup {
         com.exiledradio.buzzybeesbackport.honey.client.HoneyClient.init();
         com.exiledradio.buzzybeesbackport.bee.client.BeeClient.init();
         com.exiledradio.buzzybeesbackport.tweaks.client.TweaksClient.init();
+        com.exiledradio.buzzybeesbackport.campfire.client.CampfireClient.init();
     }
 
     @SubscribeEvent

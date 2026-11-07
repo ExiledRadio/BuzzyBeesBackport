@@ -162,6 +162,9 @@ public final class TweaksSelfTest implements SelfTest {
             }
         }
         c.eq(1, babies, "and makes a baby zombie");
+        for (EntityZombie z : c.world.getEntitiesWithinAABB(EntityZombie.class, adult.getEntityBoundingBox().grow(4))) {
+            z.setDead(); // leave nothing for a second run on the same world
+        }
         c.eq(1, player.getHeldItemMainhand().getCount(), "using one egg");
         ItemStack husk = new ItemStack(Items.SPAWN_EGG);
         ItemMonsterPlacer.applyEntityIdToItemStack(husk, EntityList.getKey(net.minecraft.entity.monster.EntityHusk.class));

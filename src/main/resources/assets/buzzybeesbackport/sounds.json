@@ -454,5 +454,17 @@
       "buzzybeesbackport:mob/irongolem/repair"
     ],
     "subtitle": "subtitles.buzzybeesbackport.entity.iron_golem.repair"
+  },
+  "block.campfire.crackle": {
+    "category": "block",
+    "sounds": [
+      "buzzybeesbackport:block/campfire/crackle1",
+      "buzzybeesbackport:block/campfire/crackle2",
+      "buzzybeesbackport:block/campfire/crackle3",
+      "buzzybeesbackport:block/campfire/crackle4",
+      "buzzybeesbackport:block/campfire/crackle5",
+      "buzzybeesbackport:block/campfire/crackle6"
+    ],
+    "subtitle": "subtitles.buzzybeesbackport.block.campfire.crackle"
   }
 }

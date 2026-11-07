@@ -33,6 +33,8 @@ import net.minecraft.world.World;
 final class DispenserTweaks {
 
     private static final ResourceLocation CAMPFIRE = new ResourceLocation("villagerbackport", "campfire");
+    /** This mod's identical copy, registered when Village &amp; Pillage is absent. */
+    private static final ResourceLocation OUR_CAMPFIRE = new ResourceLocation("buzzybeesbackport", "campfire");
 
     private DispenserTweaks() {
     }
@@ -111,7 +113,7 @@ final class DispenserTweaks {
     /** @return a campfire's {@code lit} property, or null for anything else */
     @SuppressWarnings("unchecked")
     static IProperty<Boolean> litProperty(IBlockState state) {
-        if (!CAMPFIRE.equals(state.getBlock().getRegistryName())) {
+        if (!CAMPFIRE.equals(state.getBlock().getRegistryName()) && !OUR_CAMPFIRE.equals(state.getBlock().getRegistryName())) {
             return null;
         }
         for (IProperty<?> p : state.getPropertyKeys()) {

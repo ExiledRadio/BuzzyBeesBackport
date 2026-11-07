@@ -97,3 +97,17 @@ config.buzzybeesbackport.tweaks.bellRedstone.tooltip=A bell rings when it is pow
 config.buzzybeesbackport.tweaks.splashTexts=1.15 Splash Texts
 config.buzzybeesbackport.tweaks.splashTexts.tooltip=The title screen can show 1.15's three new splash texts.
 block.buzzybeesbackport.set_spawn=Respawn point set
+
+# --- campfire ---
+config.buzzybeesbackport.campfire=Campfire
+config.buzzybeesbackport.campfire.tooltip=The campfire, when Village & Pillage Backport is not installed.
+config.buzzybeesbackport.campfire.enabled=Enabled
+config.buzzybeesbackport.campfire.enabled.tooltip=Whether this mod adds its copy of the campfire when Village & Pillage Backport is not installed. With it installed, its campfire is used and this does nothing.
+config.buzzybeesbackport.campfire.cookTime=Cooking Time
+config.buzzybeesbackport.campfire.cookTime.tooltip=How long one item takes to cook, in ticks. 1.14's is 600 (30 seconds), three times a furnace.
+config.buzzybeesbackport.campfire.extraFoods=Extra Foods
+config.buzzybeesbackport.campfire.extraFoods.tooltip=What the campfire cooks. By default: every furnace recipe whose input and output are both food, which is 1.14's own list (raw meat, raw fish, potatoes) plus any mod's raw foods. Add an item the default leaves out as 'modid:item' (cooked as the furnace would) or 'modid:item=modid:result' (cooked into that). Add ':meta' after either to pick one variant, e.g. 'minecraft:fish:1=minecraft:cooked_fish:1'.
+config.buzzybeesbackport.campfire.excludedFoods=Excluded Foods
+config.buzzybeesbackport.campfire.excludedFoods.tooltip=Items the campfire refuses, even though the rule above would cook them, as 'modid:item' or 'modid:item:meta'.
+tile.buzzybeesbackport.campfire.name=Campfire
+subtitles.buzzybeesbackport.block.campfire.crackle=Campfire crackles
