@@ -248,8 +248,14 @@ As Update Aquatic's plan, which this mod follows exactly:
 1. **Honey and slime do not stick to each other**, as in vanilla: the family's rule is closest to vanilla,
    with bytecode patches where needed (2026-11-07). Patch P1 in `docs/PATCHES.md`.
 
-## Order
+## Order and status
 
-1. Scaffold, this plan: first.
-2. H, then B, G, I, X, one at a time, each merged into `main` after its tests.
-3. F once a Future MC instance is set up; L once the family's language tool is merged into Core's `main`.
+1. Scaffold, this plan: **done**.
+2. H honey, B bees/nests/hives, G nest generation, I iron golems: **done** (see `docs/streams/`).
+   Patch P1 (honey and slime): **done** (`docs/PATCHES.md`).
+3. X other 1.15 changes: **first pass done** (fourteen changes); the rest is listed in `docs/streams/tweaks.md`.
+4. L languages: **first pass done** (Mojang's names in all 18); our own 57 keys still to translate.
+5. W (new, from the family's "every mod works on its own" rule): an identical copy of Village & Pillage's
+   campfire, registered only when it is absent, so bees can be calmed by a campfire without it. Fire under
+   the hive calms them meanwhile.
+6. F Future MC pairs: needs a real instance with Future MC to record its states with `/futuremc dump`.
