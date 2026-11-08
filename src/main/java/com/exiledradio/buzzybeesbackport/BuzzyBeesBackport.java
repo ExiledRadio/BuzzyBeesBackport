@@ -47,6 +47,7 @@ public final class BuzzyBeesBackport {
         // 1.15's structure placement numbers, for Backport Core's table (seed parity with 1.15).
         com.exiledradio.buzzybeesbackport.worldgen.Placement115.register();
         NetworkHandler.init();
+        com.exiledradio.buzzybeesbackport.lookfeel.LookAndFeel.preInit();
         com.exiledradio.buzzybeesbackport.common.Compat.preInit();
         com.exiledradio.buzzybeesbackport.nestgen.NestGenerator.preInit();
         com.exiledradio.buzzybeesbackport.migrate.FutureMcPairs.preInit();

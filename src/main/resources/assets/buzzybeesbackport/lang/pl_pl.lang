@@ -128,3 +128,12 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Papugi zostają na tw
 config.buzzybeesbackport.tweaks.xpWithLoot=Doświadczenie wypada razem z łupem
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Umierające stworzenie lub gracz od razu upuszcza swoje doświadczenie razem z łupem, zamiast po animacji śmierci.
 block.buzzybeesbackport.set_spawn=Ustawiono punkt odradzania
+
+# Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
+options.key.hold=Przytrzymanie
+options.key.toggle=Przełączanie
+title.singleplayer=Tryb jednoosobowy
+title.multiplayer.lan=Gra wieloosobowa (LAN)
+title.multiplayer.other=Gra wieloosobowa (serwer zewnętrzny)
+title.multiplayer.realms=Gra wieloosobowa (Realms)
+chat.link.open=W przeglądarce

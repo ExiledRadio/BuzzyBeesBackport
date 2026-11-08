@@ -53,6 +53,7 @@ public final class SelfTestRunner {
             new FutureMcSelfTest(),
             new CampfireSelfTest(),
             new FamilySelfTest(),
+            new LookFeelSelfTest(),
     };
 
     private final List<String> wanted;

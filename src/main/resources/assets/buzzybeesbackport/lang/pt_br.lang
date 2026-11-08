@@ -128,3 +128,12 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Papagaios ficam nos s
 config.buzzybeesbackport.tweaks.xpWithLoot=Experiência cai junto com o espólio
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Uma criatura ou um jogador que morre larga sua experiência na hora, junto com seu espólio, em vez de depois da animação de morte.
 block.buzzybeesbackport.set_spawn=Ponto de renascimento definido
+
+# Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
+options.key.hold=Segurar
+options.key.toggle=Alternar
+title.singleplayer=Um jogador
+title.multiplayer.lan=Multijogador (LAN)
+title.multiplayer.other=Multijogador (servidor de terceiros)
+title.multiplayer.realms=Multijogador (Realms)
+chat.link.open=Abrir no navegador

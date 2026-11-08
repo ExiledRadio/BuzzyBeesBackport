@@ -128,3 +128,12 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=말, 보트, 광산 �
 config.buzzybeesbackport.tweaks.xpWithLoot=경험치가 노획물과 함께 떨어짐
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=죽은 몹이나 플레이어가 사망 애니메이션이 끝난 뒤가 아니라 노획물과 함께 즉시 경험치를 떨어뜨립니다.
 block.buzzybeesbackport.set_spawn=리스폰 지점을 설정했습니다
+
+# Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
+options.key.hold=홀드
+options.key.toggle=토글
+title.singleplayer=싱글플레이
+title.multiplayer.lan=멀티플레이 (LAN)
+title.multiplayer.other=멀티플레이 (제3자 서버)
+title.multiplayer.realms=멀티플레이 (Realms)
+chat.link.open=브라우저에서 열기

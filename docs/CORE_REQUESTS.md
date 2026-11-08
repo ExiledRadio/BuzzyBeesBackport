@@ -86,3 +86,22 @@ This mod now carries an identical copy of Village & Pillage's campfire (`buzzybe
 only without it. `BlockOwnership` should list `campfire` as Village & Pillage's, and the owner-side remap of
 other mods' copies (the half of Rule 1 not built yet) should include it: a world with our campfires stops at
 FML's missing-blocks prompt when Village & Pillage is added later. Same gap as Update Aquatic's copies.
+
+## 7. Look and feel: 1.15 pieces the `presentation` module does not cover yet (Core 1.2.0)
+
+This mod registers 1.15 and 1.15.2 with `Presentation.version` (panorama, overlay, splashes, Sneak and Sprint
+on Accessibility Settings) and does three version-local touches itself (the hardcore death button, the window
+title, "Open in Browser"). These need an owner Core does not have yet:
+
+*   **Button highlight (1.15)**: highlighted buttons get a white outline and white text instead of a blue tint
+    and yellow text. That is `widgets.png` plus `GuiButton`'s text color, one owner for every screen. Wanted with
+    Core's texture packs and a button-text color hook.
+*   **Text contrast (1.15)** and the enchantment glint texture: Core's `modern` pack.
+*   **Multiplayer warning (1.15.2)**: "Online play is not rated", shown once before the server list with "Do not
+    show this screen again". 1.16 rewords it, so it needs one owner (also asked for by the 1.16 backport).
+*   **Death screen**: this mod relabels the hardcore button on Forge's GUI events; a death-screen owner would take
+    it over (1.16.2 changes the capitals, which the 1.16 backport does in its lang file).
+*   **Debug screen**: "Chunk updates" removed from the second line (19w38a). Needs the debug-text owner asked for by
+    the other backports.
+*   **Window title**: kept here while only 1.15.2 and later change it; when a later backport also sets it, it
+    should move to Core (one slot, newest wins).

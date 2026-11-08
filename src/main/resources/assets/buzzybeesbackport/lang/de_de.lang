@@ -128,3 +128,12 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Papageien bleiben auf
 config.buzzybeesbackport.tweaks.xpWithLoot=Erfahrung fällt mit der Beute
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Eine sterbende Kreatur oder ein sterbender Spieler lässt die Erfahrung sofort zusammen mit der Beute fallen, statt erst nach der Todesanimation.
 block.buzzybeesbackport.set_spawn=Wiedereinstiegspunkt gesetzt
+
+# Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
+options.key.hold=Halten
+options.key.toggle=Umschalten
+title.singleplayer=Einzelspieler
+title.multiplayer.lan=Mehrspieler (LAN)
+title.multiplayer.other=Mehrspieler (Drittanbieter-Server)
+title.multiplayer.realms=Mehrspieler (Realms)
+chat.link.open=Im Browser öffnen

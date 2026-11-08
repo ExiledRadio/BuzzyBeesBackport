@@ -128,3 +128,12 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=在你骑马、乘船
 config.buzzybeesbackport.tweaks.xpWithLoot=经验随战利品一同掉落
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=死亡的生物或玩家会立即连同战利品一起掉落经验，而不是等死亡动画结束后。
 block.buzzybeesbackport.set_spawn=已设置重生点
+
+# Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
+options.key.hold=按住
+options.key.toggle=切换
+title.singleplayer=单人游戏
+title.multiplayer.lan=多人游戏（局域网）
+title.multiplayer.other=多人游戏（第三方服务器）
+title.multiplayer.realms=多人游戏（Realms）
+chat.link.open=在浏览器中打开
