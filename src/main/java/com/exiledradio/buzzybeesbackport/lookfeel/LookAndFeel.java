@@ -19,12 +19,16 @@ import net.minecraft.util.ResourceLocation;
  *   <li>19w41a: Sneak and Sprint, Hold or Toggle, on Accessibility Settings after Auto-Jump. They show and set this
  *       mod's {@code tweaks.toggleSneak} and {@code tweaks.toggleSprint}, which the toggle itself
  *       ({@code tweaks.client.ToggleKeys}) reads;</li>
- *   <li>19w35a: the hardcore death screen's second button is "Title screen" (client side,
- *       {@code lookfeel.client.LookAndFeelClient});</li>
- *   <li>1.15.2: the window title names the session ("Minecraft* 1.12.2 - Singleplayer").</li>
+ *   <li>1.15.2: the window title names the session ("Minecraft* 1.12.2 - Singleplayer");</li>
+ *   <li>from 1.15.2's jar, as Core's single slots: {@code widgets.png} (1.15's white button highlight; Core makes
+ *       the labels white, patch P12), the startup screen's {@code mojang.png}, the title screen's Accessibility
+ *       icon, the check box, and the multiplayer warning (1.15.2-pre1, "Online play is not rated");</li>
+ *   <li>vanilla's own text as 1.15.2 words it ({@code vanilla_text/}: "Open in Browser", the warning);</li>
+ *   <li>19w38a's F3 text, "chunk updates" gone from the second line (client side).</li>
  * </ul>
  * The world-loading screen stays 1.14's grid (Core's table). Menu music did not change in 1.15
- * ({@code music.menu} is menu1 to menu4 in 1.14.4 and 1.15.2). "Open in Browser" is in the lang file.
+ * ({@code music.menu} is menu1 to menu4 in 1.14.4 and 1.15.2). The hardcore death screen's "Title screen" button
+ * (19w35a) is Core's death-screen owner, by version.
  */
 public final class LookAndFeel {
 
@@ -58,8 +62,14 @@ public final class LookAndFeel {
                         "Minecraft Java Edition presents: Disgusting Bugs")
                 // Accessibility Settings in 1.15.2: ... Chat Text Opacity, Auto-Jump, Sneak, Sprint.
                 .option(TOGGLE_SNEAK.after("AUTO_JUMP"))
-                .option(TOGGLE_SPRINT.after(TOGGLE_SNEAK.id()));
+                .option(TOGGLE_SPRINT.after(TOGGLE_SNEAK.id()))
+                .replaceAsset("textures/gui/widgets.png", new ResourceLocation(ID, "textures/gui/widgets.png"))
+                .startupLogo("textures/gui/title/mojang.png", new ResourceLocation(ID, "textures/gui/title/mojang.png"))
+                .titleAccessibilityIcon(new ResourceLocation(ID, "textures/gui/accessibility.png"))
+                .vanillaText(new ResourceLocation(ID, "vanilla_text"));
         // 1.15.2's window title is client code (LookAndFeelClient); the version is declared on both sides.
-        Presentation.version("1.15.2");
+        Presentation.version("1.15.2")
+                .replaceAsset("textures/gui/checkbox.png", new ResourceLocation(ID, "textures/gui/checkbox.png"))
+                .multiplayerWarning("multiplayerWarning.header", "multiplayerWarning.message", "multiplayerWarning.check");
     }
 }

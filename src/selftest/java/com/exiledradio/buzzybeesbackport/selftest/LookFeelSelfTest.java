@@ -51,6 +51,29 @@ public final class LookFeelSelfTest implements SelfTest {
         c.ok(v1152 != null && v1152.owners().contains(ID), "1.15.2 is registered by " + ID + ": " + v1152);
         c.eq(GameVersion.parse("1.15.2"), Presentation.newest(), "the newest installed version (this mod alone)");
         c.eq(LoadingRevision.GRID_1_14, Presentation.loadingRevision(), "the world-loading screen stays 1.14's grid at 1.15");
+        // Core's finished presentation module: 1.15.2's assets, warning and vanilla text, Core's 1.15 table.
+        String[][] assets = {
+                {"textures/gui/widgets.png", "256x256"}, {"textures/gui/checkbox.png", "32x64"}, {"textures/gui/title/mojang.png", "512x512"},
+        };
+        for (String[] a : assets) {
+            ResourceLocation src = Presentation.asset(a[0]);
+            c.eq(new ResourceLocation(ID, a[0]), src, "Core serves vanilla's " + a[0] + " from 1.15.2's");
+            int[] size;
+            try {
+                size = src == null ? null : pngSize(src);
+            } catch (IOException e) {
+                size = null;
+            }
+            c.ok(size != null && a[1].equals(size[0] + "x" + size[1]), a[0] + " is 1.15.2's: " + Arrays.toString(size));
+        }
+        c.eq(new ResourceLocation(ID, "textures/gui/accessibility.png"), Presentation.titleAccessibilityIcon(), "the title Accessibility icon");
+        String[] warn = Presentation.multiplayerWarning();
+        c.ok(warn != null && "multiplayerWarning.header".equals(warn[0]), "1.15.2's multiplayer warning: " + Arrays.toString(warn));
+        c.ok(Presentation.vanillaTexts().contains(new ResourceLocation(ID, "vanilla_text")), "1.15's vanilla text is registered");
+        c.ok(com.exiledradio.backportcore.presentation.VanillaRevisions.whiteButtonText()
+                && com.exiledradio.backportcore.presentation.VanillaRevisions.hardcoreTitleButton(), "Core's 1.15 table: white labels, hardcore title button");
+        c.eq(com.exiledradio.backportcore.presentation.VanillaRevisions.Startup.BAR_1_14, com.exiledradio.backportcore.presentation.VanillaRevisions.startup(),
+                "the startup screen is 1.14's (1.15 kept it)");
     }
 
     private static void panorama(Check c) throws IOException {
@@ -141,12 +164,18 @@ public final class LookFeelSelfTest implements SelfTest {
 
     // ------------------------------------------------------------------------------------------
 
+    /** The mod's own lang file and its vanilla text (Core's, newest version wins) for one language. */
     private static Map<String, String> langFile(String code) throws IOException {
         Map<String, String> out = new HashMap<String, String>();
-        for (String line : lines(new ResourceLocation(ID, "lang/" + code + ".lang"))) {
-            int eq = line.indexOf('=');
-            if (eq > 0 && !line.startsWith("#")) {
-                out.put(line.substring(0, eq), line.substring(eq + 1));
+        for (String folder : new String[] {"lang/", "vanilla_text/"}) {
+            for (String line : lines(new ResourceLocation(ID, folder + code + ".lang"))) {
+                int eq = line.indexOf('=');
+                if (eq > 0 && !line.startsWith("#")) {
+                    if (folder.startsWith("vanilla") && out.containsKey(line.substring(0, eq))) {
+                        throw new IOException(code + ": " + line.substring(0, eq) + " is in lang/ and vanilla_text/");
+                    }
+                    out.put(line.substring(0, eq), line.substring(eq + 1));
+                }
             }
         }
         return out;

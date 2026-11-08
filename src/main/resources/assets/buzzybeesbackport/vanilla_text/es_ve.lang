@@ -1,0 +1,4 @@
+chat.link.open=Abrir enlace
+multiplayerWarning.header=Las partidas en línea no están calificadas
+multiplayerWarning.message=Durante una partida multijugador, podrías verte expuesto a mensajes de chat u otros contenidos generados por usuarios que no han sido calificados y que, por tanto, podrían no ser adecuados para todas las edades.
+multiplayerWarning.check=No mostrar este mensaje de nuevo

@@ -67,3 +67,13 @@ and `gradlew runClient -Pselftest=client` (title screen, options kept equal to t
       (3rd-party)" on a server, "... - Multiplayer (LAN)" in a world opened to LAN.
 - [ ] **Chat link prompt**: "Open in Browser".
 - [ ] World loading still shows 1.14's chunk grid; menu music unchanged (1.15 kept menu1 to menu4).
+
+## 1.15's pieces in Backport Core's finished presentation module (Core 1.2.0)
+
+- [ ] **Buttons**: white labels, hovered or not, and 1.15's white outline on the hovered button (widgets.png).
+- [ ] **Startup**: the white Mojang screen with a full red bar as loading ends, fading into the title screen.
+- [ ] **Multiplayer** from the title screen: "Online play is not rated" with Proceed / Back and "Do not show this
+      screen again" (1.15.2's check box); ticked, it never shows again.
+- [ ] **Hardcore death**: the second button reads "Title screen" and leaves the world (saved) for the title screen.
+- [ ] **F3**: the second line has no "(N chunk updates)".
+- [ ] **Text**: "Open in Browser" on a chat link.
