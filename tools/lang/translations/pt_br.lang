@@ -1,5 +1,4 @@
 # Portuguese (Brazil) - our own text; vanilla names come from Mojang (tools/lang/build_langs.py)
-itemGroup.buzzybeesbackport=Buzzy Bees Backport
 config.buzzybeesbackport.honey=Mel
 config.buzzybeesbackport.honey.tooltip=Frascos de mel, favos de mel, blocos de mel e blocos de favo de mel.
 config.buzzybeesbackport.honey.enabled=Ativado

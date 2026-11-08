@@ -1,5 +1,4 @@
 # Chinese (Simplified) - our own text; vanilla names come from Mojang (tools/lang/build_langs.py)
-itemGroup.buzzybeesbackport=Buzzy Bees Backport
 config.buzzybeesbackport.honey=蜂蜜
 config.buzzybeesbackport.honey.tooltip=蜂蜜瓶、蜜脾、蜂蜜块和蜜脾块。
 config.buzzybeesbackport.honey.enabled=启用

@@ -92,6 +92,8 @@ public final class BeeContent {
                 .tracker(80, 3, true)
                 .egg(0xEDC343, 0x43241B)
                 .build());
+        // Vanilla's spawn egg, listed where 1.19.2 lists the bee's (Backport Core's creative placement).
+        com.exiledradio.backportcore.creative.CreativePlacement.placeSpawnEgg(Content.id("bee"));
     }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)

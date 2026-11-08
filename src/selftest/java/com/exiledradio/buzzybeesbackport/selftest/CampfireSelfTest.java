@@ -6,7 +6,6 @@ import com.exiledradio.buzzybeesbackport.campfire.CampfireContent;
 import com.exiledradio.buzzybeesbackport.campfire.CampfireRecipes;
 import com.exiledradio.buzzybeesbackport.campfire.PacketCampfireDowse;
 import com.exiledradio.buzzybeesbackport.campfire.TileEntityCampfire;
-import com.exiledradio.buzzybeesbackport.common.ModCreativeTab;
 import com.exiledradio.buzzybeesbackport.common.Owners;
 import com.exiledradio.buzzybeesbackport.network.NetworkHandler;
 
@@ -134,7 +133,7 @@ public final class CampfireSelfTest implements SelfTest {
         Item item = Item.getItemFromBlock(this.campfire);
         c.eq(OURS, item.getRegistryName(), "its item");
         c.eq("tile.buzzybeesbackport.campfire", this.campfire.getTranslationKey(), "translation key");
-        c.ok(this.campfire.getCreativeTab() == ModCreativeTab.TAB, "in the creative tab");
+        c.ok(this.campfire.getCreativeTab() == net.minecraft.creativetab.CreativeTabs.DECORATIONS, "in vanilla's Decoration Blocks tab");
         c.eq(OURS, TileEntity.getKey(TileEntityCampfire.class), "tile entity id");
         c.ok(this.campfire.createTileEntity(c.world, this.campfire.getDefaultState()) instanceof TileEntityCampfire, "makes its tile entity");
         c.ok(CampfireContent.crackle != null
