@@ -128,3 +128,12 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=ウマ、ボート、
 config.buzzybeesbackport.tweaks.xpWithLoot=経験値をドロップ品と一緒に落とす
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=死んだMobやプレイヤーが、死亡アニメーションの後ではなく、ドロップ品と一緒にすぐ経験値を落とします。
 block.buzzybeesbackport.set_spawn=リスポーン地点が設定されました
+
+# Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
+options.key.hold=固定
+options.key.toggle=切り替え
+title.singleplayer=シングルプレイ
+title.multiplayer.lan=マルチプレイ（LAN）
+title.multiplayer.other=マルチプレイ（サードパーティー製のサーバー）
+title.multiplayer.realms=マルチプレイ（Realms）
+chat.link.open=ブラウザで開く

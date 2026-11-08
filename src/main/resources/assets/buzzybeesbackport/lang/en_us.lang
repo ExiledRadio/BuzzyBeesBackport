@@ -127,3 +127,12 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Parrots stay on your 
 config.buzzybeesbackport.tweaks.xpWithLoot=Experience Drops With Loot
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=A dying mob or player drops its experience at once, with its loot, instead of after the death animation.
 block.buzzybeesbackport.set_spawn=Respawn point set
+
+# Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
+options.key.hold=Hold
+options.key.toggle=Toggle
+title.singleplayer=Singleplayer
+title.multiplayer.lan=Multiplayer (LAN)
+title.multiplayer.other=Multiplayer (3rd-party)
+title.multiplayer.realms=Multiplayer (Realms)
+chat.link.open=Open in Browser

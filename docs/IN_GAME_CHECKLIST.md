@@ -49,3 +49,21 @@ Everything server-side is covered by the headless self-test (437 checks alone, 3
     them in the dev environment.
 *   Future MC installed beside this mod (duplicate hiding, `/futuremc check`), and a real world it was
     removed from.
+
+## Look and feel (with Backport Core 1.2.0)
+
+Self-tests: `gradlew runServer -Pselftest=lookfeel` (registration, assets, splash pool, the two options, lang)
+and `gradlew runClient -Pselftest=client` (title screen, options kept equal to the config, window title; log only).
+
+- [ ] **Title screen**: 1.15's panorama (bees and nests in a flower forest) turns slowly, with 1.13's gradient over
+      it. With a newer update backport installed, the newer panorama shows instead.
+- [ ] **Splashes**: "Buzzy Bees!", "In case it isn't obvious, foxes aren't players.", "Minecraft Java Edition
+      presents: Disgusting Bugs" turn up over several launches.
+- [ ] **Accessibility Settings**: after Auto-Jump, "Sneak: Hold" and "Sprint: Hold"; clicking switches to Toggle,
+      and the mod's config screen (tweaks) shows the same; sneak then stays on after one press.
+- [ ] **Hardcore death**: the buttons read "Spectate world" and "Title screen"; Title screen saves and leaves to
+      the title screen, and the world is still in the list.
+- [ ] **Window title**: "Minecraft* 1.12.2" on the title screen, "... - Singleplayer" in a world, "... - Multiplayer
+      (3rd-party)" on a server, "... - Multiplayer (LAN)" in a world opened to LAN.
+- [ ] **Chat link prompt**: "Open in Browser".
+- [ ] World loading still shows 1.14's chunk grid; menu music unchanged (1.15 kept menu1 to menu4).

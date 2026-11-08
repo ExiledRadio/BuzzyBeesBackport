@@ -128,3 +128,12 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=I pappagalli restano 
 config.buzzybeesbackport.tweaks.xpWithLoot=Esperienza rilasciata col bottino
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Una creatura o un giocatore che muore rilascia subito la propria esperienza, insieme al bottino, invece che dopo l'animazione di morte.
 block.buzzybeesbackport.set_spawn=Impostato il punto di rinascita
+
+# Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
+options.key.hold=Tieni
+options.key.toggle=Alterna
+title.singleplayer=Giocatore singolo
+title.multiplayer.lan=Multigiocatore (rete locale)
+title.multiplayer.other=Multigiocatore (server di terze parti)
+title.multiplayer.realms=Multigiocatore (Realms)
+chat.link.open=Apri collegamento

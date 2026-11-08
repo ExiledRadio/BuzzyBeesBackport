@@ -29,7 +29,7 @@ import org.apache.logging.log4j.Logger;
         name = BuzzyBeesBackport.MOD_NAME,
         version = BuzzyBeesBackport.VERSION,
         acceptedMinecraftVersions = "[1.12.2]",
-        dependencies = "required-after:backportcore@[1.1.0,)"
+        dependencies = "required-after:backportcore@[1.2.0,)"
 )
 public final class BuzzyBeesBackport {
 
@@ -45,6 +45,7 @@ public final class BuzzyBeesBackport {
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         NetworkHandler.init();
+        com.exiledradio.buzzybeesbackport.lookfeel.LookAndFeel.preInit();
         com.exiledradio.buzzybeesbackport.common.Compat.preInit();
         com.exiledradio.buzzybeesbackport.nestgen.NestGenerator.preInit();
         com.exiledradio.buzzybeesbackport.migrate.FutureMcPairs.preInit();

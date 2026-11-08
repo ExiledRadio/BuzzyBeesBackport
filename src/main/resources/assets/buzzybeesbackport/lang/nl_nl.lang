@@ -128,3 +128,12 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Papegaaien blijven op
 config.buzzybeesbackport.tweaks.xpWithLoot=Ervaring valt samen met buit
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Een stervend wezen of stervende speler laat zijn ervaring meteen vallen, samen met zijn buit, in plaats van na de sterfanimatie.
 block.buzzybeesbackport.set_spawn=Respawnpunt ingesteld
+
+# Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
+options.key.hold=vasthouden
+options.key.toggle=omschakelen
+title.singleplayer=Alleen spelen
+title.multiplayer.lan=Samen spelen (LAN)
+title.multiplayer.other=Samen spelen (server van derden)
+title.multiplayer.realms=Samen spelen (Realms)
+chat.link.open=Openen in browser

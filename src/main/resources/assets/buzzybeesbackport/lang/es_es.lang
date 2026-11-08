@@ -128,3 +128,12 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Los loros se quedan e
 config.buzzybeesbackport.tweaks.xpWithLoot=La experiencia cae con el botín
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Una criatura o un jugador que muere suelta su experiencia al instante, junto con su botín, en lugar de tras la animación de muerte.
 block.buzzybeesbackport.set_spawn=Se ha establecido el punto de reaparición
+
+# Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
+options.key.hold=Mantener
+options.key.toggle=Alternar
+title.singleplayer=Un jugador
+title.multiplayer.lan=Multijugador (LAN)
+title.multiplayer.other=Multijugador (servidor de terceros)
+title.multiplayer.realms=Multijugador (Realms)
+chat.link.open=Abrir enlace

@@ -38,6 +38,16 @@ public final class ClientSetup {
         com.exiledradio.buzzybeesbackport.bee.client.BeeClient.init();
         com.exiledradio.buzzybeesbackport.tweaks.client.TweaksClient.init();
         com.exiledradio.buzzybeesbackport.campfire.client.CampfireClient.init();
+        com.exiledradio.buzzybeesbackport.lookfeel.client.LookAndFeelClient.init();
+        // `runClient -Pselftest=client`: the look-and-feel title-screen check, reached by name (a release jar has no test classes).
+        String selftest = System.getProperty(BuzzyBeesBackport.MOD_ID + ".selftest");
+        if (selftest != null && selftest.contains("client")) {
+            try {
+                Class.forName("com.exiledradio.buzzybeesbackport.selftest.ClientLookFeelTest").getMethod("register").invoke(null);
+            } catch (ReflectiveOperationException e) {
+                BuzzyBeesBackport.LOGGER.error("CLIENT SELFTEST DONE pass=0 fail=1: the test classes are not in this build", e);
+            }
+        }
     }
 
     @SubscribeEvent

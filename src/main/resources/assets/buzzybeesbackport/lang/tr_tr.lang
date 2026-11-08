@@ -128,3 +128,12 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Bir ata, tekneye, vag
 config.buzzybeesbackport.tweaks.xpWithLoot=Tecrübe Ganimetle Birlikte Düşer
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Ölen bir canlı ya da oyuncu, tecrübesini ölüm animasyonundan sonra değil, ganimetiyle birlikte hemen düşürür.
 block.buzzybeesbackport.set_spawn=Yeniden canlanma noktası ayarlandı
+
+# Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
+options.key.hold=Basılı tut
+options.key.toggle=Aç/Kapat
+title.singleplayer=Tek Oyunculu
+title.multiplayer.lan=Çok Oyunculu (Yerel Ağ)
+title.multiplayer.other=Çok Oyunculu (Üçüncü Taraf Sunucu)
+title.multiplayer.realms=Çok Oyunculu (Realms)
+chat.link.open=Tarayıcıda Aç

@@ -128,3 +128,12 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Les perroquets resten
 config.buzzybeesbackport.tweaks.xpWithLoot=L'expérience tombe avec le butin
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Une créature ou un joueur qui meurt lâche son expérience immédiatement, avec son butin, au lieu d'attendre la fin de l'animation de mort.
 block.buzzybeesbackport.set_spawn=Point de réapparition défini
+
+# Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
+options.key.hold=Maintenir
+options.key.toggle=Basculer
+title.singleplayer=Solo
+title.multiplayer.lan=Multijoueur (LAN)
+title.multiplayer.other=Multijoueur (serveur tiers)
+title.multiplayer.realms=Multijoueur (Realms)
+chat.link.open=Ouvrir le lien

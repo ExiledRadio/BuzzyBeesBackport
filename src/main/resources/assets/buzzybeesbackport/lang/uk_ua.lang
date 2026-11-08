@@ -128,3 +128,12 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Папуги зали
 config.buzzybeesbackport.tweaks.xpWithLoot=Досвід випадає разом зі здобиччю
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Моб або гравець, що помирає, одразу кидає свій досвід разом зі здобиччю, а не після анімації смерті.
 block.buzzybeesbackport.set_spawn=Точку відродження встановлено
+
+# Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
+options.key.hold=Утримування
+options.key.toggle=Перемикання
+title.singleplayer=Гра наодинці
+title.multiplayer.lan=Гра в мережі (локальна мережа)
+title.multiplayer.other=Гра в мережі (сторонній сервер)
+title.multiplayer.realms=Гра в мережі (Realms)
+chat.link.open=Відкр. в переглядачі
