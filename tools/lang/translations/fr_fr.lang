@@ -1,5 +1,4 @@
 # French (France) - our own text; vanilla names come from Mojang (tools/lang/build_langs.py)
-itemGroup.buzzybeesbackport=Buzzy Bees Backport
 config.buzzybeesbackport.honey=Miel
 config.buzzybeesbackport.honey.tooltip=Fioles de miel, rayons de miel, blocs de miel et blocs de rayon de miel.
 config.buzzybeesbackport.honey.enabled=Activé

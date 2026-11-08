@@ -1,5 +1,4 @@
 # Korean - our own text; vanilla names come from Mojang (tools/lang/build_langs.py)
-itemGroup.buzzybeesbackport=Buzzy Bees Backport
 config.buzzybeesbackport.honey=꿀
 config.buzzybeesbackport.honey.tooltip=꿀이 든 병, 벌집 조각, 꿀 블록, 벌집 조각 블록.
 config.buzzybeesbackport.honey.enabled=활성화

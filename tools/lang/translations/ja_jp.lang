@@ -1,5 +1,4 @@
 # Japanese - our own text; vanilla names come from Mojang (tools/lang/build_langs.py)
-itemGroup.buzzybeesbackport=Buzzy Bees Backport
 config.buzzybeesbackport.honey=ハチミツ
 config.buzzybeesbackport.honey.tooltip=ハチミツ入りの瓶、ハニカム、ハチミツブロック、ハニカムブロック。
 config.buzzybeesbackport.honey.enabled=有効

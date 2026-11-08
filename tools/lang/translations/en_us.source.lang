@@ -1,5 +1,4 @@
 # The English each translations/<code>.lang entry was made from. Written by build_langs.py snapshot.
-itemGroup.buzzybeesbackport=Buzzy Bees Backport
 config.buzzybeesbackport.honey=Honey
 config.buzzybeesbackport.honey.tooltip=Honey bottles, honeycomb, honey blocks and honeycomb blocks.
 config.buzzybeesbackport.honey.enabled=Enabled

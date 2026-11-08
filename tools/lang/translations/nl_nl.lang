@@ -1,5 +1,4 @@
 # Dutch - our own text; vanilla names come from Mojang (tools/lang/build_langs.py)
-itemGroup.buzzybeesbackport=Buzzy Bees Backport
 config.buzzybeesbackport.honey=Honing
 config.buzzybeesbackport.honey.tooltip=Honingflessen, honingraten, honingblokken en honingraatblokken.
 config.buzzybeesbackport.honey.enabled=Ingeschakeld

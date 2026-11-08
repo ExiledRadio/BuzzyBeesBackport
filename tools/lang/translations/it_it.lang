@@ -1,5 +1,4 @@
 # Italian - our own text; vanilla names come from Mojang (tools/lang/build_langs.py)
-itemGroup.buzzybeesbackport=Buzzy Bees Backport
 config.buzzybeesbackport.honey=Miele
 config.buzzybeesbackport.honey.tooltip=Ampolle di miele, favi, blocchi di miele e blocchi di favi.
 config.buzzybeesbackport.honey.enabled=Attivo

@@ -1,5 +1,4 @@
 # Russian - our own text; vanilla names come from Mojang (tools/lang/build_langs.py)
-itemGroup.buzzybeesbackport=Buzzy Bees Backport
 config.buzzybeesbackport.honey=Мёд
 config.buzzybeesbackport.honey.tooltip=Бутылочки мёда, пчелиные соты, блоки мёда и блоки пчелиных сот.
 config.buzzybeesbackport.honey.enabled=Включено

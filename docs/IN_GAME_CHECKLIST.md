@@ -77,3 +77,13 @@ and `gradlew runClient -Pselftest=client` (title screen, options kept equal to t
 - [ ] **Hardcore death**: the second button reads "Title screen" and leaves the world (saved) for the title screen.
 - [ ] **F3**: the second line has no "(N chunk updates)".
 - [ ] **Text**: "Open in Browser" on a chat link.
+
+## Creative tabs (with Backport Core 1.3.0)
+
+The places are in `docs/CREATIVE_TABS.md`; a dev client already checked the lists, the search tab and JEI.
+
+- [ ] There is no tab for this mod; every vanilla tab keeps its icon, name, background and scroll bar.
+- [ ] A few places: bee nest and beehive at the end of Decoration Blocks, the honey block in Redstone near the pistons, the honey bottle at the end of Foodstuffs, the bee egg after the bat egg.
+- [ ] The search tab finds the mod's items, and JEI lists them.
+- [ ] Other mods' items are still in their tabs, in their own order.
+- [ ] With another update backport installed too, its items and this mod's sit together by kind (stripped logs, slabs).
