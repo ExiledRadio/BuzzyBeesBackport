@@ -25,15 +25,16 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import org.lwjgl.opengl.Display;
 
 /**
- * 1.15's look and feel on the client: the Sneak and Sprint options kept equal to this mod's config, the hardcore
- * death screen's "Title screen" button (19w35a) and the window title (1.15.2).
+ * 1.15's look and feel on the client: the Sneak and Sprint options kept equal to this mod's config, the window
+ * title (1.15.2) and 19w38a's F3 text. The hardcore death screen's "Title screen" button (19w35a) is Backport
+ * Core's death-screen owner.
  */
 @SideOnly(Side.CLIENT)
 public final class LookAndFeelClient {
 
     /** For the client self-test. */
     public static volatile String lastTitle;
-    public static volatile int hardcoreButtons;
+
 
     private String shownTitle;
 
@@ -47,6 +48,16 @@ public final class LookAndFeelClient {
         LookAndFeel.TOGGLE_SNEAK.onChange(v -> save(true, "toggle".equals(v)));
         LookAndFeel.TOGGLE_SPRINT.onChange(v -> save(false, "toggle".equals(v)));
         MinecraftForge.EVENT_BUS.register(new LookAndFeelClient());
+        com.exiledradio.backportcore.presentation.client.DebugText.add("1.15", "no chunk updates", LookAndFeelClient::debugText);
+    }
+
+    /** For the client self-test. */
+    public static volatile int debugEdits;
+
+    /** 19w38a: "(N chunk updates)" leaves the second line of the F3 text (1.12.2's {@code Minecraft.debug}). */
+    static void debugText(com.exiledradio.backportcore.presentation.client.DebugText.Lines lines) {
+        lines.replaceLeft(1, s -> s.replaceFirst(" \\(\\d+ chunk updates?\\)", ""));
+        debugEdits++;
     }
 
     private static void save(boolean sneak, boolean toggle) {
@@ -67,39 +78,6 @@ public final class LookAndFeelClient {
         }
     }
 
-    /**
-     * 19w35a: the hardcore death screen's "Delete world" / "Leave server" button becomes "Title screen", which
-     * leaves the world (saving it) for the title screen, as 1.15's {@code DeathScreen.exitToTitleScreen}.
-     */
-    @SubscribeEvent
-    public void onInit(GuiScreenEvent.InitGuiEvent.Post event) {
-        if (event.getGui() instanceof GuiGameOver && isHardcore()) {
-            for (GuiButton b : event.getButtonList()) {
-                if (b.id == 1) {
-                    b.displayString = I18n.format("deathScreen.titleScreen");
-                    hardcoreButtons++;
-                }
-            }
-        }
-    }
-
-    @SubscribeEvent
-    public void onAction(GuiScreenEvent.ActionPerformedEvent.Pre event) {
-        if (event.getGui() instanceof GuiGameOver && event.getButton().id == 1 && isHardcore()) {
-            event.setCanceled(true);
-            Minecraft mc = Minecraft.getMinecraft();
-            if (mc.world != null) {
-                mc.world.sendQuittingDisconnectingPacket();
-            }
-            mc.loadWorld(null);
-            mc.displayGuiScreen(new GuiMainMenu());
-        }
-    }
-
-    private static boolean isHardcore() {
-        Minecraft mc = Minecraft.getMinecraft();
-        return mc.world != null && mc.world.getWorldInfo().isHardcoreModeEnabled();
-    }
 
     /** 1.15.2 {@code Minecraft.createTitle}, set whenever it changes. */
     @SubscribeEvent

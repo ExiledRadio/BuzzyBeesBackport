@@ -105,3 +105,11 @@ title, "Open in Browser"). These need an owner Core does not have yet:
     the other backports.
 *   **Window title**: kept here while only 1.15.2 and later change it; when a later backport also sets it, it
     should move to Core (one slot, newest wins).
+
+## Done in Backport Core 1.2.0 (core-finish, 2026-11-08)
+
+Used here on branch `bb-lookfeel2`: the button highlight (this mod's 1.15.2 `widgets.png`) and white labels (Core's
+patch P12), the multiplayer warning (1.15.2's wording and check box), the death-screen owner (Core now draws and
+acts on the hardcore "Title screen" button; this mod's own code is gone), the F3 text pipeline ("chunk updates"
+removed, registered here) and vanilla text by version. Still open: the window title (kept here while only 1.15.2
+sets it), text contrast beyond the button labels.

@@ -1,0 +1,4 @@
+chat.link.open=Ouvrir le lien
+multiplayerWarning.header=Le jeu en ligne n'est pas évalué
+multiplayerWarning.message=Durant le jeu en ligne, vous pourriez être exposé(e) à des messages dans le tchat ou à d'autres types de contenu généré par les utilisateurs qui n'ont pas été évalués et qui pourraient ne pas convenir à tous les âges.
+multiplayerWarning.check=Ne plus afficher ce message
