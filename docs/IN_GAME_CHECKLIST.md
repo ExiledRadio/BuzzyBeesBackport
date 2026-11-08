@@ -50,7 +50,7 @@ Everything server-side is covered by the headless self-test (437 checks alone, 3
 *   Future MC installed beside this mod (duplicate hiding, `/futuremc check`), and a real world it was
     removed from.
 
-## Look and feel (with Backport Core 1.2.0)
+## Look and feel (with Backport Core 1.1.0)
 
 Self-tests: `gradlew runServer -Pselftest=lookfeel` (registration, assets, splash pool, the two options, lang)
 and `gradlew runClient -Pselftest=client` (title screen, options kept equal to the config, window title; log only).
@@ -68,7 +68,7 @@ and `gradlew runClient -Pselftest=client` (title screen, options kept equal to t
 - [ ] **Chat link prompt**: "Open in Browser".
 - [ ] World loading still shows 1.14's chunk grid; menu music unchanged (1.15 kept menu1 to menu4).
 
-## 1.15's pieces in Backport Core's finished presentation module (Core 1.2.0)
+## 1.15's pieces in Backport Core's finished presentation module (Core 1.1.0)
 
 - [ ] **Buttons**: white labels, hovered or not, and 1.15's white outline on the hovered button (widgets.png).
 - [ ] **Startup**: the white Mojang screen with a full red bar as loading ends, fading into the title screen.

@@ -1,6 +1,6 @@
 # 1.0.0
 
-First release: all of 1.15 Buzzy Bees on 1.12.2. Needs Backport Core 1.2.0 or newer, which needs Fluidlogged API 3.3.3 or newer.
+First release: all of 1.15 Buzzy Bees on 1.12.2. Needs Backport Core 1.1.0 or newer, which needs Fluidlogged API 3.3.3 or newer.
 
 *   **Bees**: pollinating flowers, growing crops, making honey, going home at night and in rain, anger shared with their hive mates, stinging and dying after a sting, breeding and following you for flowers. 1.15's model, textures, sounds and particles, and a spawn egg.
 *   **Bee nests** on oak and birch trees in plains, sunflower plains, flower forests, forests and birch forests, and on oak and birch trees grown from saplings near flowers. **Beehives** to build.

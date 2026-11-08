@@ -87,7 +87,7 @@ only without it. `BlockOwnership` should list `campfire` as Village & Pillage's,
 other mods' copies (the half of Rule 1 not built yet) should include it: a world with our campfires stops at
 FML's missing-blocks prompt when Village & Pillage is added later. Same gap as Update Aquatic's copies.
 
-## 7. Look and feel: 1.15 pieces the `presentation` module does not cover yet (Core 1.2.0)
+## 7. Look and feel: 1.15 pieces the `presentation` module does not cover yet (Core 1.1.0)
 
 This mod registers 1.15 and 1.15.2 with `Presentation.version` (panorama, overlay, splashes, Sneak and Sprint
 on Accessibility Settings) and does three version-local touches itself (the hardcore death button, the window
@@ -106,7 +106,7 @@ title, "Open in Browser"). These need an owner Core does not have yet:
 *   **Window title**: kept here while only 1.15.2 and later change it; when a later backport also sets it, it
     should move to Core (one slot, newest wins).
 
-## Done in Backport Core 1.2.0 (core-finish, 2026-11-08)
+## Done in Backport Core 1.1.0 (core-finish, 2026-11-08)
 
 Used here on branch `bb-lookfeel2`: the button highlight (this mod's 1.15.2 `widgets.png`) and white labels (Core's
 patch P12), the multiplayer warning (1.15.2's wording and check box), the death-screen owner (Core now draws and
