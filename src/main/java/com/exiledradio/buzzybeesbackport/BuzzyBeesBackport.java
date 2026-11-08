@@ -29,7 +29,7 @@ import org.apache.logging.log4j.Logger;
         name = BuzzyBeesBackport.MOD_NAME,
         version = BuzzyBeesBackport.VERSION,
         acceptedMinecraftVersions = "[1.12.2]",
-        dependencies = "required-after:backportcore@[1.1.0,)"
+        dependencies = "required-after:backportcore@[1.2.0,)"
 )
 public final class BuzzyBeesBackport {
 
@@ -44,6 +44,8 @@ public final class BuzzyBeesBackport {
 
     @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
+        // 1.15's structure placement numbers, for Backport Core's table (seed parity with 1.15).
+        com.exiledradio.buzzybeesbackport.worldgen.Placement115.register();
         NetworkHandler.init();
         com.exiledradio.buzzybeesbackport.common.Compat.preInit();
         com.exiledradio.buzzybeesbackport.nestgen.NestGenerator.preInit();
