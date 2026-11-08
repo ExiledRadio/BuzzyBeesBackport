@@ -79,5 +79,5 @@ English, Spanish (Spain and Latin America), Brazilian Portuguese, French, German
 ## Requirements
 
 *   Minecraft 1.12.2, Forge 14.23.5.2847 or newer.
-*   Backport Core 1.3.0 or newer, and Fluidlogged API 3.3.3 or newer (Backport Core's own requirement). Both on the client and the server.
+*   Backport Core 1.1.0 or newer, and Fluidlogged API 3.3.3 or newer (Backport Core's own requirement). Both on the client and the server.
 *   The mod contains a small coremod of its own for five vanilla behaviors 1.12.2 has no hook for: honey and slime not sticking together, shift-clicking into the crafting grid, elytra opening while rising, dispensed fireworks and parrots on the shoulder while riding. The last four switch off with their settings; the honey one only ever touches honey blocks. Each steps aside, with a line in the log, if another mod has changed the same code.

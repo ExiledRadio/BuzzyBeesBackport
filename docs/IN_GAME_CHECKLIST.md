@@ -78,7 +78,7 @@ and `gradlew runClient -Pselftest=client` (title screen, options kept equal to t
 - [ ] **F3**: the second line has no "(N chunk updates)".
 - [ ] **Text**: "Open in Browser" on a chat link.
 
-## Creative tabs (with Backport Core 1.3.0)
+## Creative tabs (with Backport Core 1.1.0)
 
 The places are in `docs/CREATIVE_TABS.md`; a dev client already checked the lists, the search tab and JEI.
 

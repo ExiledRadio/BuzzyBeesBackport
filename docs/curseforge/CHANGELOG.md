@@ -1,6 +1,6 @@
 # 1.0.0
 
-First release: all of 1.15 Buzzy Bees on 1.12.2. Needs Backport Core 1.3.0 or newer, which needs Fluidlogged API 3.3.3 or newer.
+First release: all of 1.15 Buzzy Bees on 1.12.2. Needs Backport Core 1.1.0 or newer, which needs Fluidlogged API 3.3.3 or newer.
 
 Everything is in vanilla's creative tabs where 1.19.2 lists it (bee nests and beehives with the decoration blocks, the honey block in Redstone, the honey bottle in Foodstuffs, the bee's spawn egg among the others); the mod has no tab of its own.
 
