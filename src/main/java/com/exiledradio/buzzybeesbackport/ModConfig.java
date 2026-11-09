@@ -1,5 +1,7 @@
 package com.exiledradio.buzzybeesbackport;
 
+import com.exiledradio.backportcore.settings.Setting;
+
 import net.minecraftforge.common.config.Config;
 import net.minecraftforge.common.config.ConfigManager;
 import net.minecraftforge.fml.client.event.ConfigChangedEvent;
@@ -27,30 +29,37 @@ public final class ModConfig {
 
     @Config.LangKey("config.buzzybeesbackport.honey")
     @Config.Comment("Honey bottles, honeycomb, honey blocks and honeycomb blocks.")
+    @Setting.Feature(icon = "buzzybeesbackport:honey_bottle")
     public static final Honey honey = new Honey();
 
     @Config.LangKey("config.buzzybeesbackport.bees")
     @Config.Comment("Bees, bee nests and beehives.")
+    @Setting.Feature(icon = "buzzybeesbackport:beehive")
     public static final Bees bees = new Bees();
 
     @Config.LangKey("config.buzzybeesbackport.nests")
     @Config.Comment("Bee nests generating on trees and growing with saplings near flowers.")
+    @Setting.Feature(icon = "buzzybeesbackport:bee_nest")
     public static final Nests nests = new Nests();
 
     @Config.LangKey("config.buzzybeesbackport.golems")
     @Config.Comment("Iron golems cracking as they are hurt, and repairing them with iron ingots.")
+    @Setting.Feature(icon = "minecraft:iron_ingot")
     public static final Golems golems = new Golems();
 
     @Config.LangKey("config.buzzybeesbackport.tweaks")
     @Config.Comment("1.15's smaller changes, each with its own switch.")
+    @Setting.Feature(icon = "minecraft:end_bricks")
     public static final Tweaks tweaks = new Tweaks();
 
     @Config.LangKey("config.buzzybeesbackport.compat")
     @Config.Comment("Worlds and blocks from other mods that add the same things.")
+    @Setting.Feature(icon = "minecraft:chest")
     public static final Compat compat = new Compat();
 
     @Config.LangKey("config.buzzybeesbackport.campfire")
     @Config.Comment("The campfire, when Village & Pillage Backport is not installed.")
+    @Setting.Feature(icon = "buzzybeesbackport:campfire")
     public static final Campfire campfire = new Campfire();
 
     // ------------------------------------------------------------------------------------------
@@ -76,6 +85,7 @@ public final class ModConfig {
         @Config.LangKey("config.buzzybeesbackport.nests.enabled")
         public boolean enabled = true;
 
+        @Setting.NewChunks
         @Config.Comment({"Other mods' biomes get nests too, by their Forge biome types: plains like plains (5% of trees),",
                 "broadleaf forests like forests (0.2%)."})
         @Config.LangKey("config.buzzybeesbackport.nests.moddedBiomes")
@@ -94,6 +104,7 @@ public final class ModConfig {
         @Config.LangKey("config.buzzybeesbackport.tweaks.enabled")
         public boolean enabled = true;
 
+        @Config.RequiresMcRestart
         @Config.Comment("End stone bricks take as long to mine as stone (hardness 3) and resist explosions like it (9).")
         @Config.LangKey("config.buzzybeesbackport.tweaks.endStoneBricks")
         public boolean endStoneBricks = true;
@@ -122,6 +133,7 @@ public final class ModConfig {
         @Config.LangKey("config.buzzybeesbackport.tweaks.babyAnimals")
         public boolean babyAnimals = true;
 
+        @Config.RequiresMcRestart
         @Config.Comment("Parrots no longer imitate endermen, polar bears, wolves or zombie pigmen.")
         @Config.LangKey("config.buzzybeesbackport.tweaks.parrotImitation")
         public boolean parrotImitation = true;
@@ -138,6 +150,7 @@ public final class ModConfig {
         @Config.LangKey("config.buzzybeesbackport.tweaks.gameRules")
         public boolean gameRules = true;
 
+        @Config.RequiresMcRestart
         @Config.Comment("Dispensers fill glass bottles from water, place armor stands and light campfires with fire charges.")
         @Config.LangKey("config.buzzybeesbackport.tweaks.dispensers")
         public boolean dispensers = true;
@@ -146,6 +159,7 @@ public final class ModConfig {
         @Config.LangKey("config.buzzybeesbackport.tweaks.bellRedstone")
         public boolean bellRedstone = true;
 
+        @Setting.Client
         @Config.Comment("The title screen can show 1.15's three new splash texts.")
         @Config.LangKey("config.buzzybeesbackport.tweaks.splashTexts")
         public boolean splashTexts = true;
@@ -159,14 +173,17 @@ public final class ModConfig {
         @Config.LangKey("config.buzzybeesbackport.tweaks.elytraJump")
         public boolean elytraJump = true;
 
+        @Setting.Client
         @Config.Comment("Client: the sneak key turns sneaking on and off instead of being held.")
         @Config.LangKey("config.buzzybeesbackport.tweaks.toggleSneak")
         public boolean toggleSneak = false;
 
+        @Setting.Client
         @Config.Comment("Client: the sprint key turns sprinting on and off instead of being held.")
         @Config.LangKey("config.buzzybeesbackport.tweaks.toggleSprint")
         public boolean toggleSprint = false;
 
+        @Config.RequiresMcRestart
         @Config.Comment("A firework rocket fired from a dispenser flies straight the way the dispenser faces.")
         @Config.LangKey("config.buzzybeesbackport.tweaks.dispensedFireworks")
         public boolean dispensedFireworks = true;
@@ -208,6 +225,8 @@ public final class ModConfig {
         @Config.LangKey("config.buzzybeesbackport.campfire.cookTime")
         public int cookTime = 600;
 
+        @Config.RequiresMcRestart
+        @Setting.ListOf(Setting.Kind.ITEM)
         @Config.Comment({"What the campfire cooks. By default: every furnace recipe whose input and output are both food,",
                 "which is 1.14's own list (raw meat, raw fish, potatoes) plus any mod's raw foods.",
                 "Add an item the default leaves out as 'modid:item' (cooked as the furnace would) or",
@@ -216,6 +235,8 @@ public final class ModConfig {
         @Config.LangKey("config.buzzybeesbackport.campfire.extraFoods")
         public String[] extraFoods = {};
 
+        @Config.RequiresMcRestart
+        @Setting.ListOf(Setting.Kind.ITEM)
         @Config.Comment({"Items the campfire refuses, even though the rule above would cook them, as 'modid:item' or",
                 "'modid:item:meta'."})
         @Config.LangKey("config.buzzybeesbackport.campfire.excludedFoods")
