@@ -6,7 +6,7 @@ Bees live in nests on oak and birch trees, fly out to the flowers, come home wit
 
 It is ported from the decompiled game code, so the bees' timings, distances and chances, the honey block's physics, the golems' crack stages and the nest generation rates are the ones the real game uses. Where today's Minecraft behaves differently from 1.15, today's wins.
 
-**Everything 1.15 added is in this one mod.** It needs one library, Backport Core, which holds the code the update backports share, and Backport Core needs Fluidlogged API. All three are needed on the client and the server.
+**Everything 1.15 added is in this one mod.** It needs one library, Backport Core, which holds the code the update backports share. Both are needed on the client and the server.
 
 > 💬 **[Join the Discord](https://discord.gg/kxQvMDJBTN)** for bug reports, questions and release pings.
 
@@ -79,5 +79,5 @@ English, Spanish (Spain and Latin America), Brazilian Portuguese, French, German
 ## Requirements
 
 *   Minecraft 1.12.2, Forge 14.23.5.2847 or newer.
-*   Backport Core 1.1.0 or newer, and Fluidlogged API 3.3.3 or newer (Backport Core's own requirement). Both on the client and the server.
+*   Backport Core 1.1.0 or newer, on the client and the server. It installs Fluidlogged API with it.
 *   The mod contains a small coremod of its own for five vanilla behaviors 1.12.2 has no hook for: honey and slime not sticking together, shift-clicking into the crafting grid, elytra opening while rising, dispensed fireworks and parrots on the shoulder while riding. The last four switch off with their settings; the honey one only ever touches honey blocks. Each steps aside, with a line in the log, if another mod has changed the same code.
