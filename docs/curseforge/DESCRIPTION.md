@@ -56,4 +56,4 @@ Minecraft 1.12.2 with Forge 14.23.5.2847 or newer, and [Backport Core](https://w
 
 Also by me: [Village & Pillage Backport](https://www.curseforge.com/minecraft/mc-mods/villager-backport), all of 1.14 on 1.12.2, and [Enchantment Recipes](https://www.curseforge.com/minecraft/mc-mods/rlcraft-enchantment-recipes), which lets you craft enchanted books from mod materials.
 
-Not affiliated with Mojang.
+Not affiliated with Mojang. Source: [github.com/ExiledRadio/BuzzyBeesBackport](https://github.com/ExiledRadio/BuzzyBeesBackport)
