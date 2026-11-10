@@ -15,4 +15,5 @@ Everything is in vanilla's creative tabs where 1.19.2 lists it (bee nests and be
 *   **Seed maps: worlds match 1.15.** A new world generated with this mod (and the 1.13 and 1.14 backports) matches what 1.15 generates for the same seed, so seed map sites set to 1.15 show its biomes and structures where they really are. Checked against Minecraft 1.15.2's own code over six seeds. The biome of each block blends between biomes as in 1.15, so villages, temples and other structures near a biome's edge start where 1.15 starts them. With a backport of a later update installed as well, the world matches that update instead.
 *   Works with Village & Pillage Backport's campfires, flowers, berry bushes, bells and golems, and brings its own campfire when Village & Pillage isn't installed.
 *   Worlds that had another mod's bees, nests, hives and honey keep them, converted to this mod's, with the bees and honey inside.
+*   Every setting is on Backport Core's settings screen, under Mod Options.
 *   Eighteen languages.
