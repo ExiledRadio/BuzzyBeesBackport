@@ -134,8 +134,39 @@ public final class NestGenerator {
             p.setY(p.getY() - 1);
         }
         Block ground = world.getBlockState(p.down()).getBlock();
-        return ground instanceof BlockGrass || ground instanceof BlockDirt ? p.toImmutable() : null;
+        if (!(ground instanceof BlockGrass || ground instanceof BlockDirt)) {
+            return null;
+        }
+        return isTree(world, p) ? p.toImmutable() : null;
     }
+
+    /**
+     * True when the trunk at {@code base} is a grown tree: at least {@link #MIN_TRUNK} logs with leaves
+     * around its top. 1.15 decorates only trees it just generated; 1.12 villages border every farm with
+     * single oak logs on dirt and build log corners on houses, and neither has leaves.
+     */
+    static boolean isTree(World world, BlockPos base) {
+        int top = base.getY();
+        while (top - base.getY() < 32 && BeeNests.isNestTree(world.getBlockState(new BlockPos(base.getX(), top + 1, base.getZ())))) {
+            top++;
+        }
+        if (top - base.getY() + 1 < MIN_TRUNK) {
+            return false;
+        }
+        for (int y = top - 2; y <= top + 2; y++) {
+            for (int dx = -2; dx <= 2; dx++) {
+                for (int dz = -2; dz <= 2; dz++) {
+                    if (world.getBlockState(new BlockPos(base.getX() + dx, y, base.getZ() + dz)).getBlock() instanceof BlockLeaves) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    /** The shortest vanilla oak or birch trunk is 4 logs. */
+    private static final int MIN_TRUNK = 4;
 
     /**
      * Puts a nest on the trunk standing at {@code base}, as 1.15's decorator.

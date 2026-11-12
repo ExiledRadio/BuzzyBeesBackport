@@ -1,3 +1,7 @@
+# 1.0.1
+
+*   Bee nests no longer generate on the logs around village farms (most noticeable in superflat worlds). Nests now only generate on grown oak and birch trees, as in 1.15.
+
 # 1.0.0
 
 First release: all of 1.15 Buzzy Bees on 1.12.2. Needs Backport Core 1.1.0 or newer. Fluidlogged API comes through Backport Core and only adds waterlogging.

@@ -110,6 +110,20 @@ public final class NestSelfTest implements SelfTest {
         BlockPos base2 = c.area();
         tree(c, base2.add(10, 0, 10), BlockPlanks.EnumType.SPRUCE);
         c.eq(0, NestGenerator.scan(c.world, new Random(3), base2.getX(), base2.getZ(), true), "a spruce gets no nest");
+        // A village farm border (one oak log on dirt) and a house corner (a leafless log pillar) get none.
+        BlockPos base3 = c.area();
+        for (int dx = 0; dx < 16; dx++) {
+            for (int dz = 0; dz < 16; dz++) {
+                c.world.setBlockState(base3.add(dx, 0, dz), Blocks.DIRT.getDefaultState(), 2);
+            }
+        }
+        for (int dz = 2; dz < 12; dz++) {
+            c.world.setBlockState(base3.add(3, 1, dz), Blocks.LOG.getDefaultState(), 2);
+        }
+        for (int y = 1; y <= 5; y++) {
+            c.world.setBlockState(base3.add(10, y, 10), Blocks.LOG.getDefaultState(), 2);
+        }
+        c.eq(0, NestGenerator.scan(c.world, new Random(4), base3.getX(), base3.getZ(), true), "farm-border logs and a leafless log pillar get no nest");
     }
 
     private void saplings(Check c) {
