@@ -23,6 +23,10 @@ Needs stream B's `bee_nest` (by name; does nothing without it). Built in the fir
     oak or birch sapling is remembered, with the 5% already rolled, and the nest goes on at the end of the
     tick if a tree grew. Flowers: 1.15.2's box, 2 across and 1 up or down, any of `BeeFlowers`.
 *   The per-chunk random is seeded from the world seed and chunk, so a seed gives the same nests.
+*   A world whose generator places today's trees itself (Backport Core 1.2.0's `DecorationSource`: Caves &
+    Cliffs Backport's 1.18 terrain, whose trees carry 1.18's beehive decorator) gets no populate scan: its trees
+    already rolled their nests, and the generator gives each nest its bees. `GeneratorNests` looks the interface up
+    by name, so with Core 1.1.0 nothing changes. Saplings still grow nests there.
 
 ## Tested headlessly
 

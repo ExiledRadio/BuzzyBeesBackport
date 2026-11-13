@@ -1,3 +1,7 @@
+# Unreleased
+
+*   In Caves & Cliffs Backport's 1.18 terrain worlds, trees get their bee nests (with bees) from the 1.18 terrain itself, as in 1.18, and no second nest from this mod.
+
 # 1.0.1
 
 *   Bee nests no longer generate on the logs around village farms (most noticeable in superflat worlds). Nests now only generate on grown oak and birch trees, as in 1.15.
