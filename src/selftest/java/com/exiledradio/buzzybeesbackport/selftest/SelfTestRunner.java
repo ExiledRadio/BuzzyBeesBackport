@@ -54,6 +54,7 @@ public final class SelfTestRunner {
             new CampfireSelfTest(),
             new FamilySelfTest(),
             new LookFeelSelfTest(),
+            new FlatSelfTest(),
     };
 
     private final List<String> wanted;

@@ -43,7 +43,8 @@ import java.util.WeakHashMap;
  *   <li><b>Generation</b>: after a chunk is populated, every oak and birch trunk in its decoration area gets
  *       a nest with its biome's chance ({@link BeeNests#chance}). 1.12.2 has no per-tree hook, so the trunks
  *       are found by looking: a nest-tree log standing on dirt or grass, under leaves. Not where the world's
- *       generator places today's trees with their nests itself ({@link GeneratorNests}).</li>
+ *       generator places today's trees with their nests itself, nor in a superflat world without
+ *       {@code decoration} ({@link GeneratorNests}).</li>
  *   <li><b>Saplings</b>: an oak or birch sapling with a flower within 2 blocks (one up or down) grows a
  *       nest 5% of the time, in any biome or dimension. The sapling event fires before the tree exists, so it
  *       is remembered and the nest placed at the end of the same tick.</li>
@@ -83,7 +84,7 @@ public final class NestGenerator {
             return;
         }
         World world = event.getWorld();
-        if (GeneratorNests.placedBy(world, event.getGenerator())) {
+        if (!GeneratorNests.scans(world, event.getGenerator())) {
             return;
         }
         int x0 = event.getChunkX() * 16 + 8;

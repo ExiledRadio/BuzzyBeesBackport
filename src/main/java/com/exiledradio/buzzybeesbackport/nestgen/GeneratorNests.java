@@ -1,40 +1,32 @@
 package com.exiledradio.buzzybeesbackport.nestgen;
 
+import com.exiledradio.backportcore.terrain.DecorationSource;
+import com.exiledradio.backportcore.worldgen.FlatWorlds;
+
 import net.minecraft.world.World;
 import net.minecraft.world.gen.IChunkGenerator;
 
-import java.lang.reflect.Method;
+import javax.annotation.Nullable;
 
 /**
- * Whether a world's generator already gives its trees their nests (Backport Core 1.2.0's {@code DecorationSource}:
- * Caves &amp; Cliffs Backport's 1.18 terrain places 1.18's trees with their beehive decorators, bees included). Then
- * the populate scan would add a second nest to trees that rolled theirs. This mod requires Core 1.1.0, which has no
- * such interface, so it is looked up once by name: missing, the answer is always no.
+ * Whether the populate scan gives a chunk's trees their nests, or the world has them another way or not at all.
+ *
+ * <ul>
+ *   <li>A generator that places today's trees with their nests itself (Backport Core's {@link DecorationSource}:
+ *       Caves &amp; Cliffs Backport's 1.18 terrain places 1.18's trees with their beehive decorators, bees included):
+ *       the scan would add a second nest to trees that rolled theirs.</li>
+ *   <li>A superflat world without {@code decoration} ({@link FlatWorlds#decoration}): superflat grows no trees, and
+ *       so no nests, unless its preset has {@code decoration}. 1.12's flat generator still fires the populate events,
+ *       and its villages build log corners and farm borders.</li>
+ * </ul>
  */
-final class GeneratorNests {
-
-    private static final Method PLACES = find();
+public final class GeneratorNests {
 
     private GeneratorNests() {
     }
 
-    private static Method find() {
-        try {
-            return Class.forName("com.exiledradio.backportcore.terrain.DecorationSource")
-                    .getMethod("places", World.class, IChunkGenerator.class, String.class);
-        } catch (ReflectiveOperationException | LinkageError e) {
-            return null;
-        }
-    }
-
-    static boolean placedBy(World world, IChunkGenerator generator) {
-        if (PLACES == null) {
-            return false;
-        }
-        try {
-            return (Boolean) PLACES.invoke(null, world, generator, "bee_nest");
-        } catch (ReflectiveOperationException e) {
-            return false;
-        }
+    /** @return true when the populate scan should look for trunks in a chunk this generator just populated */
+    public static boolean scans(World world, @Nullable IChunkGenerator generator) {
+        return FlatWorlds.decoration(world) && !DecorationSource.places(world, generator, "bee_nest");
     }
 }

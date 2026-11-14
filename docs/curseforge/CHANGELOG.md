@@ -1,5 +1,6 @@
 # Unreleased
 
+*   Superflat worlds get bee nests only as vanilla's do: none unless the preset has decoration (which grows trees), and then on its grown oak and birch trees. Needs Backport Core 1.3.0 or newer.
 *   In Caves & Cliffs Backport's 1.18 terrain worlds, trees get their bee nests (with bees) from the 1.18 terrain itself, as in 1.18, and no second nest from this mod.
 
 # 1.0.1
