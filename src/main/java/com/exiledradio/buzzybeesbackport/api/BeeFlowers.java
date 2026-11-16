@@ -16,6 +16,7 @@ import net.minecraft.util.ResourceLocation;
 import javax.annotation.Nullable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 /**
@@ -24,7 +25,8 @@ import java.util.function.Predicate;
  *
  * <p>Other mods - later backports of the family with their own flowers and crops - add to it:
  * {@code BeeFlowers.addFlower(state -> ...)}, {@code BeeFlowers.addFlowerItem(stack -> ...)} and
- * {@code BeeFlowers.addGrowable(...)}, from pre-init or init. Reach it by reflection or a soft dependency;
+ * {@code BeeFlowers.addGrowable(...)} (raised one {@code age} step) or {@code BeeFlowers.addGrower(...)} (any grown
+ * state, for a crop whose last stage is another block), from pre-init or init. Reach it by reflection or a soft dependency;
  * it never changes shape.
  */
 public final class BeeFlowers {
@@ -32,6 +34,7 @@ public final class BeeFlowers {
     private static final List<Predicate<IBlockState>> FLOWERS = new ArrayList<Predicate<IBlockState>>();
     private static final List<Predicate<ItemStack>> FLOWER_ITEMS = new ArrayList<Predicate<ItemStack>>();
     private static final List<Predicate<IBlockState>> GROWABLES = new ArrayList<Predicate<IBlockState>>();
+    private static final List<Function<IBlockState, IBlockState>> GROWERS = new ArrayList<Function<IBlockState, IBlockState>>();
 
     /** Village & Pillage's 1.14 flowers, by name: the mod is optional. */
     private static final String[] FAMILY_FLOWERS = {
@@ -52,6 +55,15 @@ public final class BeeFlowers {
 
     public static void addGrowable(Predicate<IBlockState> growable) {
         GROWABLES.add(growable);
+    }
+
+    /**
+     * A crop a bee grows to a state of its own choosing: the function answers the state one stage on, or null when
+     * it does not grow this one (not its block, or ripe). For crops like 1.20's torchflower crop, whose
+     * {@code CropBlock.getStateForAge} gives the flower itself at the last stage.
+     */
+    public static void addGrower(Function<IBlockState, IBlockState> grower) {
+        GROWERS.add(grower);
     }
 
     /** @return true if a bee pollinates this state: small flowers, and tall flowers except a sunflower's stem */
@@ -129,6 +141,13 @@ public final class BeeFlowers {
      */
     @Nullable
     public static IBlockState grow(IBlockState state) {
+        // A grower first: it may answer for a block the built-in rules would also take.
+        for (Function<IBlockState, IBlockState> grower : GROWERS) {
+            IBlockState grown = grower.apply(state);
+            if (grown != null) {
+                return grown;
+            }
+        }
         Block block = state.getBlock();
         if (block instanceof BlockCrops) {
             BlockCrops crops = (BlockCrops) block;
