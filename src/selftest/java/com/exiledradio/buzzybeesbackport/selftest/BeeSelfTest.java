@@ -482,6 +482,12 @@ public final class BeeSelfTest implements SelfTest {
         invokeGrow(c, bee);
         c.eq(1, c.world.getBlockState(farm.east().up()).getValue(net.minecraft.block.BlockStem.AGE).intValue(), "and a melon stem");
         c.ok(BeeFlowers.grow(Blocks.WHEAT.getDefaultState().withProperty(BlockCrops.AGE, 7)) == null, "ripe wheat does not grow");
+        // A grower answers its own state (a crop whose last stage is another block).
+        BeeFlowers.addGrower(st -> st.getBlock() == Blocks.BEETROOTS && st.getValue(net.minecraft.block.BlockBeetroot.BEETROOT_AGE) == 2
+                ? Blocks.RED_FLOWER.getDefaultState() : null);
+        c.ok(BeeFlowers.grow(Blocks.BEETROOTS.getDefaultState().withProperty(net.minecraft.block.BlockBeetroot.BEETROOT_AGE, 2)).getBlock() == Blocks.RED_FLOWER,
+                "addGrower: the grower's own state");
+        c.ok(BeeFlowers.grow(Blocks.BEETROOTS.getDefaultState()).getBlock() == Blocks.BEETROOTS, "addGrower: others keep the crop's own growth");
         bee.setDead();
     }
 
