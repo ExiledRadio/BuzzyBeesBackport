@@ -126,6 +126,16 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding=オウムが肩に乗った�
 config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=ウマ、ボート、トロッコなど何かに乗っている間も、オウムが肩に乗ったままになります。
 config.buzzybeesbackport.tweaks.xpWithLoot=経験値をドロップ品と一緒に落とす
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=死んだMobやプレイヤーが、死亡アニメーションの後ではなく、ドロップ品と一緒にすぐ経験値を落とします。
+config.buzzybeesbackport.tweaks.hiddenEffects=弱い効果が待機する
+config.buzzybeesbackport.tweaks.hiddenEffects.tooltip=同じ種類の強い効果の下に弱い効果が保持され、強い効果が切れると戻るので、ビーコンがポーションの効果を消さなくなります。
+config.buzzybeesbackport.tweaks.portalLinkHeight=ポータルがY 128より上と繋がる
+config.buzzybeesbackport.tweaks.portalLinkHeight.tooltip=オーバーワールドのポータルが、新しいポータルを作らずに、ネザーの上半分（y 128より上）にあるポータルと繋がります。
+config.buzzybeesbackport.tweaks.lavaPathing=Mobが溶岩を避ける
+config.buzzybeesbackport.tweaks.lavaPathing.tooltip=Mobは経路を探すとき、火と同じように溶岩からも1ブロック離れます。
+config.buzzybeesbackport.tweaks.farmlandPistons=耕地とピストン
+config.buzzybeesbackport.tweaks.farmlandPistons.tooltip=ピストンが耕地の上を押していくブロックが、途中の耕地を土に変えなくなります。
+config.buzzybeesbackport.tweaks.hardcoreDeathScreen=ハードコアの死亡画面
+config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=クライアント：ハードコアの死亡画面に、「ワールドを削除」や「サーバーを退出」の代わりに、「ワールドを観覧」と、ワールドから退出する「タイトル画面へ戻る」が表示されます。
 block.buzzybeesbackport.set_spawn=リスポーン地点が設定されました
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.

@@ -117,3 +117,79 @@ not find the exact shape it expects changes nothing and logs a warning; it never
     before it, nothing is patched and `P5 ... patch skipped` is logged; parrots then jump off as in 1.12.2.
 *   **Tested**: applied; a parrot on a player's shoulder stays through a tick in a boat; switched off, it
     drops.
+
+## P6. Weaker effects wait under a stronger one
+
+*   **Classes**: `net.minecraft.potion.PotionEffect`, `net.minecraft.entity.EntityLivingBase`. **Transformer**:
+    `asm/HiddenEffectsTransformer`. **Hooks**: `tweaks/HiddenEffects` (and `tweaks/HiddenEffectHolder`, the
+    interface the patch adds). **Switch**: `tweaks.hiddenEffects`. **Since**: after 1.0.1 (unreleased).
+*   **Vanilla 1.15.2**: "effects are now stored when overwritten by an effect of a higher amplifier"; "a beacon effect
+    only temporarily overwrites a lower amplifier potion until the beacon effect runs out" (MC-1541).
+    `MobEffectInstance` has a `hiddenEffect`: `update` keeps the weaker, longer effect under a stronger, shorter one
+    (and a weaker, longer one added under a stronger one), `tick` counts the whole chain down and brings the hidden
+    effect back when the top one reaches 0, and the save nests it as `HiddenEffect` (with `Id`, `Amplifier`,
+    `Duration`, `Ambient`, `ShowParticles`). 1.12.2's `combine` simply overwrites: a beacon's Haste II wipes a Haste I
+    potion.
+*   **Why a patch**: the effect needs somewhere to keep its hidden effect, and the merge, the tick and the save are
+    all inside `PotionEffect`; no event reaches them.
+*   **What changes**:
+    *   `PotionEffect` gets a private field `buzzybeesbackport$hiddenEffect` and implements `HiddenEffectHolder`
+        (four methods: get and set the hidden effect, set duration/amplifier/ambient/particles, set duration).
+    *   `onUpdate` starts with `int r = HiddenEffects.tick(this, entity); if (r >= 0) return r != 0;`. `tick`
+        answers -1 (1.12.2's own tick runs) unless the effect has a hidden one and the switch is on; then it runs
+        1.15.2's tick. When the hidden effect comes back, the attribute modifiers follow its amplifier, the particles
+        are recomputed and a player is sent the effect (1.15.2's `onEffectUpdated(effect, true)`).
+    *   `writeCustomPotionEffectToNBT` and `readCustomPotionEffectFromNBT` return through `HiddenEffects.write` and
+        `read`, which add and read `HiddenEffect` as 1.15.2 does (a chain nests).
+    *   `EntityLivingBase.addPotionEffect`'s one `existing.combine(added)` becomes
+        `HiddenEffects.combine(existing, added, this)`: 1.15.2's `update` on the server; on a client the effect
+        added is the server's whole new state, so it is taken as it is (1.15.2's client `forceAddEffect`; 1.12.2's
+        combine would keep a stronger effect the server has just let run out). Switched off, `combine` as before.
+*   **Fails safe**: if `PotionEffect` lacks any of the fields or methods, nothing in it is patched;
+    `HiddenEffects.combine` then finds no holder and combines as 1.12.2 (`EntityLivingBase` may load first, so its
+    patch does not depend on the other). Off, hidden effects already saved stay in the save but are not used.
+*   **Tested**: applied to both; a Haste I potion under a beacon's Haste II is kept, kept through the beacon's
+    renewal, saved as `HiddenEffect` and read back (and through a mob's save), and comes back after the beacon with
+    the time it had left; a longer Speed I added under Speed II waits and comes back, and the speed modifier
+    follows; switched off, the beacon replaces the potion.
+
+## P7. Portals link to portals above y 128 in the Nether
+
+*   **Class**: `net.minecraft.world.Teleporter`. **Transformer**: `asm/WorldTweaksTransformer`. **Hook**:
+    `WorldTweaks.portalSearchTop`. **Switch**: `tweaks.portalLinkHeight`. **Since**: after 1.0.1 (unreleased).
+*   **Vanilla 1.15**: "Nether portals in the Overworld now correctly link with portals placed in the top half
+    (128-255) of the Nether". 1.15's `PortalForcer.findPortal` searches the portal points of interest at every
+    height. 1.12.2's `placeInExistingPortal` searches each column from `getActualHeight() - 1` down, and the Nether's
+    actual height is 128, so a portal above the roof is never found and a new one is built.
+*   **What changes**: that one `getActualHeight()` call becomes `portalSearchTop(world)`, the larger of the actual
+    height and the world's height (256) while switched on. Building a new portal is unchanged.
+*   **With the family**: Nether Update Backport's P7 changes the same method's search radius (the `128`
+    constants), Caves & Cliffs Backport's portal patch its bottom (`y >= 0`); neither touches this call.
+*   **Tested**: applied; the search starts at 256 in the Nether (128 switched off); a pig arriving 40 blocks from a
+    portal built at y 150 in the Nether finds it and lands there.
+
+## P8. Mobs keep away from lava
+
+*   **Class**: `net.minecraft.pathfinding.WalkNodeProcessor`. **Transformer**: `asm/WorldTweaksTransformer`.
+    **Hook**: `WorldTweaks.neighbors`. **Switch**: `tweaks.lavaPathing`. **Since**: after 1.0.1 (unreleased).
+*   **Vanilla 1.15**: "mobs are now better at avoiding walking through lava". 1.15.2's
+    `WalkNodeEvaluator.checkNeighbourBlocks` looks at the 26 blocks around a walkable node (1.12.2: the 8 at the same
+    height) and counts lava with fire as `DANGER_FIRE`, which costs a mob 8 to step on.
+*   **What changes**: `checkNeighborBlocks` starts with
+    `PathNodeType t = WorldTweaks.neighbors(world, x, y, z, type, this.entity); if (t != null) return t;` (the one
+    branch, with its frame). The hook runs 1.15's check, keeping 1.12.2's order of precedence and Forge's path
+    types for modded blocks; switched off it returns null and 1.12.2's check runs.
+*   **Tested**: applied; a node beside lava one block down, and one diagonally beside lava, are `DANGER_FIRE` (both
+    `WALKABLE` switched off); a node away from lava stays `WALKABLE`.
+
+## P9. Farmland under a moving block
+
+*   **Class**: `net.minecraft.block.BlockFarmland`. **Transformer**: `asm/WorldTweaksTransformer`. **Hook**:
+    `WorldTweaks.killsFarmland`. **Switch**: `tweaks.farmlandPistons`. **Since**: after 1.0.1 (unreleased).
+*   **Vanilla 1.15** (19w37a): blocks that can be placed on farmland can be pushed onto it by a piston without the
+    farmland turning to dirt. 1.15's `FarmBlock.canSurvive` lets a moving piston block stand above it; 1.12.2 turns
+    farmland to dirt under any solid block, and the moving block a piston leaves on its way is solid.
+*   **What changes**: in `neighborChanged` and `onBlockAdded`, each `getMaterial().isSolid()` of the block above
+    becomes `killsFarmland(state)`: solid, unless it is a moving piston block and the switch is on.
+*   **Tested**: applied; farmland stays under a moving block (dirt switched off) and under hay a real piston is
+    pushing over it; farmland under stone still turns to dirt.

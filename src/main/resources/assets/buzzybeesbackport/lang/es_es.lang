@@ -126,6 +126,16 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding=Los loros se quedan en los ho
 config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Los loros se quedan en tus hombros mientras montas un caballo, una barca, una vagoneta o cualquier otra cosa.
 config.buzzybeesbackport.tweaks.xpWithLoot=La experiencia cae con el botín
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Una criatura o un jugador que muere suelta su experiencia al instante, junto con su botín, en lugar de tras la animación de muerte.
+config.buzzybeesbackport.tweaks.hiddenEffects=Los efectos más débiles esperan
+config.buzzybeesbackport.tweaks.hiddenEffects.tooltip=Un efecto más débil se conserva debajo de uno más fuerte del mismo tipo y vuelve cuando el más fuerte se acaba, así que un faro ya no borra el efecto de una poción.
+config.buzzybeesbackport.tweaks.portalLinkHeight=Los portales se enlazan por encima de Y 128
+config.buzzybeesbackport.tweaks.portalLinkHeight.tooltip=Un portal del mundo superior se enlaza con un portal de la mitad superior del Nether, por encima de y 128, en lugar de construir uno nuevo.
+config.buzzybeesbackport.tweaks.lavaPathing=Las criaturas evitan la lava
+config.buzzybeesbackport.tweaks.lavaPathing.tooltip=Las criaturas se mantienen a un bloque de la lava al buscar un camino, como hacen con el fuego.
+config.buzzybeesbackport.tweaks.farmlandPistons=Tierra de cultivo y pistones
+config.buzzybeesbackport.tweaks.farmlandPistons.tooltip=Un bloque que un pistón empuja sobre tierra de cultivo ya no convierte la tierra de cultivo en tierra a su paso.
+config.buzzybeesbackport.tweaks.hardcoreDeathScreen=Pantalla de muerte del modo extremo
+config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=Cliente: la pantalla de muerte del modo extremo ofrece «Observar mundo» y «Menú principal», que sale del mundo, en lugar de «Borrar mundo» o «Salir del servidor».
 block.buzzybeesbackport.set_spawn=Se ha establecido el punto de reaparición
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.

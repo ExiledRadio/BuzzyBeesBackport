@@ -26,6 +26,8 @@ public final class BuzzyBeesCore implements IFMLLoadingPlugin {
                 ElytraStartTransformer.class.getName(),
                 FireworkAngleTransformer.class.getName(),
                 ShoulderRidingTransformer.class.getName(),
+                HiddenEffectsTransformer.class.getName(),
+                WorldTweaksTransformer.class.getName(),
         };
     }
 
