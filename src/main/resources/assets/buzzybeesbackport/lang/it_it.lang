@@ -126,6 +126,16 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding=I pappagalli restano sulle sp
 config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=I pappagalli restano sulle tue spalle mentre cavalchi un cavallo o viaggi su una barca, un vagonetto o qualsiasi altra cosa.
 config.buzzybeesbackport.tweaks.xpWithLoot=Esperienza rilasciata col bottino
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Una creatura o un giocatore che muore rilascia subito la propria esperienza, insieme al bottino, invece che dopo l'animazione di morte.
+config.buzzybeesbackport.tweaks.hiddenEffects=Gli effetti più deboli attendono
+config.buzzybeesbackport.tweaks.hiddenEffects.tooltip=Un effetto più debole viene conservato sotto uno più forte dello stesso tipo e ritorna quando quello più forte si esaurisce, così un faro non cancella più l'effetto di una pozione.
+config.buzzybeesbackport.tweaks.portalLinkHeight=I portali si collegano sopra Y 128
+config.buzzybeesbackport.tweaks.portalLinkHeight.tooltip=Un portale dell'Overworld si collega a un portale nella metà superiore del Nether, sopra y 128, invece di costruirne uno nuovo.
+config.buzzybeesbackport.tweaks.lavaPathing=Le creature evitano la lava
+config.buzzybeesbackport.tweaks.lavaPathing.tooltip=Le creature si tengono a un blocco di distanza dalla lava quando trovano un percorso, come fanno con il fuoco.
+config.buzzybeesbackport.tweaks.farmlandPistons=Terra zappata e pistoni
+config.buzzybeesbackport.tweaks.farmlandPistons.tooltip=Un blocco spinto da un pistone sopra la terra zappata non trasforma più la terra zappata in terra al suo passaggio.
+config.buzzybeesbackport.tweaks.hardcoreDeathScreen=Schermata di morte in Estrema
+config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=Client: la schermata di morte in modalità Estrema offre "Rinasci come spettatore" e "Menu principale", che esce dal mondo, invece di "Elimina il mondo" o "Esci dal server".
 block.buzzybeesbackport.set_spawn=Impostato il punto di rinascita
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.

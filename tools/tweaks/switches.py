@@ -26,6 +26,11 @@ SWITCHES = [
     ("advancementBees", "Bees in Husbandry Advancements", "Two by Two also needs bees bred, and A Balanced Diet also needs a honey bottle."),
     ("parrotsWhileRiding", "Parrots Stay on Shoulders", "Parrots stay on your shoulders while you ride a horse, boat, minecart or anything else."),
     ("xpWithLoot", "Experience Drops With Loot", "A dying mob or player drops its experience at once, with its loot, instead of after the death animation."),
+    ("hiddenEffects", "Weaker Effects Wait", "A weaker effect is kept under a stronger one of the same kind and comes back when the stronger one runs out, so a beacon no longer wipes a potion's effect."),
+    ("portalLinkHeight", "Portals Link Above Y 128", "An Overworld portal links to a portal in the top half of the Nether, above y 128, instead of building a new one."),
+    ("lavaPathing", "Mobs Avoid Lava", "Mobs keep a block away from lava when they find a path, as they do from fire."),
+    ("farmlandPistons", "Farmland and Pistons", "A block a piston pushes over farmland no longer turns the farmland to dirt on its way."),
+    ("hardcoreDeathScreen", "Hardcore Death Screen", "Client: the Hardcore death screen offers Spectate World and Title Screen, which leaves the world, instead of Delete World or Leave Server."),
 ]
 
 

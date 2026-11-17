@@ -126,6 +126,16 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding=Papağanlar Omuzda Kalır
 config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Bir ata, tekneye, vagona ya da başka herhangi bir şeye binerken papağanlar omuzlarında kalır.
 config.buzzybeesbackport.tweaks.xpWithLoot=Tecrübe Ganimetle Birlikte Düşer
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Ölen bir canlı ya da oyuncu, tecrübesini ölüm animasyonundan sonra değil, ganimetiyle birlikte hemen düşürür.
+config.buzzybeesbackport.tweaks.hiddenEffects=Zayıf Etkiler Bekler
+config.buzzybeesbackport.tweaks.hiddenEffects.tooltip=Daha zayıf bir etki, aynı türden daha güçlü bir etkinin altında saklanır ve güçlü olanın süresi bitince geri gelir; böylece bir fener artık bir iksirin etkisini silmez.
+config.buzzybeesbackport.tweaks.portalLinkHeight=Geçitler Y 128'in Üstünde Bağlanır
+config.buzzybeesbackport.tweaks.portalLinkHeight.tooltip=Dünya'daki bir geçit, yenisini inşa etmek yerine Nether'ın üst yarısında, y 128'in üstündeki bir geçide bağlanır.
+config.buzzybeesbackport.tweaks.lavaPathing=Canlılar Lavdan Kaçınır
+config.buzzybeesbackport.tweaks.lavaPathing.tooltip=Canlılar bir yol bulurken, ateşten olduğu gibi lavdan da bir blok uzak durur.
+config.buzzybeesbackport.tweaks.farmlandPistons=Tarım Arazisi ve Pistonlar
+config.buzzybeesbackport.tweaks.farmlandPistons.tooltip=Bir pistonun tarım arazisinin üzerinden ittiği blok, artık yol boyunca tarım arazisini toprağa çevirmez.
+config.buzzybeesbackport.tweaks.hardcoreDeathScreen=Zorlayıcı Ölüm Ekranı
+config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=İstemci: Zorlayıcı ölüm ekranı, "Dünyayı sil" ya da "Sunucudan ayrıl" yerine "Dünyayı seyret" ve dünyadan çıkan "Ana menü" seçeneklerini sunar.
 block.buzzybeesbackport.set_spawn=Yeniden canlanma noktası ayarlandı
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.

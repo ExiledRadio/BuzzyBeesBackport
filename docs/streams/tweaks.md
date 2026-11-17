@@ -31,6 +31,12 @@ blocks, items, entities or packets. The second pass added four bytecode patches,
 *   *Two by Two* also needs bees bred, and *A Balanced Diet* a honey bottle.
 *   Parrots stay on your shoulders while you ride.
 *   Experience drops at once with a mob's loot, not at the end of its death animation.
+*   A weaker effect waits under a stronger one of the same kind and comes back when it runs out: a beacon no
+    longer wipes a potion (1.15.2).
+*   An Overworld portal links to a portal above y 128 in the Nether instead of building a new one.
+*   Mobs keep a block away from lava when they find a path.
+*   A block a piston pushes over farmland no longer turns it to dirt on its way.
+*   The Hardcore death screen offers Spectate World and Title Screen.
 
 ## How it works
 
@@ -79,6 +85,24 @@ blocks, items, entities or packets. The second pass added four bytecode patches,
     entities. Classes with their own death animation (`onDeathUpdate`: the ender dragon, modded bosses) are
     left alone. This also gives players their experience drop with `doImmediateRespawn` on, which 1.12.2's
     timing would skip.
+
+## Third pass: behavior changes (2026-11-17)
+
+From the family audit of 2026-11-16 (`family-notes/MECHANICS_AUDIT_2026-11-16.md`), its 1.15 rows: switches
+`hiddenEffects`, `portalLinkHeight`, `lavaPathing`, `farmlandPistons`, `hardcoreDeathScreen` (client), all on.
+Patches P6-P9 (`docs/PATCHES.md` has the details and tests; `MechanicsSelfTest`, `-Pselftest=mechanics`).
+
+*   **Hidden effects** (P6, `HiddenEffects`): 1.15.2's `hiddenEffect` chain on `PotionEffect`, its merge, tick and
+    `HiddenEffect` save tag.
+*   **Portals** (P7): the existing-portal search starts at the world's top (256), not the Nether's actual height
+    (128). Building a new portal is unchanged.
+*   **Lava** (P8): 1.15's neighbor check (26 blocks, lava counts as fire).
+*   **Farmland** (P9): a moving piston block above is not solid for farmland, as 1.15's `canSurvive`. 1.15 also
+    moved the check to a scheduled tick; that is not needed for this (and 1.12.2's farmland tick also dries it), so
+    the check stays immediate.
+*   **Hardcore death screen** (`client/HardcoreDeathScreen`, events): the second button reads Title Screen and
+    leaves the world at once, as 1.15's (1.12.2's Delete World / Leave Server opened the title screen with the
+    world still loaded and deleted nothing). Not tested headlessly (client screen).
 
 ## Tested headlessly
 
@@ -135,12 +159,8 @@ harvest).
 
 ## Not doing
 
-*   **Farmland under piston-moved blocks**: 1.15 lets the moving piston block stand on farmland and checks
-    one tick later (a scheduled tick); 1.12.2's farmland uses the same `updateTick` for its random moisture
-    ticks, so a scheduled check would also run the drying logic early. Only seen with piston contraptions
-    passing over fields; left as 1.12.2.
-*   Mobs avoiding lava better (pathfinding), the hand-swing animations, experience orb translucency, grass
-    tint smoothing: as the plan says.
+*   The hand-swing animations, experience orb translucency, grass tint smoothing: as the plan says. (Farmland
+    under piston-moved blocks and mobs avoiding lava, once here, are done since the third pass below.)
 
 ## Still to do in this stream
 

@@ -50,6 +50,7 @@ public final class SelfTestRunner {
             new GolemSelfTest(),
             new TweaksSelfTest(),
             new Tweaks2SelfTest(),
+            new MechanicsSelfTest(),
             new FutureMcSelfTest(),
             new CampfireSelfTest(),
             new FamilySelfTest(),

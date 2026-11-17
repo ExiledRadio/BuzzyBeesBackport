@@ -199,6 +199,28 @@ public final class ModConfig {
         @Config.Comment("A dying mob or player drops its experience at once, with its loot, instead of after the death animation.")
         @Config.LangKey("config.buzzybeesbackport.tweaks.xpWithLoot")
         public boolean xpWithLoot = true;
+
+        @Config.Comment({"A weaker effect is kept under a stronger one of the same kind and comes back when the stronger one",
+                "runs out, so a beacon no longer wipes a potion's effect."})
+        @Config.LangKey("config.buzzybeesbackport.tweaks.hiddenEffects")
+        public boolean hiddenEffects = true;
+
+        @Config.Comment("An Overworld portal links to a portal in the top half of the Nether, above y 128, instead of building a new one.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.portalLinkHeight")
+        public boolean portalLinkHeight = true;
+
+        @Config.Comment("Mobs keep a block away from lava when they find a path, as they do from fire.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.lavaPathing")
+        public boolean lavaPathing = true;
+
+        @Config.Comment("A block a piston pushes over farmland no longer turns the farmland to dirt on its way.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.farmlandPistons")
+        public boolean farmlandPistons = true;
+
+        @Setting.Client
+        @Config.Comment("Client: the Hardcore death screen offers Spectate World and Title Screen, which leaves the world, instead of Delete World or Leave Server.")
+        @Config.LangKey("config.buzzybeesbackport.tweaks.hardcoreDeathScreen")
+        public boolean hardcoreDeathScreen = true;
     }
 
     public static final class Compat {

@@ -126,6 +126,16 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding=Les perroquets restent sur le
 config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Les perroquets restent sur vos épaules pendant que vous montez un cheval, un bateau, un wagonnet ou toute autre chose.
 config.buzzybeesbackport.tweaks.xpWithLoot=L'expérience tombe avec le butin
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Une créature ou un joueur qui meurt lâche son expérience immédiatement, avec son butin, au lieu d'attendre la fin de l'animation de mort.
+config.buzzybeesbackport.tweaks.hiddenEffects=Les effets plus faibles patientent
+config.buzzybeesbackport.tweaks.hiddenEffects.tooltip=Un effet plus faible est conservé sous un effet plus fort du même type et revient quand le plus fort s'épuise, si bien qu'une balise n'efface plus l'effet d'une potion.
+config.buzzybeesbackport.tweaks.portalLinkHeight=Les portails se lient au-dessus de Y 128
+config.buzzybeesbackport.tweaks.portalLinkHeight.tooltip=Un portail de la Surface se lie à un portail situé dans la moitié supérieure du Nether, au-dessus de y 128, au lieu d'en construire un nouveau.
+config.buzzybeesbackport.tweaks.lavaPathing=Les créatures évitent la lave
+config.buzzybeesbackport.tweaks.lavaPathing.tooltip=Les créatures se tiennent à un bloc de la lave quand elles cherchent un chemin, comme elles le font pour le feu.
+config.buzzybeesbackport.tweaks.farmlandPistons=Terre labourée et pistons
+config.buzzybeesbackport.tweaks.farmlandPistons.tooltip=Un bloc poussé par un piston au-dessus de la terre labourée ne transforme plus la terre labourée en terre sur son passage.
+config.buzzybeesbackport.tweaks.hardcoreDeathScreen=Écran de mort en Hardcore
+config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=Client : l'écran de mort du mode Hardcore propose « Devenir spectateur » et « Menu principal », qui quitte le monde, au lieu de « Supprimer ce monde » ou « Quitter le serveur ».
 block.buzzybeesbackport.set_spawn=Point de réapparition défini
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.

@@ -126,6 +126,16 @@ config.buzzybeesbackport.tweaks.parrotsWhileRiding=Papugi zostają na ramionach
 config.buzzybeesbackport.tweaks.parrotsWhileRiding.tooltip=Papugi zostają na twoich ramionach, gdy jedziesz na koniu, łódką, wagonikiem czy czymkolwiek innym.
 config.buzzybeesbackport.tweaks.xpWithLoot=Doświadczenie wypada razem z łupem
 config.buzzybeesbackport.tweaks.xpWithLoot.tooltip=Umierające stworzenie lub gracz od razu upuszcza swoje doświadczenie razem z łupem, zamiast po animacji śmierci.
+config.buzzybeesbackport.tweaks.hiddenEffects=Słabsze efekty czekają
+config.buzzybeesbackport.tweaks.hiddenEffects.tooltip=Słabszy efekt jest zachowywany pod silniejszym efektem tego samego rodzaju i wraca, gdy silniejszy się skończy, więc magiczna latarnia nie usuwa już efektu mikstury.
+config.buzzybeesbackport.tweaks.portalLinkHeight=Portale łączą się powyżej Y 128
+config.buzzybeesbackport.tweaks.portalLinkHeight.tooltip=Portal na Nadziemiu łączy się z portalem w górnej połowie Netheru, powyżej y 128, zamiast budować nowy.
+config.buzzybeesbackport.tweaks.lavaPathing=Stworzenia omijają lawę
+config.buzzybeesbackport.tweaks.lavaPathing.tooltip=Stworzenia przy wyznaczaniu ścieżki trzymają się o blok od lawy, tak jak od ognia.
+config.buzzybeesbackport.tweaks.farmlandPistons=Pole uprawne i tłoki
+config.buzzybeesbackport.tweaks.farmlandPistons.tooltip=Blok przesuwany przez tłok nad polem uprawnym nie zamienia już po drodze pola uprawnego w ziemię.
+config.buzzybeesbackport.tweaks.hardcoreDeathScreen=Ekran śmierci w trybie hardcore
+config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=Klient: ekran śmierci w trybie hardcore oferuje „Obserwuj świat” i „Menu główne”, które opuszcza świat, zamiast „Usuń świat” lub „Opuść serwer”.
 block.buzzybeesbackport.set_spawn=Ustawiono punkt odradzania
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
