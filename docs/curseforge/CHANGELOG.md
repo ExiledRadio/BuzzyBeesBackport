@@ -1,8 +1,16 @@
-# Unreleased
+# 1.1.0
 
-*   Bees grow Trails & Tales Backport's torchflower crop into a torchflower, as in 1.20 (a new `BeeFlowers.addGrower` hook for crops whose last stage is another block).
-*   Superflat worlds get bee nests only as vanilla's do: none unless the preset has decoration (which grows trees), and then on its grown oak and birch trees. Needs Backport Core 1.3.0 or newer.
-*   In Caves & Cliffs Backport's 1.18 terrain worlds, trees get their bee nests (with bees) from the 1.18 terrain itself, as in 1.18, and no second nest from this mod.
+*   **More of 1.15's behavior changes**, each with its own switch:
+    *   A weaker effect waits under a stronger one of the same kind and comes back when it runs out, so a beacon no longer wipes a potion.
+    *   Overworld portals link to portals above y 128 in the Nether instead of building a new one.
+    *   Mobs keep away from lava when they find a path.
+    *   A block a piston pushes over farmland no longer turns it to dirt.
+    *   The Hardcore death screen's **Title Screen** button leaves the world at once.
+*   **Bees grow Trails & Tales Backport's torchflower crop** into a torchflower, as in 1.20.
+*   **Superflat worlds get bee nests as in vanilla**: none unless the preset has decoration, and then only on its grown oak and birch trees.
+*   **Caves & Cliffs Backport's 1.18 terrain**: trees get their bee nests (with bees) from the 1.18 terrain itself, as in 1.18, and no second nest from this mod.
+
+Needs Backport Core 1.3.0 or newer.
 
 # 1.0.1
 
