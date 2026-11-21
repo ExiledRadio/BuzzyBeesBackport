@@ -1,3 +1,7 @@
+# 1.1.1
+
+*   **26.1's baby bee** when Game Drops Backport is installed: its new model and textures. It follows Game Drops' Baby Models setting; without Game Drops baby bees look as before.
+
 # 1.1.0
 
 *   **More of 1.15's behavior changes**, each with its own switch:
