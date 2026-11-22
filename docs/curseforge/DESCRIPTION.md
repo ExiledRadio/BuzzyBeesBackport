@@ -50,7 +50,7 @@ Every feature can be turned off in Backport Core's settings screen, under Mod Op
 
 **[Caves & Cliffs Backport](https://www.curseforge.com/minecraft/mc-mods/caves-cliffs-backport)**: honeycomb waxes copper and makes candles, goats can't jump off honey blocks, and trees in its 1.18 worlds get bee nests.
 
-**[Nether Update Backport](https://www.curseforge.com/minecraft/mc-mods/nether-update-backport)**: angry bees forgive a player who dies, with its `forgiveDeadPlayers` setting.
+**[Nether Update Backport](https://www.curseforge.com/minecraft/mc-mods/nether-backport)**: angry bees forgive a player who dies, with its `forgiveDeadPlayers` setting.
 
 **[Wild Update Backport](https://www.curseforge.com/minecraft/mc-mods/wild-update-backport)**: some mangrove trees grow bee nests.
 
@@ -64,4 +64,12 @@ Minecraft 1.12.2 with Forge 14.23.5.2847 or newer, and [Backport Core](https://w
 
 Also by me: [Village & Pillage Backport](https://www.curseforge.com/minecraft/mc-mods/villager-backport), all of 1.14 on 1.12.2, and [Enchantment Recipes](https://www.curseforge.com/minecraft/mc-mods/rlcraft-enchantment-recipes), which lets you craft enchanted books from mod materials.
 
-Not affiliated with Mojang. Source: [github.com/ExiledRadio/BuzzyBeesBackport](https://github.com/ExiledRadio/BuzzyBeesBackport)
+## Credits
+
+**Original content: [Minecraft](https://www.minecraft.net), by [Mojang Studios](https://www.minecraft.net/en-us/about-minecraft).** Every feature this mod adds is from a later version of Minecraft. The textures, models, sounds, music and translations are Mojang's, taken from Minecraft's own game files, and remain theirs. The features' names and designs are Mojang's too.
+
+**How this mod differs from the original:** Minecraft's newer versions don't run on 1.12.2. This mod is a Forge mod for Minecraft 1.12.2 that reimplements those features on the older game, matching the newer versions as closely as it can. It is not a copy or port of another mod. Where 1.12.2 can't do something the same way, the description above says so.
+
+This is an unofficial fan project, made under Mojang's [Minecraft Usage Guidelines](https://www.minecraft.net/en-us/usage-guidelines). Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.
+
+Source: [github.com/ExiledRadio/BuzzyBeesBackport](https://github.com/ExiledRadio/BuzzyBeesBackport)
