@@ -29,6 +29,8 @@ import org.apache.logging.log4j.Logger;
         name = BuzzyBeesBackport.MOD_NAME,
         version = BuzzyBeesBackport.VERSION,
         acceptedMinecraftVersions = "[1.12.2]",
+        // Newer releases, read by Forge's update check and Backport Core's settings screen.
+        updateJSON = "https://raw.githubusercontent.com/ExiledRadio/BackportCore/main/updates/buzzybeesbackport.json",
         dependencies = "required-after:backportcore@[1.3.0,)"
 )
 public final class BuzzyBeesBackport {
