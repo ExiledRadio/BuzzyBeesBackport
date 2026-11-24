@@ -108,16 +108,10 @@ config.buzzybeesbackport.tweaks.dispensers=Changements des distributeurs
 config.buzzybeesbackport.tweaks.dispensers.tooltip=Les distributeurs remplissent les fioles avec de l'eau, posent les porte-armures et allument les feux de camp avec des charges de feu.
 config.buzzybeesbackport.tweaks.bellRedstone=Les cloches sonnent avec la redstone
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=Une cloche sonne quand elle est alimentée par de la redstone.
-config.buzzybeesbackport.tweaks.splashTexts=Textes d'accueil de la 1.15
-config.buzzybeesbackport.tweaks.splashTexts.tooltip=Le menu principal peut afficher les trois nouveaux textes d'accueil de la 1.15.
 config.buzzybeesbackport.tweaks.craftingShiftClick=Maj + clic vers la grille de fabrication
 config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=À un établi, un Maj + clic sur une pile de votre inventaire la déplace dans la grille de fabrication, et seulement vers l'autre partie de l'inventaire quand la grille n'a plus de place.
 config.buzzybeesbackport.tweaks.elytraJump=Ouvrir les élytres en montant
 config.buzzybeesbackport.tweaks.elytraJump.tooltip=Les élytres peuvent s'ouvrir juste après un saut, pendant que vous montez encore.
-config.buzzybeesbackport.tweaks.toggleSneak=S'accroupir en mode basculer
-config.buzzybeesbackport.tweaks.toggleSneak.tooltip=Client : la touche S'accroupir active et désactive l'accroupissement au lieu de devoir être maintenue.
-config.buzzybeesbackport.tweaks.toggleSprint=Courir en mode basculer
-config.buzzybeesbackport.tweaks.toggleSprint.tooltip=Client : la touche Courir active et désactive la course au lieu de devoir être maintenue.
 config.buzzybeesbackport.tweaks.dispensedFireworks=Les feux d'artifice distribués volent droit devant
 config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=Une fusée de feu d'artifice tirée par un distributeur vole tout droit dans la direction vers laquelle le distributeur est orienté.
 config.buzzybeesbackport.tweaks.advancementBees=Abeilles dans les progrès d'Agriculture
@@ -139,9 +133,3 @@ config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=Client : l'écran de
 block.buzzybeesbackport.set_spawn=Point de réapparition défini
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
-options.key.hold=Maintenir
-options.key.toggle=Basculer
-title.singleplayer=Solo
-title.multiplayer.lan=Multijoueur (LAN)
-title.multiplayer.other=Multijoueur (serveur tiers)
-title.multiplayer.realms=Multijoueur (Realms)

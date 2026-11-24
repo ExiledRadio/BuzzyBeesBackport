@@ -159,11 +159,6 @@ public final class ModConfig {
         @Config.LangKey("config.buzzybeesbackport.tweaks.bellRedstone")
         public boolean bellRedstone = true;
 
-        @Setting.Client
-        @Config.Comment("The title screen can show 1.15's three new splash texts.")
-        @Config.LangKey("config.buzzybeesbackport.tweaks.splashTexts")
-        public boolean splashTexts = true;
-
 
         @Config.Comment("At a crafting table, shift-clicking a stack in your inventory moves it into the crafting grid, and only to the other part of the inventory when the grid has no room.")
         @Config.LangKey("config.buzzybeesbackport.tweaks.craftingShiftClick")
@@ -172,16 +167,6 @@ public final class ModConfig {
         @Config.Comment("Elytra can be opened right after a jump, while you are still rising.")
         @Config.LangKey("config.buzzybeesbackport.tweaks.elytraJump")
         public boolean elytraJump = true;
-
-        @Setting.Client
-        @Config.Comment("Client: the sneak key turns sneaking on and off instead of being held.")
-        @Config.LangKey("config.buzzybeesbackport.tweaks.toggleSneak")
-        public boolean toggleSneak = false;
-
-        @Setting.Client
-        @Config.Comment("Client: the sprint key turns sprinting on and off instead of being held.")
-        @Config.LangKey("config.buzzybeesbackport.tweaks.toggleSprint")
-        public boolean toggleSprint = false;
 
         @Config.RequiresMcRestart
         @Config.Comment("A firework rocket fired from a dispenser flies straight the way the dispenser faces.")

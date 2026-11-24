@@ -108,16 +108,10 @@ config.buzzybeesbackport.tweaks.dispensers=Mudanças nos ejetores
 config.buzzybeesbackport.tweaks.dispensers.tooltip=Ejetores enchem frascos de vidro com água, colocam suportes de armaduras e acendem fogueiras com bolas de fogo.
 config.buzzybeesbackport.tweaks.bellRedstone=Sinos tocam com redstone
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=Um sino toca quando é energizado por redstone.
-config.buzzybeesbackport.tweaks.splashTexts=Textos iniciais da 1.15
-config.buzzybeesbackport.tweaks.splashTexts.tooltip=O menu principal pode mostrar os três novos textos iniciais da 1.15.
 config.buzzybeesbackport.tweaks.craftingShiftClick=Shift + clique para a grade de fabricação
 config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=Numa bancada de trabalho, Shift + clique em uma pilha do seu inventário a move para a grade de fabricação, e só para a outra parte do inventário quando a grade não tem espaço.
 config.buzzybeesbackport.tweaks.elytraJump=Abrir os élitros ao subir
 config.buzzybeesbackport.tweaks.elytraJump.tooltip=Os élitros podem ser abertos logo após um pulo, enquanto você ainda está subindo.
-config.buzzybeesbackport.tweaks.toggleSneak=Alternar agachar
-config.buzzybeesbackport.tweaks.toggleSneak.tooltip=Cliente: a tecla de agachar liga e desliga o agachamento em vez de precisar ser segurada.
-config.buzzybeesbackport.tweaks.toggleSprint=Alternar correr
-config.buzzybeesbackport.tweaks.toggleSprint.tooltip=Cliente: a tecla de correr liga e desliga a corrida em vez de precisar ser segurada.
 config.buzzybeesbackport.tweaks.dispensedFireworks=Fogos de artifício ejetados voam para frente
 config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=Um fogo de artifício disparado por um ejetor voa em linha reta na direção para a qual o ejetor está virado.
 config.buzzybeesbackport.tweaks.advancementBees=Abelhas nos progressos de Pecuária
@@ -139,9 +133,3 @@ config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=Cliente: a tela de m
 block.buzzybeesbackport.set_spawn=Ponto de renascimento definido
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
-options.key.hold=Segurar
-options.key.toggle=Alternar
-title.singleplayer=Um jogador
-title.multiplayer.lan=Multijogador (LAN)
-title.multiplayer.other=Multijogador (servidor de terceiros)
-title.multiplayer.realms=Multijogador (Realms)

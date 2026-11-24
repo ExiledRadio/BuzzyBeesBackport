@@ -108,16 +108,10 @@ config.buzzybeesbackport.tweaks.dispensers=Dispenserwijzigingen
 config.buzzybeesbackport.tweaks.dispensers.tooltip=Dispensers vullen glazen flessen met water, plaatsen harnashouders en steken kampvuren aan met vuurballen.
 config.buzzybeesbackport.tweaks.bellRedstone=Bellen luiden met redstone
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=Een bel luidt wanneer hij door redstone wordt aangestuurd.
-config.buzzybeesbackport.tweaks.splashTexts=Splashteksten uit 1.15
-config.buzzybeesbackport.tweaks.splashTexts.tooltip=Het hoofdmenu kan de drie nieuwe splashteksten uit 1.15 tonen.
 config.buzzybeesbackport.tweaks.craftingShiftClick=Shift-klik naar het vervaardigingsraster
 config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=Bij een werkbank verplaatst een shift-klik op een stapel in je inventaris die naar het vervaardigingsraster, en alleen naar het andere deel van de inventaris als het raster geen ruimte heeft.
 config.buzzybeesbackport.tweaks.elytraJump=Dekschild openen tijdens het stijgen
 config.buzzybeesbackport.tweaks.elytraJump.tooltip=Een dekschild kan direct na een sprong worden geopend, terwijl je nog stijgt.
-config.buzzybeesbackport.tweaks.toggleSneak=Sluipen omschakelen
-config.buzzybeesbackport.tweaks.toggleSneak.tooltip=Client: de sluiptoets zet sluipen aan en uit in plaats van dat je hem ingedrukt moet houden.
-config.buzzybeesbackport.tweaks.toggleSprint=Rennen omschakelen
-config.buzzybeesbackport.tweaks.toggleSprint.tooltip=Client: de rentoets zet rennen aan en uit in plaats van dat je hem ingedrukt moet houden.
 config.buzzybeesbackport.tweaks.dispensedFireworks=Vuurpijlen uit dispensers vliegen recht vooruit
 config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=Een vuurpijl die door een dispenser wordt afgevuurd, vliegt recht in de richting waarin de dispenser kijkt.
 config.buzzybeesbackport.tweaks.advancementBees=Bijen in agricultuurvooruitgangen
@@ -139,9 +133,3 @@ config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=Client: het doodssch
 block.buzzybeesbackport.set_spawn=Respawnpunt ingesteld
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
-options.key.hold=vasthouden
-options.key.toggle=omschakelen
-title.singleplayer=Alleen spelen
-title.multiplayer.lan=Samen spelen (LAN)
-title.multiplayer.other=Samen spelen (server van derden)
-title.multiplayer.realms=Samen spelen (Realms)

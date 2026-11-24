@@ -108,16 +108,10 @@ config.buzzybeesbackport.tweaks.dispensers=Изменения раздатчик
 config.buzzybeesbackport.tweaks.dispensers.tooltip=Раздатчики наполняют бутылочки водой, ставят стойки для брони и разжигают костры огненными зарядами.
 config.buzzybeesbackport.tweaks.bellRedstone=Колокола звонят от редстоуна
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=Колокол звонит, когда на него подаётся сигнал редстоуна.
-config.buzzybeesbackport.tweaks.splashTexts=Сплэши из 1.15
-config.buzzybeesbackport.tweaks.splashTexts.tooltip=Главное меню может показывать три новых сплэша из 1.15.
 config.buzzybeesbackport.tweaks.craftingShiftClick=Shift+клик в сетку создания
 config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=У верстака Shift+клик по стаку в вашем инвентаре перемещает его в сетку создания, а в другую часть инвентаря — только когда в сетке нет места.
 config.buzzybeesbackport.tweaks.elytraJump=Раскрытие элитр при подъёме
 config.buzzybeesbackport.tweaks.elytraJump.tooltip=Элитры можно раскрыть сразу после прыжка, пока вы ещё поднимаетесь.
-config.buzzybeesbackport.tweaks.toggleSneak=Переключение подкрадывания
-config.buzzybeesbackport.tweaks.toggleSneak.tooltip=Клиент: клавиша «Красться» включает и выключает подкрадывание, а не требует удерживания.
-config.buzzybeesbackport.tweaks.toggleSprint=Переключение бега
-config.buzzybeesbackport.tweaks.toggleSprint.tooltip=Клиент: клавиша «Бег» включает и выключает бег, а не требует удерживания.
 config.buzzybeesbackport.tweaks.dispensedFireworks=Фейерверки из раздатчика летят вперёд
 config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=Фейерверк, выпущенный из раздатчика, летит прямо в ту сторону, куда обращён раздатчик.
 config.buzzybeesbackport.tweaks.advancementBees=Пчёлы в достижениях раздела «Сельское хозяйство»
@@ -139,9 +133,3 @@ config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=Клиент: экр
 block.buzzybeesbackport.set_spawn=Точка возрождения установлена
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
-options.key.hold=Удерживание
-options.key.toggle=Переключение
-title.singleplayer=Одиночная игра
-title.multiplayer.lan=Сетевая игра (локальная)
-title.multiplayer.other=Сетевая игра (сторонний сервер)
-title.multiplayer.realms=Сетевая игра (Realms)

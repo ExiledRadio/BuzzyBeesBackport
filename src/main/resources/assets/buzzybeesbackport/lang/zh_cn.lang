@@ -108,16 +108,10 @@ config.buzzybeesbackport.tweaks.dispensers=发射器改动
 config.buzzybeesbackport.tweaks.dispensers.tooltip=发射器能用水装满玻璃瓶、放置盔甲架，并用火焰弹点燃营火。
 config.buzzybeesbackport.tweaks.bellRedstone=钟可被红石敲响
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=钟在受到红石充能时会鸣响。
-config.buzzybeesbackport.tweaks.splashTexts=1.15闪烁标语
-config.buzzybeesbackport.tweaks.splashTexts.tooltip=标题屏幕可以显示1.15新增的三条闪烁标语。
 config.buzzybeesbackport.tweaks.craftingShiftClick=Shift+点击放入合成方格
 config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=在工作台中，Shift+点击物品栏中的一组物品会将其移入合成方格，只有当合成方格放不下时才会移到物品栏的另一部分。
 config.buzzybeesbackport.tweaks.elytraJump=上升时展开鞘翅
 config.buzzybeesbackport.tweaks.elytraJump.tooltip=跳跃后即可立刻展开鞘翅，即使你仍在上升。
-config.buzzybeesbackport.tweaks.toggleSneak=切换潜行
-config.buzzybeesbackport.tweaks.toggleSneak.tooltip=客户端：潜行键改为按一下开启或关闭潜行，而不必按住。
-config.buzzybeesbackport.tweaks.toggleSprint=切换疾跑
-config.buzzybeesbackport.tweaks.toggleSprint.tooltip=客户端：疾跑键改为按一下开启或关闭疾跑，而不必按住。
 config.buzzybeesbackport.tweaks.dispensedFireworks=发射器射出的烟花向前飞
 config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=从发射器射出的烟花火箭会沿发射器朝向的方向笔直飞行。
 config.buzzybeesbackport.tweaks.advancementBees=农牧业进度中加入蜜蜂
@@ -139,9 +133,3 @@ config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=客户端：极限�
 block.buzzybeesbackport.set_spawn=已设置重生点
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
-options.key.hold=按住
-options.key.toggle=切换
-title.singleplayer=单人游戏
-title.multiplayer.lan=多人游戏（局域网）
-title.multiplayer.other=多人游戏（第三方服务器）
-title.multiplayer.realms=多人游戏（Realms）

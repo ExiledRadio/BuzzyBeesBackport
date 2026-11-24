@@ -108,16 +108,10 @@ config.buzzybeesbackport.tweaks.dispensers=발사기 변경 사항
 config.buzzybeesbackport.tweaks.dispensers.tooltip=발사기가 물로 유리병을 채우고, 갑옷 거치대를 놓고, 화염구로 모닥불을 붙입니다.
 config.buzzybeesbackport.tweaks.bellRedstone=레드스톤으로 울리는 종
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=종에 레드스톤 신호가 들어오면 종이 울립니다.
-config.buzzybeesbackport.tweaks.splashTexts=1.15 스플래시 문구
-config.buzzybeesbackport.tweaks.splashTexts.tooltip=타이틀 화면에 1.15의 새 스플래시 문구 3개가 표시될 수 있습니다.
 config.buzzybeesbackport.tweaks.craftingShiftClick=Shift+클릭으로 제작 칸에 넣기
 config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=제작대에서 보관함의 아이템 묶음을 Shift+클릭하면 제작 칸으로 옮겨지며, 제작 칸에 자리가 없을 때만 보관함의 다른 부분으로 옮겨집니다.
 config.buzzybeesbackport.tweaks.elytraJump=상승 중 겉날개 펼치기
 config.buzzybeesbackport.tweaks.elytraJump.tooltip=점프 직후 아직 올라가는 중에도 겉날개를 펼칠 수 있습니다.
-config.buzzybeesbackport.tweaks.toggleSneak=웅크리기 토글
-config.buzzybeesbackport.tweaks.toggleSneak.tooltip=클라이언트: 웅크리기 키를 누르고 있는 대신 누를 때마다 웅크리기를 켜고 끕니다.
-config.buzzybeesbackport.tweaks.toggleSprint=달리기 토글
-config.buzzybeesbackport.tweaks.toggleSprint.tooltip=클라이언트: 달리기 키를 누르고 있는 대신 누를 때마다 달리기를 켜고 끕니다.
 config.buzzybeesbackport.tweaks.dispensedFireworks=발사기 폭죽이 앞으로 날아감
 config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=발사기에서 발사된 폭죽 로켓이 발사기가 향한 방향으로 곧게 날아갑니다.
 config.buzzybeesbackport.tweaks.advancementBees=농사 발전 과제에 꿀벌 추가
@@ -139,9 +133,3 @@ config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=클라이언트: 하
 block.buzzybeesbackport.set_spawn=리스폰 지점을 설정했습니다
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
-options.key.hold=홀드
-options.key.toggle=토글
-title.singleplayer=싱글플레이
-title.multiplayer.lan=멀티플레이 (LAN)
-title.multiplayer.other=멀티플레이 (제3자 서버)
-title.multiplayer.realms=멀티플레이 (Realms)

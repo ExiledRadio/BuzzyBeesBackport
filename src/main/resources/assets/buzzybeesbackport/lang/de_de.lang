@@ -108,16 +108,10 @@ config.buzzybeesbackport.tweaks.dispensers=Werfer-Änderungen
 config.buzzybeesbackport.tweaks.dispensers.tooltip=Werfer füllen Glasflaschen mit Wasser, stellen Rüstungsständer auf und entzünden Lagerfeuer mit Feuerkugeln.
 config.buzzybeesbackport.tweaks.bellRedstone=Glocken läuten mit Redstone
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=Eine Glocke läutet, wenn sie mit Redstone aktiviert wird.
-config.buzzybeesbackport.tweaks.splashTexts=Menüsprüche aus 1.15
-config.buzzybeesbackport.tweaks.splashTexts.tooltip=Das Hauptmenü kann die drei neuen Menüsprüche aus 1.15 anzeigen.
 config.buzzybeesbackport.tweaks.craftingShiftClick=Umschalt-Klick ins Handwerksraster
 config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=An einer Werkbank verschiebt ein Umschalt-Klick auf einen Stapel in deinem Inventar diesen ins Handwerksraster, und nur dann in den anderen Teil des Inventars, wenn im Raster kein Platz ist.
 config.buzzybeesbackport.tweaks.elytraJump=Elytren beim Aufsteigen öffnen
 config.buzzybeesbackport.tweaks.elytraJump.tooltip=Elytren lassen sich direkt nach einem Sprung öffnen, während du noch aufsteigst.
-config.buzzybeesbackport.tweaks.toggleSneak=Schleichen umschalten
-config.buzzybeesbackport.tweaks.toggleSneak.tooltip=Client: Die Schleichen-Taste schaltet das Schleichen ein und aus, statt gehalten werden zu müssen.
-config.buzzybeesbackport.tweaks.toggleSprint=Sprinten umschalten
-config.buzzybeesbackport.tweaks.toggleSprint.tooltip=Client: Die Sprinten-Taste schaltet das Sprinten ein und aus, statt gehalten werden zu müssen.
 config.buzzybeesbackport.tweaks.dispensedFireworks=Geworfene Feuerwerksraketen fliegen geradeaus
 config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=Eine aus einem Werfer abgefeuerte Feuerwerksrakete fliegt geradeaus in die Richtung, in die der Werfer zeigt.
 config.buzzybeesbackport.tweaks.advancementBees=Bienen in Landwirtschafts-Fortschritten
@@ -139,9 +133,3 @@ config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=Client: Der Todesbil
 block.buzzybeesbackport.set_spawn=Wiedereinstiegspunkt gesetzt
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
-options.key.hold=Halten
-options.key.toggle=Umschalten
-title.singleplayer=Einzelspieler
-title.multiplayer.lan=Mehrspieler (LAN)
-title.multiplayer.other=Mehrspieler (Drittanbieter-Server)
-title.multiplayer.realms=Mehrspieler (Realms)

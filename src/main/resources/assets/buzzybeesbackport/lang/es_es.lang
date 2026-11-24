@@ -108,16 +108,10 @@ config.buzzybeesbackport.tweaks.dispensers=Cambios en los dispensadores
 config.buzzybeesbackport.tweaks.dispensers.tooltip=Los dispensadores llenan frascos de cristal con agua, colocan soportes para armadura y encienden hogueras con cargas ígneas.
 config.buzzybeesbackport.tweaks.bellRedstone=Las campanas suenan con redstone
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=Una campana suena cuando recibe energía de redstone.
-config.buzzybeesbackport.tweaks.splashTexts=Textos de inicio de la 1.15
-config.buzzybeesbackport.tweaks.splashTexts.tooltip=El menú principal puede mostrar los tres nuevos textos de inicio de la 1.15.
 config.buzzybeesbackport.tweaks.craftingShiftClick=Mayús + clic hacia la cuadrícula de fabricación
 config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=En una mesa de trabajo, hacer Mayús + clic en un montón de tu inventario lo mueve a la cuadrícula de fabricación, y solo pasa a la otra parte del inventario si la cuadrícula no tiene sitio.
 config.buzzybeesbackport.tweaks.elytraJump=Abrir los élitros al subir
 config.buzzybeesbackport.tweaks.elytraJump.tooltip=Los élitros se pueden abrir justo después de saltar, mientras todavía estás subiendo.
-config.buzzybeesbackport.tweaks.toggleSneak=Alternar agacharse
-config.buzzybeesbackport.tweaks.toggleSneak.tooltip=Cliente: la tecla de agacharse activa y desactiva el agachado en lugar de tener que mantenerla pulsada.
-config.buzzybeesbackport.tweaks.toggleSprint=Alternar correr
-config.buzzybeesbackport.tweaks.toggleSprint.tooltip=Cliente: la tecla de correr activa y desactiva la carrera en lugar de tener que mantenerla pulsada.
 config.buzzybeesbackport.tweaks.dispensedFireworks=Los fuegos artificiales dispensados vuelan recto
 config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=Un cohete de fuegos artificiales disparado desde un dispensador vuela recto hacia donde mira el dispensador.
 config.buzzybeesbackport.tweaks.advancementBees=Abejas en los progresos de Prosperidad
@@ -139,9 +133,3 @@ config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=Cliente: la pantalla
 block.buzzybeesbackport.set_spawn=Se ha establecido el punto de reaparición
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
-options.key.hold=Mantener
-options.key.toggle=Alternar
-title.singleplayer=Un jugador
-title.multiplayer.lan=Multijugador (LAN)
-title.multiplayer.other=Multijugador (servidor de terceros)
-title.multiplayer.realms=Multijugador (Realms)

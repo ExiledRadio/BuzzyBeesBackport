@@ -108,16 +108,10 @@ config.buzzybeesbackport.tweaks.dispensers=Modifiche ai distributori
 config.buzzybeesbackport.tweaks.dispensers.tooltip=I distributori riempiono le ampolle con l'acqua, piazzano i supporti per armature e accendono i fuochi da campo con le cariche di fuoco.
 config.buzzybeesbackport.tweaks.bellRedstone=Le campane suonano con la redstone
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=Una campana suona quando viene alimentata dalla redstone.
-config.buzzybeesbackport.tweaks.splashTexts=Testi iniziali della 1.15
-config.buzzybeesbackport.tweaks.splashTexts.tooltip=Il menù principale può mostrare i tre nuovi testi iniziali della 1.15.
 config.buzzybeesbackport.tweaks.craftingShiftClick=Maiusc+clic nella griglia di fabbricazione
 config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=Al banco da fabbricazione, fare Maiusc+clic su una pila nel tuo inventario la sposta nella griglia di fabbricazione, e la manda nell'altra parte dell'inventario solo quando la griglia non ha spazio.
 config.buzzybeesbackport.tweaks.elytraJump=Apri le elitre mentre sali
 config.buzzybeesbackport.tweaks.elytraJump.tooltip=Le elitre si possono aprire subito dopo un salto, mentre stai ancora salendo.
-config.buzzybeesbackport.tweaks.toggleSneak=Accovacciati alternato
-config.buzzybeesbackport.tweaks.toggleSneak.tooltip=Client: il tasto per accovacciarti attiva e disattiva l'accovacciamento invece di dover essere tenuto premuto.
-config.buzzybeesbackport.tweaks.toggleSprint=Corsa alternata
-config.buzzybeesbackport.tweaks.toggleSprint.tooltip=Client: il tasto per correre attiva e disattiva la corsa invece di dover essere tenuto premuto.
 config.buzzybeesbackport.tweaks.dispensedFireworks=I razzi dei distributori volano dritti
 config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=Un razzo pirotecnico sparato da un distributore vola dritto nella direzione verso cui è rivolto il distributore.
 config.buzzybeesbackport.tweaks.advancementBees=Api nei progressi di Vita dei campi
@@ -139,9 +133,3 @@ config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=Client: la schermata
 block.buzzybeesbackport.set_spawn=Impostato il punto di rinascita
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
-options.key.hold=Tieni
-options.key.toggle=Alterna
-title.singleplayer=Giocatore singolo
-title.multiplayer.lan=Multigiocatore (rete locale)
-title.multiplayer.other=Multigiocatore (server di terze parti)
-title.multiplayer.realms=Multigiocatore (Realms)

@@ -108,16 +108,10 @@ config.buzzybeesbackport.tweaks.dispensers=Fırlatıcı Değişiklikleri
 config.buzzybeesbackport.tweaks.dispensers.tooltip=Fırlatıcılar cam şişeleri sudan doldurur, zırh askılarını yerleştirir ve ateş toplarıyla kamp ateşlerini yakar.
 config.buzzybeesbackport.tweaks.bellRedstone=Çanlar Redstone ile Çalar
 config.buzzybeesbackport.tweaks.bellRedstone.tooltip=Bir çan redstone ile güç aldığında çalar.
-config.buzzybeesbackport.tweaks.splashTexts=1.15 Logo Altı Metinleri
-config.buzzybeesbackport.tweaks.splashTexts.tooltip=Ana menü, 1.15'in üç yeni logo altı metnini gösterebilir.
 config.buzzybeesbackport.tweaks.craftingShiftClick=Shift+Tıklama ile Üretim Izgarasına
 config.buzzybeesbackport.tweaks.craftingShiftClick.tooltip=Çalışma masasında envanterindeki bir yığına Shift+tıklama onu üretim ızgarasına taşır; envanterin diğer kısmına ise yalnızca ızgarada yer kalmadığında taşır.
 config.buzzybeesbackport.tweaks.elytraJump=Yükselirken Elitra Açma
 config.buzzybeesbackport.tweaks.elytraJump.tooltip=Elitra, bir zıplamanın hemen ardından, sen hâlâ yükselirken açılabilir.
-config.buzzybeesbackport.tweaks.toggleSneak=Eğilmeyi Aç/Kapat
-config.buzzybeesbackport.tweaks.toggleSneak.tooltip=İstemci: eğilme tuşu basılı tutulmak yerine eğilmeyi açıp kapatır.
-config.buzzybeesbackport.tweaks.toggleSprint=Koşmayı Aç/Kapat
-config.buzzybeesbackport.tweaks.toggleSprint.tooltip=İstemci: koşma tuşu basılı tutulmak yerine koşmayı açıp kapatır.
 config.buzzybeesbackport.tweaks.dispensedFireworks=Fırlatılan Havai Fişekler İleri Uçar
 config.buzzybeesbackport.tweaks.dispensedFireworks.tooltip=Bir fırlatıcıdan atılan havai fişek roketi, fırlatıcının baktığı yöne doğru dümdüz uçar.
 config.buzzybeesbackport.tweaks.advancementBees=Tarım ve Hayvancılık Gelişimlerinde Arılar
@@ -139,9 +133,3 @@ config.buzzybeesbackport.tweaks.hardcoreDeathScreen.tooltip=İstemci: Zorlayıc�
 block.buzzybeesbackport.set_spawn=Yeniden canlanma noktası ayarlandı
 
 # Look and feel: 1.15's Accessibility options, window title and reworded vanilla text.
-options.key.hold=Basılı tut
-options.key.toggle=Aç/Kapat
-title.singleplayer=Tek Oyunculu
-title.multiplayer.lan=Çok Oyunculu (Yerel Ağ)
-title.multiplayer.other=Çok Oyunculu (Üçüncü Taraf Sunucu)
-title.multiplayer.realms=Çok Oyunculu (Realms)

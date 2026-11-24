@@ -7,9 +7,8 @@ import com.exiledradio.backportcore.presentation.Presentation;
 import com.exiledradio.backportcore.presentation.client.PanoramaRenderer;
 import com.exiledradio.backportcore.presentation.client.TitleSplashes;
 import com.exiledradio.buzzybeesbackport.BuzzyBeesBackport;
-import com.exiledradio.buzzybeesbackport.ModConfig;
-import com.exiledradio.buzzybeesbackport.lookfeel.LookAndFeel;
-import com.exiledradio.buzzybeesbackport.lookfeel.client.LookAndFeelClient;
+import com.exiledradio.backportcore.presentation.versions.Look115;
+import com.exiledradio.backportcore.presentation.versions.client.Look115Client;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiMainMenu;
 import net.minecraft.client.resources.I18n;
@@ -99,18 +98,18 @@ public final class ClientLookFeelTest {
             }
         }
 
-        // Sneak and Sprint show this mod's config.
-        ok(LookAndFeel.TOGGLE_SNEAK.get().equals(ModConfig.tweaks.toggleSneak ? "toggle" : "hold"), "Sneak shows tweaks.toggleSneak");
-        ok(LookAndFeel.TOGGLE_SPRINT.get().equals(ModConfig.tweaks.toggleSprint ? "toggle" : "hold"), "Sprint shows tweaks.toggleSprint");
-        boolean before = ModConfig.tweaks.toggleSneak;
-        LookAndFeel.TOGGLE_SNEAK.cycle(false);
-        ok(ModConfig.tweaks.toggleSneak != before, "cycling Sneak on Accessibility Settings sets the config");
-        LookAndFeel.TOGGLE_SNEAK.cycle(false);
-        ok(ModConfig.tweaks.toggleSneak == before, "and back");
+        // Sneak and Sprint are Backport Core's since 1.4.7 (the config switches are gone): they show at 1.15 and cycle.
+        ok(Look115.TOGGLE_SNEAK.isShown() && Look115.TOGGLE_SPRINT.isShown(), "Sneak and Sprint show on Accessibility Settings");
+        String before = Look115.TOGGLE_SNEAK.get();
+        Look115.TOGGLE_SNEAK.cycle(false);
+        ok(!Look115.TOGGLE_SNEAK.get().equals(before) && Look115.toggles(Look115.TOGGLE_SNEAK) == "toggle".equals(Look115.TOGGLE_SNEAK.get()),
+                "cycling Sneak switches Hold and Toggle: " + Look115.TOGGLE_SNEAK.get());
+        Look115.TOGGLE_SNEAK.cycle(false);
+        ok(Look115.TOGGLE_SNEAK.get().equals(before), "and back");
 
         // 1.15.2's window title at the title screen: no session yet.
         String expected = "Minecraft* " + net.minecraftforge.common.ForgeVersion.mcVersion;
-        ok(expected.equals(LookAndFeelClient.title(mc)), "the title screen's window title: " + LookAndFeelClient.title(mc));
+        ok(expected.equals(Look115Client.title(mc)), "the title screen's window title: " + Look115Client.title(mc));
         ok(expected.equals(org.lwjgl.opengl.Display.getTitle()), "the window shows it: " + org.lwjgl.opengl.Display.getTitle());
 
         String[][] lang = {
