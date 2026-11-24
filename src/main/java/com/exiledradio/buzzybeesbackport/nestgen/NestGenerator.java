@@ -44,7 +44,8 @@ import java.util.WeakHashMap;
  *       a nest with its biome's chance ({@link BeeNests#chance}). 1.12.2 has no per-tree hook, so the trunks
  *       are found by looking: a nest-tree log standing on dirt or grass, under leaves. Not where the world's
  *       generator places today's trees with their nests itself, nor in a superflat world without
- *       {@code decoration} ({@link GeneratorNests}).</li>
+ *       {@code decoration} ({@link GeneratorNests}). Dynamic Trees' oaks and birches get theirs after its own
+ *       generator has grown them ({@link DynamicTreeNests}).</li>
  *   <li><b>Saplings</b>: an oak or birch sapling with a flower within 2 blocks (one up or down) grows a
  *       nest 5% of the time, in any biome or dimension. The sapling event fires before the tree exists, so it
  *       is remembered and the nest placed at the end of the same tick.</li>
@@ -100,10 +101,18 @@ public final class NestGenerator {
      * @return how many nests were placed
      */
     public static int scan(World world, Random rand, int x0, int z0, boolean always) {
+        return scan(world, rand, x0, z0, always, false);
+    }
+
+    /**
+     * @param dynamic true for Dynamic Trees' trunks (standing on its rooty soil), false for static trees (on dirt or
+     *                grass)
+     */
+    static int scan(World world, Random rand, int x0, int z0, boolean always, boolean dynamic) {
         int placed = 0;
         for (int dx = 0; dx < 16; dx++) {
             for (int dz = 0; dz < 16; dz++) {
-                BlockPos base = trunkBase(world, x0 + dx, z0 + dz);
+                BlockPos base = trunkBase(world, x0 + dx, z0 + dz, dynamic);
                 if (base == null) {
                     continue;
                 }
@@ -116,9 +125,14 @@ public final class NestGenerator {
         return placed;
     }
 
-    /** @return the lowest log of a nest-tree trunk in this column, standing on dirt or grass, or null */
+    /** @return the lowest log of a nest-tree trunk in this column, standing on dirt or grass (or Dynamic Trees' rooty soil), or null */
     @Nullable
     static BlockPos trunkBase(World world, int x, int z) {
+        return trunkBase(world, x, z, false);
+    }
+
+    @Nullable
+    static BlockPos trunkBase(World world, int x, int z, boolean dynamic) {
         BlockPos.MutableBlockPos p = new BlockPos.MutableBlockPos(x, world.getHeight(x, z), z);
         int bottom = Math.max(1, p.getY() - 40);
         // Down through air and leaves to the first log.
@@ -139,7 +153,7 @@ public final class NestGenerator {
             p.setY(p.getY() - 1);
         }
         Block ground = world.getBlockState(p.down()).getBlock();
-        if (!(ground instanceof BlockGrass || ground instanceof BlockDirt)) {
+        if (dynamic ? !DynamicTreeNests.isRootySoil(ground) : !(ground instanceof BlockGrass || ground instanceof BlockDirt)) {
             return null;
         }
         return isTree(world, p) ? p.toImmutable() : null;
@@ -247,6 +261,7 @@ public final class NestGenerator {
 
     /** From the mod's pre-init: the sapling event is posted on Forge's terrain-generation bus, not the main one. */
     public static void preInit() {
+        DynamicTreeNests.preInit();
         net.minecraftforge.common.MinecraftForge.TERRAIN_GEN_BUS.register(new Object() {
             @SubscribeEvent
             public void grow(SaplingGrowTreeEvent event) {

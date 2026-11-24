@@ -44,6 +44,8 @@ Every feature can be turned off in Backport Core's settings screen, under Mod Op
 
 ## Compatibility
 
+**Dynamic Trees**: its oaks and birches get bee nests, with 1.15's chances.
+
 **[Village & Pillage Backport](https://www.curseforge.com/minecraft/mc-mods/villager-backport)**: its campfires calm bees, bees pollinate its cornflowers, lilies of the valley and wither roses and grow its berry bushes, its bell rings from redstone, and its village golems crack like any other. Some foxes spawn as babies. Without it, this mod brings its own campfire.
 
 **[Update Aquatic Backport](https://www.curseforge.com/minecraft/mc-mods/update-aquatic-backport)**: with `doInsomnia` off, phantoms stop spawning. Drowned spawn eggs make baby drowned.
