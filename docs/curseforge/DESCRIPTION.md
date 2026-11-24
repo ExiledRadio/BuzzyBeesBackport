@@ -56,17 +56,21 @@ Every feature can be turned off in Backport Core's settings screen, under Mod Op
 
 **[Trails & Tales Backport](https://www.curseforge.com/minecraft/mc-mods/trails-tales-backport)**: honeycomb waxes signs and hanging signs.
 
+**[Tricky Trials Backport](https://www.curseforge.com/minecraft/mc-mods/trials-backport)**: honeycomb waxes its copper.
+
+**[Game Drops Backport](https://www.curseforge.com/minecraft/mc-mods/game-drops-backport)**: its sulfur cubes swallow honeycomb blocks and turn sticky, and its camp trees get bee nests.
+
 ## Requirements
 
-Minecraft 1.12.2 with Forge 14.23.5.2847 or newer, and [Backport Core](https://www.curseforge.com/minecraft/mc-mods/backport-core) 1.1.0 or newer. The CurseForge app installs Backport Core and Fluidlogged API with it.
+Minecraft 1.12.2 with Forge 14.23.5.2847 or newer, and [Backport Core](https://www.curseforge.com/minecraft/mc-mods/backport-core) 1.4.7 or newer. The CurseForge app installs Backport Core and Fluidlogged API with it.
 
 ***
 
-Also by me: [Village & Pillage Backport](https://www.curseforge.com/minecraft/mc-mods/villager-backport), all of 1.14 on 1.12.2, and [Enchantment Recipes](https://www.curseforge.com/minecraft/mc-mods/rlcraft-enchantment-recipes), which lets you craft enchanted books from mod materials.
+Also by me: [Village & Pillage Backport](https://www.curseforge.com/minecraft/mc-mods/villager-backport), all of 1.14 on 1.12.2, [Update Aquatic Backport](https://www.curseforge.com/minecraft/mc-mods/update-aquatic-backport), all of 1.13 on 1.12.2, [Nether Update Backport](https://www.curseforge.com/minecraft/mc-mods/nether-backport), all of 1.16 on 1.12.2, [Caves & Cliffs Backport](https://www.curseforge.com/minecraft/mc-mods/caves-cliffs-backport), all of 1.17 and 1.18 on 1.12.2, [Wild Update Backport](https://www.curseforge.com/minecraft/mc-mods/wild-update-backport), all of 1.19 on 1.12.2, [Trails & Tales Backport](https://www.curseforge.com/minecraft/mc-mods/trails-tales-backport), all of 1.20 on 1.12.2, [Tricky Trials Backport](https://www.curseforge.com/minecraft/mc-mods/trials-backport), all of 1.21 on 1.12.2, [Game Drops Backport](https://www.curseforge.com/minecraft/mc-mods/game-drops-backport), the 26.x game drops on 1.12.2, and [Enchantment Recipes](https://www.curseforge.com/minecraft/mc-mods/rlcraft-enchantment-recipes), which lets you craft enchanted books from mod materials.
 
 ## Credits
 
-**Original content: [Minecraft](https://www.minecraft.net), by [Mojang Studios](https://www.minecraft.net/en-us/about-minecraft).** Every feature this mod adds is from a later version of Minecraft. The textures, models, sounds, music and translations are Mojang's, taken from Minecraft's own game files, and remain theirs. The features' names and designs are Mojang's too.
+**Original content: [Minecraft](https://www.minecraft.net), by [Mojang Studios](https://www.minecraft.net/en-us/about-minecraft).** Every feature this mod adds is from a later version of Minecraft. The textures, models, sounds, music and translations are Mojang's and remain theirs. The features' names and designs are Mojang's too.
 
 **How this mod differs from the original:** Minecraft's newer versions don't run on 1.12.2. This mod is a Forge mod for Minecraft 1.12.2 that reimplements those features on the older game, matching the newer versions as closely as it can. It is not a copy or port of another mod. Where 1.12.2 can't do something the same way, the description above says so.
 
