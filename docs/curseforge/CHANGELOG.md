@@ -1,10 +1,10 @@
 # 1.1.2
 
-**Requires Backport Core 1.4.7 or newer.**
-
 *   **1.15's look and feel pieces moved into Backport Core**, so every backport of 1.15 or later has them, even without this mod: Sneak and Sprint as Hold or Toggle, the 1.15 button texture, the check box, the multiplayer warning, the window title, the F3 text without chunk updates, the Mojang startup logo, the Accessibility icon, 1.15's splashes and vanilla's text as 1.15 words it.
 *   **The Toggle Sneak, Toggle Sprint and 1.15 Splash Texts config settings are gone.** Sneak and Sprint are set on Accessibility Settings, as before; a Toggle you set carries over. The splashes follow Backport Core's Look & Feel settings.
 *   The bee panorama stays in this mod.
+
+Needs Backport Core 1.4.7 or newer.
 
 # 1.1.1
 
