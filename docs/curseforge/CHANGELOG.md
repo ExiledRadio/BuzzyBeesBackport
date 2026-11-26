@@ -1,6 +1,7 @@
 # 1.1.3
 
 *   **Dynamic Trees**: bee nests grow on Dynamic Trees' oaks and birches, with 1.15's chances per biome. With Dynamic Trees installed, worlds had no bee nests.
+*   **Nests sit against dynamic trunks**: a Dynamic Trees trunk is often thinner than a block, so up to the nest it grows a full log thick and the nest hangs flush, as on a vanilla tree.
 
 Needs Backport Core 1.4.9 or newer.
 

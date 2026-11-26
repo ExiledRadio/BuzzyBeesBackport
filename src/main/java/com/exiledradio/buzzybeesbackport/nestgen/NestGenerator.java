@@ -228,9 +228,29 @@ public final class NestGenerator {
                 state = withFacing(state, p);
             }
         }
+        fullTrunk(world, base, log);
         world.setBlockState(at, state, 2);
         fill(world, rand, at);
         return true;
+    }
+
+    /**
+     * A Dynamic Trees trunk (a branch block with a {@code radius}) is often thinner than a block, and a nest beside it
+     * would hang in the air: from its base up to the nest, the trunk is made a full log thick, as 1.15's nests sit
+     * against a whole log. Dynamic Trees only ever thickens a branch, so it stays that way as the tree grows.
+     */
+    @SuppressWarnings({"unchecked", "rawtypes"})
+    static void fullTrunk(World world, BlockPos base, BlockPos log) {
+        for (BlockPos p = base; p.getY() <= log.getY(); p = p.up()) {
+            IBlockState s = world.getBlockState(p);
+            for (IProperty<?> prop : s.getPropertyKeys()) {
+                if ("radius".equals(prop.getName()) && prop.getValueClass() == Integer.class && prop.getAllowedValues().contains(8)) {
+                    if ((Integer) s.getValue(prop) < 8) {
+                        world.setBlockState(p, s.withProperty((IProperty) prop, 8), 2);
+                    }
+                }
+            }
+        }
     }
 
     @SuppressWarnings({"unchecked", "rawtypes"})
