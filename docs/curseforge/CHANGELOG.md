@@ -1,3 +1,7 @@
+# 1.1.4
+
+*   **Faster world generation with Dynamic Trees**: finding the trunks for bee nests no longer looks up every block's name.
+
 # 1.1.3
 
 *   **Dynamic Trees**: bee nests grow on Dynamic Trees' oaks and birches, with 1.15's chances per biome. With Dynamic Trees installed, worlds had no bee nests.

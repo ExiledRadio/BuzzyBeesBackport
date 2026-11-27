@@ -38,9 +38,16 @@ public final class DynamicTreeNests implements IWorldGenerator {
         GameRegistry.registerWorldGenerator(new DynamicTreeNests(), WEIGHT);
     }
 
+    /** The trunks' blocks, found once: the nest scan asks this of every block down every column it reads. */
+    private static Block oakBlock;
+    private static Block birchBlock;
+
     static boolean isTrunk(Block block) {
-        ResourceLocation id = block.getRegistryName();
-        return OAK.equals(id) || BIRCH.equals(id);
+        if (oakBlock == null) {
+            oakBlock = net.minecraftforge.fml.common.registry.ForgeRegistries.BLOCKS.getValue(OAK);
+            birchBlock = net.minecraftforge.fml.common.registry.ForgeRegistries.BLOCKS.getValue(BIRCH);
+        }
+        return block != net.minecraft.init.Blocks.AIR && (block == oakBlock || block == birchBlock);
     }
 
     /** Dynamic Trees' rooty dirt (and its grass and podzol looks), sand or water: what its trees stand on. */
